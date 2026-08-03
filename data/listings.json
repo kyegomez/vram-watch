@@ -1,0 +1,666 @@
+{
+ "rtx-5090": {
+  "newegg": [
+   {
+    "title": "GIGABYTE Gaming GeForce RTX 5090 32GB GDDR7 PCI Express 5.0 ATX Graphics Card GV-N5090GAMING OC-32GD",
+    "price": 4199.99,
+    "url": "https://www.newegg.com/gigabyte-gv-n5090gaming-oc-32gd-geforce-rtx-5090-32gb-graphics-card-triple-fans/p/N82E16814932761"
+   },
+   {
+    "title": "GIGABYTE AORUS GeForce RTX 5090 32GB GDDR7 PCI Express 5.0 x16 ATX Graphics Card GV-N5090AORUSST ICE-32GD",
+    "price": 4299.99,
+    "url": "https://www.newegg.com/gigabyte-gv-n5090aorusst-ice-32gd-geforce-rtx-5090-32gb-graphics-card-triple-fans/p/N82E16814932810"
+   },
+   {
+    "title": "ZOTAC AMP Extreme INFINITY GeForce RTX 5090 32GB GDDR7 PCI Express 5.0 x16 ATX Graphics Card ZT-B50900B-10A",
+    "price": 4299.99,
+    "url": "https://www.newegg.com/zotac-amp-extreme-infinity-zt-b50900b-10a-geforce-rtx-5090-32gb-graphics-card-triple-fans/p/N82E16814500656"
+   },
+   {
+    "title": "ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition ROG-ASTRAL-RTX5090-O32G-GAMING DLSS 4.0 PCI Express 5.0 Graphics Card",
+    "price": 4329.99,
+    "url": "https://www.newegg.com/asus-rog-astral-rog-astral-rtx5090-o32g-gaming-geforce-rtx-5090-32gb-graphics-card-triple-fans/p/N82E16814126751"
+   },
+   {
+    "title": "ZOTAC SOLID OC GeForce RTX 5090 32GB GDDR7 PCI Express 5.0 x16 ATX Graphics Card RTX 5090 SOLID OC ZT-B50900J-10A",
+    "price": 4469.67,
+    "url": "https://www.newegg.com/zotac-rtx-5090-solid-oc-geforce-rtx-5090-32gb-graphics-card-triple-fans/p/N82E16814500639"
+   },
+   {
+    "title": "MSI Ventus GeForce RTX 5090 32GB GDDR7 PCI Express 5.0 Graphics Card RTX 5090 32G VENTUS 3X OC",
+    "price": 4499.99,
+    "url": "https://www.newegg.com/msi-rtx-5090-32g-ventus-3x-oc-geforce-rtx-5090-32gb-graphics-card/p/N82E16814137920"
+   }
+  ],
+  "central": [
+   {
+    "title": "ASUS TUF-RTX5090-32G-GAMING TUF Gaming GeForce RTX 5090 Graphics Card 32GB GDDR7 PCI Express 5.0 2x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector ARGB",
+    "price": 4099.99,
+    "url": "https://www.centralcomputer.com/asus-tuf-rtx5090-32g-gaming-tuf-gaming-geforce-rtx-5090-graphics-card-32gb-gddr7-pci-express-5-0-2x-hdmi-2-1a.html"
+   },
+   {
+    "title": "MSI G5090-32V3C NVIDIA GeForce RTX 5090 VENTUS 3X OC Graphics Card 32GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector",
+    "price": 4299.99,
+    "url": "https://www.centralcomputer.com/msi-g5090-32v3c-nvidia-geforce-rtx-5090-ventus-3x-oc-graphics-card-32gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   },
+   {
+    "title": "Gigabyte GV-N5090WF3OC-32GD GeForce RTX 5090 WINDFORCE OC 32GB GDDR7 PCI Express 5.0 Graphics Card 1x HDMI 2.1b 3x DP 2.1a 1x 16-pin Power Connector",
+    "price": 4299.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-n5090wf3oc-32gd-geforce-rtx-5090-windforce-oc-32gb-gddr7-pci-express-5-0-graphics-card-1x-hdmi-2-1b-3x-dp-2-1a.html"
+   },
+   {
+    "title": "ASUS TUF-RTX5090-O32G-GAMING TUF Gaming GeForce RTX 5090 OC Edition Graphics Card 32GB GDDR7 PCI Express 5.0 2x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector ARGB",
+    "price": 4399.99,
+    "url": "https://www.centralcomputer.com/asus-tuf-rtx5090-o32g-gaming-tuf-gaming-geforce-rtx-5090-oc-edition-graphics-card-32gb-gddr7-pci-express-5-0-2x-hdmi-2-1a.html"
+   },
+   {
+    "title": "Gigabyte GV-N5090GAMING OC-32GD GeForce RTX 5090 GAMING OC 32GB GDDR7 PCI Express 5.0 ATX Graphics Card 1x HDMI 2.1b 3x DP 2.1a",
+    "price": 4399.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-n5090gaming-oc-32gd-geforce-rtx-5090-gaming-oc-32gb-gddr7-pci-express-5-0-atx-graphics-card-1x-hdmi-2-1b-3x-dp-2-1a.html"
+   },
+   {
+    "title": "Gigabyte GV-N5090AORUSM ICE-32GD GeForce RTX 5090 AORUS Master ICE 32GB GDDR7 White",
+    "price": 4499.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-n5090aorusm-ice-32gd-geforce-rtx-5090-aorus-master-ice-32gb-gddr7-pci-express-5-0-graphics-card-1x-hdmi-2-1b-3x-dp.html"
+   }
+  ]
+ },
+ "rtx-5080": {
+  "newegg": [
+   {
+    "title": "MSI SHADOW GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5080 16G SHADOW 3X OC",
+    "price": 1389.99,
+    "url": "https://www.newegg.com/msi-rtx-5080-16g-shadow-3x-oc-geforce-rtx-5080-16gb-graphics-card-triple-fans/p/N82E16814137914"
+   },
+   {
+    "title": "GIGABYTE WINDFORCE GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Graphics Card GV-N5080WF3OC-16GD",
+    "price": 1399.99,
+    "url": "https://www.newegg.com/gigabyte-windforce-gv-n5080wf3oc-16gd-geforce-rtx-5080-16gb-graphics-card-triple-fans/p/N82E16814932754"
+   },
+   {
+    "title": "MSI Ventus GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5080 16G VENTUS 3X OC",
+    "price": 1399.99,
+    "url": "https://www.newegg.com/msi-rtx-5080-16g-ventus-3x-oc-geforce-rtx-5080-16gb-graphics-card/p/N82E16814137930"
+   },
+   {
+    "title": "MSI INSPIRE GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 ATX Graphics Card RTX 5080 16G INSPIRE 3X OC BLACK",
+    "price": 1429.99,
+    "url": "https://www.newegg.com/msi-rtx-5080-16g-inspire-3x-oc-black-geforce-rtx-5080-16gb-graphics-card/p/N82E16814982005"
+   },
+   {
+    "title": "MSI INSPIRE GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5080 16G INSPIRE 3X OC",
+    "price": 1449.99,
+    "url": "https://www.newegg.com/msi-rtx-5080-16g-inspire-3x-oc-geforce-rtx-5080-16gb-graphics-card/p/N82E16814137911"
+   },
+   {
+    "title": "ASUS PRIME GeForce RTX 5080 16GB GDDR7 OC Edition PRIME-RTX5080-O16G PCI-Express 5.0 DLSS 4.0 Graphics Card",
+    "price": 1478.99,
+    "url": "https://www.newegg.com/asus-prime-rtx5080-o16g-geforce-rtx-5080-16gb-graphics-card/p/N82E16814126744"
+   }
+  ],
+  "central": [
+   {
+    "title": "PNY VCG508016TFXPB1-O Nvidia GeForce RTX 5080 OC 16GB 256-Bit GDDR7 DLSS 4.0 PCI Express 5.0 x16 Video Card",
+    "price": 1399.99,
+    "url": "https://www.centralcomputer.com/pny-vcg508016tfxpb1-o-nvidia-geforce-rtx-5080-oc-16gb-256-bit-gddr7-dlss-4-0-pci-express-5-0-x16-video-card.html"
+   },
+   {
+    "title": "PNY VCG508016DFSXPB1-O GeForce RTX 5080 Dual-FanSlim Overclocked Graphics Card 16GB GDDR7 Memory3x Display Port 1x HDMI",
+    "price": 1449.99,
+    "url": "https://www.centralcomputer.com/pny-vcg508016dfsxpb1-o-geforce-rtx-5080-dual-fanslim-overclocked-graphics-card-16gb-gddr7-memory3x-display-port-1x-hdmi.html"
+   },
+   {
+    "title": "MSI G5080-16S3C NVIDIA GeForce RTX 5080 SHADOW 3X OC Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector",
+    "price": 1499.99,
+    "url": "https://www.centralcomputer.com/msi-g5080-16s3c-nvidia-geforce-rtx-5080-shadow-3x-oc-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   },
+   {
+    "title": "ASUS PRIME-RTX5080-16G PRIME GeForce RTX 5080 Edition Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector",
+    "price": 1549.99,
+    "url": "https://www.centralcomputer.com/asus-prime-rtx5080-16g-prime-geforce-rtx-5080-edition-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   },
+   {
+    "title": "Gigabyte GV-N5080WF3OC-16GD WINDFORCE GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Video Card 1 x HDMI 2.1b 3 x DisplayPort 2.1a 1x 16-pin Power Connector",
+    "price": 1549.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-n5080wf3oc-16gd-windforce-geforce-rtx-5080-16gb-gddr7-pci-express-5-0-video-card-1-x-hdmi-2-1b-3-x-displayport-2-1a.html"
+   },
+   {
+    "title": "ASUS PRIME-RTX5080-O16G PRIME GeForce RTX 5080 OC Edition Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector 3 Year Warranty",
+    "price": 1599.99,
+    "url": "https://www.centralcomputer.com/asus-prime-rtx5080-o16g-prime-geforce-rtx-5080-oc-edition-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   }
+  ]
+ },
+ "rtx-5070-ti": {
+  "newegg": [
+   {
+    "title": "MSI Ventus GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card RTX 5070 TI 16G VENTUS 3X OC",
+    "price": 969.99,
+    "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-ventus-3x-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814137933"
+   },
+   {
+    "title": "GIGABYTE WindForce GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card GV-N507TWF3OC-16GD",
+    "price": 989.99,
+    "url": "https://www.newegg.com/gigabyte-windforce-gv-n507twf3oc-16gd-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814932771"
+   },
+   {
+    "title": "MSI Ventus GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5070 Ti 16G VENTUS 3X PZ OC",
+    "price": 999.99,
+    "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-ventus-3x-pz-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814137995"
+   },
+   {
+    "title": "MSI Ventus GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5070 Ti 16G VENTUS 3X PZ OC BLACK",
+    "price": 999.99,
+    "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-ventus-3x-pz-oc-black-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814982006"
+   },
+   {
+    "title": "PNY GeForce RTX 5070 Ti OC PCI Express 5.0, 16GB GDDR7, DLSS 4.0 Graphics Card VCG5070T16TFXPB1-O",
+    "price": 999.99,
+    "url": "https://www.newegg.com/pny-technologies-inc-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814133900"
+   },
+   {
+    "title": "MSI MLG Edition GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 Graphics Card RTX 5070 Ti 16G MLG EDITION OC",
+    "price": 1049.99,
+    "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-mlg-edition-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814137990"
+   }
+  ],
+  "central": [
+   {
+    "title": "ASUS PRIME-RTX5070TI-16G PRIME GeForce RTX 5070 Ti Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector 3 Year Warranty",
+    "price": 1049.99,
+    "url": "https://www.centralcomputer.com/asus-prime-rtx5070ti-16g-prime-geforce-rtx-5070-ti-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   },
+   {
+    "title": "Gigabyte GV-N507TWF3OC-16GD GeForce RTX 5070 Ti WindForce 16GB GDDR7 PCI Express 5.0 Video Card 1 x HDMI 2.1b  3 x DisplayPort 2.1a 1x 16-pin Power Connector",
+    "price": 1049.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-n507twf3oc-16gd-geforce-rtx-5070-ti-windforce-16gb-gddr7-pci-express-5-0-video-card-1-x-hdmi-2-1b.html"
+   },
+   {
+    "title": "ASUS PRIME-RTX5070TI-O16G PRIME GeForce RTX 5070 Ti OC Edition Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector 3 Year Warranty",
+    "price": 1099.99,
+    "url": "https://www.centralcomputer.com/asus-prime-rtx5070ti-o16g-prime-geforce-rtx-5070-ti-oc-edition-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   },
+   {
+    "title": "MSI G507T-16GTCW NVIDIA GeForce RTX 5070 Ti TRIO OC WHITE Graphics Card 16GB GDDR7 PCI Express 5.01x HDMI 2.1a 3x DisplayPort 2.1a",
+    "price": 1099.99,
+    "url": "https://www.centralcomputer.com/msi-g507t-16gtcw-nvidia-geforce-rtx-5070-ti-trio-oc-white-graphics-card-16gb-gddr7-pci-express-5-0.html"
+   },
+   {
+    "title": "MSI G507T-16S3C NVIDIA GeForce RTX 5070 Ti SHADOW 3X OC Graphics Card 16GB GDDR7 PCI Express 5.01x HDMI 2.1a 3x DisplayPort 2.1a",
+    "price": 1099.99,
+    "url": "https://www.centralcomputer.com/msi-g507t-16s3c-nvidia-geforce-rtx-5070-ti-shadow-3x-oc-graphics-card-16gb-gddr7-pci-express-5-0.html"
+   },
+   {
+    "title": "ASUS TUF-RTX5070TI-O16G-GAMINGTUF Gaming GeForce RTX 5070 Ti OC Edition Graphics Card 16GB GDDR7 PCI Express 5.0 1x HDMI 2.1a3x DisplayPort 2.1a  1x 16-pin Power Connector 3 Year Warranty",
+    "price": 1189.99,
+    "url": "https://www.centralcomputer.com/asus-tuf-rtx5070ti-o16g-gamingtuf-gaming-geforce-rtx-5070-ti-oc-edition-graphics-card-16gb-gddr7-pci-express-5-0-1x-hdmi-2-1a.html"
+   }
+  ]
+ },
+ "rx-9070-xt": {
+  "newegg": [
+   {
+    "title": "XFX Swift AMD Radeon RX 9070 XT RNDA 4 16GB 256-Bit GDDR6 PCI-Express 5.0 RDNA 4 Graphics Card RX-97TSWF3B9",
+    "price": 719.99,
+    "url": "https://www.newegg.com/xfx-swift-rx-97tswf3b9-radeon-rx-9070-xt-16gb-graphics-card-triple-fans/p/N82E16814150900?Item=9SIAD2CKGS4562&amp;cm_sp=SP-_-2905770-_-0-_-6-_-9SIAD2CKGS4562-_-Radeon RX 9070 XT-_-9070|xt-_-3"
+   },
+   {
+    "title": "XFX Swift AMD Radeon RX 9070 XT RNDA 4 16GB 256-Bit GDDR6 PCI-Express 5.0 RDNA 4 Graphics Card RX-97TSWF3B9",
+    "price": 719.99,
+    "url": "https://www.newegg.com/xfx-swift-rx-97tswf3b9-radeon-rx-9070-xt-16gb-graphics-card-triple-fans/p/N82E16814150900"
+   },
+   {
+    "title": "GIGABYTE Gaming Radeon RX 9070 XT 16GB GDDR6 PCI Express 5.0 x16 Graphics Card GV-R9070XTGAMING-16GD",
+    "price": 729.99,
+    "url": "https://www.newegg.com/gigabyte-gv-r9070xtgaming-16gd-radeon-rx-9070-xt-16gb-graphics-card-triple-fans/p/N82E16814932783?Item=N82E16814932783&amp;cm_sp=SP-_-2988166-_-0-_-2-_-14-932-783-_-Radeon RX 9070 XT-_-radeon-_-9"
+   },
+   {
+    "title": "GIGABYTE Gaming Radeon RX 9070 XT 16GB GDDR6 PCI Express 5.0 x16 Graphics Card GV-R9070XTGAMING-16GD",
+    "price": 729.99,
+    "url": "https://www.newegg.com/gigabyte-gv-r9070xtgaming-16gd-radeon-rx-9070-xt-16gb-graphics-card-triple-fans/p/N82E16814932783"
+   },
+   {
+    "title": "XFX Quicksilver Radeon RX 9070 XT 16GB 256-Bit GDDR6 PCI-Express 5.0 RDNA 4 Graphics Card RX-97TQICKB9",
+    "price": 739.99,
+    "url": "https://www.newegg.com/xfx-quicksilver-rx-97tqickb9-radeon-rx-9070-xt-16gb-graphics-card-triple-fans/p/N82E16814150902"
+   },
+   {
+    "title": "Yeston Sakura Radeon RX 9070 XT 16GB GDDR6 RDNA 4 4nm Triple Fan ARGB Desktop Graphics Card, Dual BIOS, PCIe 5.0, 3×DP+1×HDMI",
+    "price": 749,
+    "url": "https://www.newegg.com/yeston-rx9070xt-16gb-graphics-card-triple-fans/p/27N-0042-000J3"
+   }
+  ],
+  "central": [
+   {
+    "title": "ASRock RX9070XT CL 16G AMD Radeon RX 9070 XT Challenger 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.12 x 8-pin Power Connectors",
+    "price": 729.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9070xt-cl-16g-amd-radeon-rx-9070-xt-challenger-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASRock RX9070XT SL 16G AMD Radeon RX 9070 XT Steel Legend 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 729.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9070xt-sl-16g-amd-radeon-rx-9070-xt-steel-legend-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "GIGABYTE GV-R907XGAMINGOCICE-16GD Gaming Radeon RX 9070 XT OC ICE 16GB GDDR6 PCI Express 5.0 x16 Graphics Card HDMI/DP 2.1",
+    "price": 729.99,
+    "url": "https://www.centralcomputer.com/gigabyte-gv-r907xgamingocice-16gd-gaming-radeon-rx-9070-xt-oc-ice-16gb-gddr6-pci-express-5-0-x16-graphics-card-hdmi-dp-2-1.html"
+   },
+   {
+    "title": "ASRock RX9070XT MH 16G  AMD Radeon RX 9070 XT Monster Hunter Wilds 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 759.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9070xt-mh-16g-amd-radeon-rx-9070-xt-monster-hunter-wilds-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASRock RX9070XT TC 16GO AMD Radeon RX 9070 XT TAICHI 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 769.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9070xt-tc-16go-amd-radeon-rx-9070-xt-taichi-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASRock RX9070XT SLD 16G  AMD Radeon RX 9070 XT Steel Legend Dark 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 769.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9070xt-sld-16g-amd-radeon-rx-9070-xt-steel-legend-dark-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   }
+  ]
+ },
+ "rtx-6000-ada": {
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-5G133-0050-000 Quadro RTX6000 Ada Generation 48GB GDDR6 Memory Dual Slot",
+    "price": 7312,
+    "url": "https://www.wiredzone.com/shop/product/10025754-nvidia-900-5g133-0050-000-quadro-rtx6000-ada-generation-48gb-gddr6-memory-dual-slot-10989?search=NVIDIA+RTX+6000+Ada"
+   }
+  ],
+  "newegg": [
+   {
+    "title": "PNY RTX 6000 Ada VCNRTX6000ADA-PB 48GB 384-bit GDDR6 PCI Express 4.0 x16 Graphics Card",
+    "price": 7229,
+    "url": "https://www.newegg.com/pny-technologies-inc-vcnrtx6000ada-pb-rtx-6000-ada-48gb-graphics-card/p/N82E16814133886"
+   },
+   {
+    "title": "PNY NVIDIA RTX 6000 Ada Graphics card NVIDIA RTX 6000 Ada 48 GB GDDR6 PCIe 4.0 x16 4 x DisplayPort Model VCNRTX6KADAOVE-PB",
+    "price": 8998,
+    "url": "https://www.newegg.com/p/1FT-000P-00626"
+   }
+  ],
+  "central": [
+   {
+    "title": "PNY NVIDIA RTX 6000 Ada Graphics Card 48GB GDDR6 with ECC 18176 CUDA Cores PCI Express 4.0 x16 300W - VCNRTX6000ADA-PB",
+    "price": 7499.99,
+    "url": "https://www.centralcomputer.com/pny-nvidia-quadro-rtx-6000-ada-graphics-card-48gb-gddr6-with-ecc-18176-cuda-cores-pci-express-4-0-x16-300w-vcnrtx6000ada-pb.html"
+   }
+  ],
+  "pcsp": [
+   {
+    "title": "PNY - NVIDIA Quadro - RTX 6000 ADA (48GB) - GDDR6 384 bit (VCNRTX6000ADA-PB)",
+    "price": 5599.99,
+    "url": "https://pcserverandparts.com/pny-nvidia-quadro-rtx-6000-ada-48gb-gddr6-384-bit-vcnrtx6000ada-pb/?searchid=4144008&search_query=NVIDIA+RTX+6000+Ada"
+   }
+  ]
+ },
+ "rx-7900-xtx": {
+  "newegg": [
+   {
+    "title": "ASRock Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 Video Card RX7900XTX 24G - OEM",
+    "price": 929.99,
+    "url": "https://www.newegg.com/asrock-radeon-rx7900xtx-24g-radeon-rx-7900-xtx-24gb-graphics-card-triple-fans/p/N82E16814930084"
+   },
+   {
+    "title": "SAPPHIRE Tech PULSE Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 x16 ATX Video Card 11322-02-20G",
+    "price": 1199.99,
+    "url": "https://www.newegg.com/sapphire-tech-pulse-11322-02-20g-radeon-rx-7900-xtx-24gb-graphics-card-triple-fans/p/27N-0005-00251"
+   },
+   {
+    "title": "SAPPHIRE Tech NITRO+ Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 x16 ATX Video Card 11322-01-40G",
+    "price": 1205,
+    "url": "https://www.newegg.com/sapphire-tech-nitro-11322-01-40g-radeon-rx-7900-xtx-24gb-graphics-card-triple-fans/p/27N-0005-00250"
+   },
+   {
+    "title": "SAPPHIRE NITRO+ Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 x16 ATX Graphics Card 11322-01-40G",
+    "price": 1220,
+    "url": "https://www.newegg.com/sapphire-tech-nitro-11322-01-40g-radeon-rx-7900-xtx-24gb-graphics-card-triple-fans/p/N82E16814202428"
+   },
+   {
+    "title": "Gigabyte Radeon RX 7900 XTX GAMING OC 24G video card PCI Express 4.0 X16 HDMI GV-R79XTXGAMING OC-24GD",
+    "price": 1262.94,
+    "url": "https://www.newegg.com/p/27N-0022-000R8"
+   },
+   {
+    "title": "SAPPHIRE Tech NITRO+ Radeon RX 7900 XTX OC 24GB Graphics Card, 384 bit GDDR6G PCI-Express 4.0 x16 ATX Video Card, RDNA 3 Architecture, vapor-X, for deepseek, ai model, silver",
+    "price": 1270,
+    "url": "https://www.newegg.com/p/27N-0005-001W7"
+   }
+  ]
+ },
+ "l40s": {
+  "newegg": [
+   {
+    "title": "PNY NVIDIA L40S Graphic Card - 48 GB GDDR6 - PCIe 4.0 x16 - 2x Slot - Ada - NVL40STCGPU-KIT",
+    "price": 8095,
+    "url": "https://www.newegg.com/p/N82E16888899002"
+   },
+   {
+    "title": "NVIDIA L40S Graphic Card - 48 GB GDDR6 - PCIe 4.0 x16 - 2x Slot - Ada - 900-2G133-0080-000",
+    "price": 8095.99,
+    "url": "https://www.newegg.com/p/N82E16888892001"
+   },
+   {
+    "title": "PNY NVIDIA L40S Graphic Card - 48 GB GDDR6 - PCIe 4.0 x16 - 2x Slot - Ada -",
+    "price": 9970,
+    "url": "https://www.newegg.com/p/N82E16814133876"
+   }
+  ],
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-2G133-0080-000 Graphics Processing unit (GPU) L40S 48GB Memory PCIe Gen4 x16 4x DisplayPort",
+    "price": 7530,
+    "url": "https://www.wiredzone.com/shop/product/10029703-nvidia-900-2g133-0080-000-graphics-processing-unit-gpu-l40s-48gb-memory-pcie-gen4-x16-4x-displayport-12769?search=NVIDIA+L40S"
+   }
+  ],
+  "central": [
+   {
+    "title": "PNY NVL40STCGPU-KIT Nvidia L40S Graphics Card 48 GB GDDR6 PCI Express 4.0 x16 Dual Slot",
+    "price": 7989.99,
+    "url": "https://www.centralcomputer.com/pny-nvl40stcgpu-kit-nvidia-l40s-graphics-card-48-gb-gddr6-pci-express-4-0-x16-dual-slot.html"
+   }
+  ]
+ },
+ "a100-80gb": {
+  "newegg": [
+   {
+    "title": "PNY NVIDIA A100 - 80 GB Graphic Card - ECC - 2x Slot - PCIe 4.0 x16 - NVA100TCGPU80-KIT",
+    "price": 17789,
+    "url": "https://www.newegg.com/p/N82E16814133879"
+   },
+   {
+    "title": "PNY NVIDIA A100 - 80 GB Graphic Card - ECC - 2x Slot - PCIe 4.0 x16 - NVA100TCGPU80-KIT",
+    "price": 17789,
+    "url": "https://www.newegg.com/p/N82E16814133879?Item=9SIATRNKE65733&amp;cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKE65733-_-NVIDIA A100 80GB-_-80gb|a100-_-3"
+   }
+  ],
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-21001-0060-000 Graphics Processing Unit (GPU) A100 80GB HBM2e Memory PCIe Liquid Cooling",
+    "price": 14006,
+    "url": "https://www.wiredzone.com/shop/product/10025503-nvidia-900-21001-0060-000-graphics-processing-unit-gpu-a100-80gb-hbm2e-memory-pcie-liquid-cooling-10756?search=NVIDIA+A100+80GB"
+   }
+  ]
+ },
+ "h100-pcie": {
+  "newegg": [
+   {
+    "title": "PNY NVIDIA H100 Graphic Card - 80 GB HBM3 - PCIe 5.0 x16 - 2 Slot - Passive - NVH100TCGPU-KIT",
+    "price": 32879,
+    "url": "https://www.newegg.com/p/N82E16814133874"
+   },
+   {
+    "title": "NVIDIA H100 80GB HBM2e PCIE Express GPU Graphics Card New",
+    "price": 32879,
+    "url": "https://www.newegg.com/p/1VK-0066-00022"
+   }
+  ],
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-21010-0000-000 Graphics Processing unit (GPU) H100 80GB HBM2e Memory FHFL",
+    "price": 26879,
+    "url": "https://www.wiredzone.com/shop/product/10025500-nvidia-900-21010-0000-000-graphics-processing-unit-gpu-h100-80gb-hbm2e-memory-fhfl-10753?search=NVIDIA+H100+80GB+PCIe"
+   }
+  ]
+ },
+ "rtx-pro-6000": {
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-2G153-0000-000 RTX PRO 6000 Blackwell Server Edition Graphics Card 96GB GDDR7 Memory PCI-Express 5.0 x16 Air-Cooled",
+    "price": 12093,
+    "url": "https://www.wiredzone.com/shop/product/10032818-nvidia-900-2g153-0000-000-rtx-pro-6000-blackwell-server-edition-graphics-card-96gb-gddr7-memory-pci-express-5-0-x16-air-cooled-15515?search=NVIDIA+RTX+PRO+6000+Blackwell"
+   },
+   {
+    "title": "NVIDIA 900-2G153-0010-000 RTX PRO 6000 Blackwell Server Edition Graphics Card 96GB GDDR7 ECC Memory PCI Express 5.0 x16 Passive",
+    "price": 12093,
+    "url": "https://www.wiredzone.com/shop/product/10034348-nvidia-900-2g153-0010-000-rtx-pro-6000-blackwell-server-edition-graphics-card-96gb-gddr7-ecc-memory-pci-express-5-0-x16-passive-17045?search=NVIDIA+RTX+PRO+6000+Blackwell"
+   },
+   {
+    "title": "NVIDIA 900-5G153-0000-000 RTX PRO 6000 Blackwell Max-Q Workstation Edition GPU 96GB GDDR7 With ECC Memory PCI Express 5.0 x16 Quad Display",
+    "price": 12118,
+    "url": "https://www.wiredzone.com/shop/product/10034042-nvidia-900-5g153-0000-000-rtx-pro-6000-blackwell-max-q-workstation-edition-gpu-96gb-gddr7-with-ecc-memory-pci-express-5-0-x16-quad-display-16739?search=NVIDIA+RTX+PRO+6000+Blackwell"
+   }
+  ],
+  "central": [
+   {
+    "title": "NVIDIA RTX Pro 6000 Blackwell Max-Q Edition 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 300W - Bulk 900-5G153-2200-000-01Graphics Card - OEM",
+    "price": 11899.99,
+    "url": "https://www.centralcomputer.com/nvidia-rtx-pro-6000-blackwell-max-q-edition-96gb-gddr7-24064-cuda-cores-pci-express-5-0-x16-300w-bulk-900-5g153-2200-000-01.html"
+   },
+   {
+    "title": "NVIDIA RTX Pro 6000 Blackwell Workstation 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 600W - Bulk 900-5G144-2200-000-01Graphics Card",
+    "price": 11899.99,
+    "url": "https://www.centralcomputer.com/nvidia-rtx-pro-6000-blackwell-workstation-96gb-gddr7-24-064-cuda-cores-pci-express-5-0-x16-600w-bulk-900-5g144-2200-000-01.html"
+   },
+   {
+    "title": "PNY NVIDIA RTX Pro 6000 Blackwell Workstation 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 600W - VCNRTXPRO6000B-PBGraphics Card",
+    "price": 11899.99,
+    "url": "https://www.centralcomputer.com/pny-nvidia-rtx-pro-6000-graphics-card-96gb-gddr6-24-064-cuda-cores-pci-express-5-0-x16-600w-vcnrtxpro6000b-pb.html"
+   },
+   {
+    "title": "NVIDIA RTX Pro 6000 Blackwell Workstation 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 600W - 900-5G144-2500-000Graphics Card",
+    "price": 11999.99,
+    "url": "https://www.centralcomputer.com/nvidia-rtx-pro-6000-96gb-blackwell-workstation-edition-gddr7-24064-cuda-cores-pci-express-5-0-x16-600w-blackwell.html"
+   },
+   {
+    "title": "NVIDIA RTX Pro 6000 Blackwell Max-Q Edition 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 300W - 900-5G153-2500-000Graphics Card Retail",
+    "price": 11999.99,
+    "url": "https://www.centralcomputer.com/nvidia-rtx-pro-6000-96gb-blackwell-max-q-edition-gddr7-24-064-cuda-cores-pci-express-5-0-x16-600w-blackwell-workstation.html"
+   },
+   {
+    "title": "PNY NVIDIA RTX Pro 6000 Blackwell Max-Q 96GB GDDR7 24064 CUDA Cores PCI Express 5.0 x16 300W Graphics CardVCNRTXPRO6000BQ-PB",
+    "price": 11999.99,
+    "url": "https://www.centralcomputer.com/pny-nvidia-rtx-pro-6000-graphics-card-96gb-max-q-gddr6-24-064-cuda-cores-pci-express-5-0-x16-600w-vcnrtxpro6000bq-pb.html"
+   }
+  ]
+ },
+ "h100-nvl": {
+  "wiredzone": [
+   {
+    "title": "NVIDIA 900-21010-0020-000 H100 NVL 94GB Memory Passive Cooling GPU-NVH100NVL",
+    "price": 26768,
+    "url": "https://www.wiredzone.com/shop/product/10029542-nvidia-900-21010-0020-000-h100-nvl-94gb-memory-passive-cooling-gpu-nvh100nvl-12609?search=NVIDIA+H100+NVL"
+   }
+  ]
+ },
+ "rtx-4090": {
+  "newegg": [
+   {
+    "title": "GIGABYTE AORUS GeForce RTX 4090 MASTER 24GB GDDR6X PCI Express 4.0 x16 ATX Video Card GV-N4090AORUS M-24GD",
+    "price": 3399,
+    "url": "https://www.newegg.com/p/1FT-000A-005R4"
+   },
+   {
+    "title": "MSI Ventus GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Graphics Card RTX 4090 VENTUS 3X E 24G OC",
+    "price": 3465,
+    "url": "https://www.newegg.com/msi-rtx-4090-ventus-3x-e-24g-oc-geforce-rtx-4090-24gb-graphics-card-triple-fans/p/N82E16814137842"
+   },
+   {
+    "title": "MSI Gaming GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Video Card RTX 4090 GAMING TRIO 24G",
+    "price": 3469,
+    "url": "https://www.newegg.com/p/1FT-0009-00B51"
+   },
+   {
+    "title": "GIGABYTE Gaming GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 x16 ATX Video Card GV-N4090GAMING OC-24GD",
+    "price": 3495,
+    "url": "https://www.newegg.com/gigabyte-gv-n4090gaming-oc-24gd-geforce-rtx-4090-24gb-graphics-card-triple-fans/p/N82E16814932550"
+   },
+   {
+    "title": "MSI Suprim GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Graphics Card RTX 4090 SUPRIM LIQUID 24G",
+    "price": 3495,
+    "url": "https://www.newegg.com/msi-rtx-4090-suprim-liquid-24g-geforce-rtx-4090-24gb-graphics-card-liquid-cooler/p/N82E16814137779"
+   },
+   {
+    "title": "GIGABYTE GAMING GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 ATX Video Card GeForce RTX 4090 GAMING OC 24G (rev. 1.0/1.1)",
+    "price": 3495,
+    "url": "https://www.newegg.com/p/1FT-000A-00694"
+   }
+  ],
+  "central": [
+   {
+    "title": "MSI Infinite RS 13NUI-419US Gaming Desktop Intel Core-i7 13700KF 32GB DDR5 RAM Nvidia GeForce RTX 4090 Graphics Card 2TB NVMe Gen 4 Solid State Drive 802.11ax Wi-Fi BT 5.2 Windows 11 Pro",
+    "price": 3299.99,
+    "url": "https://www.centralcomputer.com/msi-infinite-rs-13nui-419us-gaming-desktop-intel-core-i7-13700kf-32gb-ddr5-ram-nvidia-geforce-rtx-4090-graphics-card.html"
+   }
+  ]
+ },
+ "rx-9060-xt": {
+  "newegg": [
+   {
+    "title": "XFX Swift AMD Radeon RX 9060 XT OC Gaming Edition with 16GB GDDR6 HDMI 2xDP, AMD RDNA 4",
+    "price": 459.99,
+    "url": "https://www.newegg.com/xfx-swift-rx-96tsw16bq-radeon-rx-9060-xt-16gb-graphics-card-double-fans/p/N82E16814150910"
+   },
+   {
+    "title": "ASRock Challenger Radeon RX 9060 XT 16GB GDDR6 PCI Express 5.0 x16 Graphics Card RX9060XT CL 16GO RX 9060XT",
+    "price": 459.99,
+    "url": "https://www.newegg.com/asrock-challenger-rx9060xt-cl-16go-radeon-rx-9060-xt-16gb-graphics-card-double-fans/p/N82E16814930140"
+   },
+   {
+    "title": "GIGABYTE Gaming Radeon RX 9060 XT 16GB GDDR6 PCI Express 5.0 x16 ATX Graphics Card GV-R9060XTGAMING OC-16GD RX 9060XT",
+    "price": 459.99,
+    "url": "https://www.newegg.com/gigabyte-gv-r9060xtgaming-oc-16gd-radeon-rx-9060-xt-16gb-graphics-card-triple-fans/p/N82E16814932806"
+   },
+   {
+    "title": "SAPPHIRE PULSE Radeon RX 9060 XT 16GB GDDR6 PCI Express 5.0 x16 ATX Graphics Card 11350-03-20G",
+    "price": 469.99,
+    "url": "https://www.newegg.com/sapphire-tech-pulse-11350-03-20g-radeon-rx-9060-xt-16gb-graphics-card-double-fans/p/N82E16814202457"
+   },
+   {
+    "title": "ASUS Dual Radeon RX 9060 XT 16GB GDDR6 PCI Express 5.0 x16 ATX Graphics Card DUAL-RX9060XT-16G",
+    "price": 479.99,
+    "url": "https://www.newegg.com/asus-dual-rx9060xt-16g-radeon-rx-9060-xt-16gb-graphics-card-double-fans/p/N82E16814126817"
+   },
+   {
+    "title": "XFX OC White Gaming Edition Radeon RX 9060 XT 16GB GDDR6 PCI Express 5.0 Graphics Card RX-96TSW16WQ",
+    "price": 489.99,
+    "url": "https://www.newegg.com/xfx-oc-white-gaming-edition-rx-96tsw16wq-radeon-rx-9060-xt-16gb-graphics-card-double-fans/p/N82E16814150920"
+   }
+  ],
+  "central": [
+   {
+    "title": "SAPPHIRE 11350-03-20G PULSE Radeon RX 9060 XT 16GB Graphics Card PCIe 5.0 1x DisplayPort 2.1 2x HDMI 2.1 16-pin Power Connectors",
+    "price": 449.99,
+    "url": "https://www.centralcomputer.com/sapphire-11350-03-20g-pulse-radeon-rx-9060-xt-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASRock RX9060XT CL 16GO AMD Radeon RX 9060 XT Challenger 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 449.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9060xt-cl-16go-amd-radeon-rx-9060-xt-challenger-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASRock RX9060XT SL 16GO AMD Radeon RX 9060 XT Steel Legend 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 469.99,
+    "url": "https://www.centralcomputer.com/asrock-rx9060xt-sl-16go-amd-radeon-rx-9060-xt-steel-legend-16gb-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASUS DUAL-RX9060XT-16G AMD Radeon RX 9060 XT Dual Edition 16G Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 489.99,
+    "url": "https://www.centralcomputer.com/asus-dual-rx9060xt-16g-amd-radeon-rx-9060-xt-dual-edition-16g-graphics-card-pcie-5-0-3x-displayport-2-1-1x-hdmi-2-1.html"
+   },
+   {
+    "title": "ASUS PRIME-RX9060XT-O16G AMD Radeon RX 9060 XT Prime OC 16GB Graphics Card PCIe 5.0 3x DisplayPort 2.1 1x HDMI 2.1 16-pin Power Connectors",
+    "price": 529.99,
+    "url": "https://www.centralcomputer.com/asus-prime-rx9060xt-o16g-amd-radeon-rx-9060-xt-prime-oc-16gb-graphics-card.html"
+   }
+  ]
+ },
+ "arc-b580": {
+  "newegg": [
+   {
+    "title": "ASRock Challenger Arc B580 12GB GDDR6 PCI Express 4.0 x8 ATX Graphics Card B580 CL 12GO",
+    "price": 309.99,
+    "url": "https://www.newegg.com/asrock-challenger-b580-cl-12go-arc-b580-12gb-graphics-card-double-fans/p/N82E16814930131"
+   },
+   {
+    "title": "ONIX LUMI Arc B580 12GB GDDR6 PCI Express 4.0 x8 ATX Graphics Card 8346-00278",
+    "price": 309.99,
+    "url": "https://www.newegg.com/onix-lumi-8346-00278-arc-b580-12gb-graphics-card-double-fans/p/N82E16814987002"
+   },
+   {
+    "title": "Intel Arc B580 Limited Edition Graphics Card Black GDDR6 2670MHz Dual Fan Video Card (192-bit, PCI-Express 4.0 x8, One HDMI Three DisplayPorts, Supports 4k)",
+    "price": 419,
+    "url": "https://www.newegg.com/p/3GM-0002-00002"
+   },
+   {
+    "title": "GUNNIR Intel Arc B580 Photon 12G OC W Gaming Graphics Card (PCIe 4.0, 12GB GDDR6, HDMI 2.1, DisplayPort 2.1) White",
+    "price": 429,
+    "url": "https://www.newegg.com/gunnir-b580-photon-b580-photon-12g-oc-w-intel-12gb-gddr6/p/3GM-0001-00008"
+   }
+  ],
+  "central": [
+   {
+    "title": "Asrock Intel Arc B580 STEEL LEGEND 12GB OC Graphic Card White",
+    "price": 299.99,
+    "url": "https://www.centralcomputer.com/asrock-intel-arc-b580-steel-legend-12gb-oc-graphic-card-white.html"
+   }
+  ]
+ },
+ "v100-32gb": {
+  "newegg": [
+   {
+    "title": "Refurbished NVIDIA/HP Tesla V100 PG500-216 32GB HBM2 PCIe 3.0 x16 Passive GPU Computational Accelerator for AI Machine Learning HPC Deep Learning 699-2G500-0216-400",
+    "price": 709,
+    "url": "https://www.newegg.com/nvidia-hp-tesla-v100-gpu/p/1WK-00TY-000B4"
+   },
+   {
+    "title": "Refurbished Nvidia Tesla V100 SXM2 32GB GV100 Volta HBM2 250W GPU Accelerator Card",
+    "price": 780,
+    "url": "https://www.newegg.com/p/1WK-00TY-00094"
+   },
+   {
+    "title": "Refurbished NVIDIA Tesla V100 32GB PCIe HBM2 GPU 250W CUDA Accelerator Graphics Card",
+    "price": 834.95,
+    "url": "https://www.newegg.com/p/1WK-00TY-00086"
+   },
+   {
+    "title": "T39XP DELL /NVIDIA Tesla V100 32GB HBM2 CUDA GPU PCIe Graphics Card 0T39XP",
+    "price": 1089,
+    "url": "https://www.newegg.com/p/1WK-0025-036E0"
+   },
+   {
+    "title": "NVIDIA Tesla V100 Graphic Card, 1 GPUs - 32 GB HBM2, TESLA V100 32GB, for ai Accelerator Card",
+    "price": 1089,
+    "url": "https://www.newegg.com/nvidia-tesla-v100-32gb-video-cards/p/1FT-0004-00957"
+   },
+   {
+    "title": "NVIDIA Tesla V100 Graphic Card, 1 GPUs - 32 GB HBM2, TESLA V100 32GB, for ai Accelerator Card",
+    "price": 1089,
+    "url": "https://www.newegg.com/nvidia-tesla-v100-32gb-video-cards/p/1FT-0004-009C6"
+   }
+  ]
+ },
+ "a100-40gb": {
+  "newegg": [
+   {
+    "title": "Refurbished NVIDIA A100 900-21001-0000-000 40GB 5120-bit HBM2 PCI Express 4.0 x16 FHFL Workstation Video Card",
+    "price": 4499.99,
+    "url": "https://www.newegg.com/nvidia-900-21001-0000-000-a100-40gb-video-cards-workstation/p/2VV-000H-000P9"
+   },
+   {
+    "title": "NVIDIA A100 900-21001-0000-000 40GB 5120-bit HBM2 PCI Express 4.0 x16 FHFL Workstation Video Card",
+    "price": 5599,
+    "url": "https://www.newegg.com/nvidia-900-21001-0000-000-a100-40gb-graphics-card/p/2VV-000H-000N4"
+   },
+   {
+    "title": "NVIDIA A100 900-21001-0000-000 40GB 5120-bit HBM2 PCI Express 4.0 x16 FHFL Graphics Card",
+    "price": 5599,
+    "url": "https://www.newegg.com/nvidia-900-21001-0000-000-a100-40gb-graphics-card/p/N82E16814132090"
+   },
+   {
+    "title": "PNY Nvidia A100 PCI-E 4.0 Ampere Tensor Core GPU 40GB Graphics Card",
+    "price": 5599,
+    "url": "https://www.newegg.com/p/1FT-0004-006M7"
+   },
+   {
+    "title": "Nvidia A100 40GB Tensor Core GPU",
+    "price": 5599,
+    "url": "https://www.newegg.com/p/0XP-00VH-00059"
+   }
+  ]
+ }
+}

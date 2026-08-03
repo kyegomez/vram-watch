@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* dark slate grey, tinted toward green — the whole app runs on this plane */
+  --color-bg: #0c1113;
+  --color-panel: #131a1d;
+  --color-panel2: #182124;
+  --color-edge: rgba(226, 238, 232, 0.08);
+  --color-edge2: rgba(226, 238, 232, 0.16);
+
+  --color-ink: #e6ece9;
+  --color-ink2: #93a39c;
+  --color-mute: #5e6d66;
+
+  /* the hint of green */
+  --color-acc: #3ecf8e;
+  --color-accdim: rgba(62, 207, 142, 0.12);
+  --color-neg: #e0685c;
+  --color-negdim: rgba(224, 104, 92, 0.1);
+
+  --color-grid: #212b2e;
+
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(62, 207, 142, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-acc);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---- signature: the price tape ---- */
+.tape-track {
+  display: flex;
+  width: max-content;
+  animation: tape 55s linear infinite;
+}
+.tape:hover .tape-track {
+  animation-play-state: paused;
+}
+@keyframes tape {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tape-track {
+    animation: none;
+  }
+}
+
+/* subtle scanline texture on the page plane */
+.plane {
+  background-image: linear-gradient(
+    rgba(226, 238, 232, 0.015) 1px,
+    transparent 1px
+  );
+  background-size: 100% 3px;
+}
