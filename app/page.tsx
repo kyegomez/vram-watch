@@ -47,7 +47,7 @@ const FAQ = [
   },
   {
     q: "Where do the prices come from?",
-    a: "Newegg, Central Computer, Wiredzone and PC Server & Parts are fetched live server-side. eBay and Best Buy come through their official APIs. Micro Center, B&H Photo and Amazon block automated requests, so those get deep search links instead of a quoted price.",
+    a: "Newegg, Central Computer, Wiredzone, PC Server & Parts, TechMikeNY, Server Part Deals and the Supermicro store are fetched live server-side. eBay and Best Buy come through their official APIs. Micro Center, B&H Photo and Amazon refuse automated requests, so those get deep search links instead of a quoted price. The sources page lists every one of them and what it covers.",
   },
   {
     q: "Is the price history real?",
@@ -193,7 +193,7 @@ export default function Dashboard() {
           id="board-heading"
           className="mb-3 font-mono text-xs tracking-widest text-mute uppercase"
         >
-          All tracked GPUs
+          All tracked parts
         </h2>
         <MarketBoard rows={rows} />
       </section>

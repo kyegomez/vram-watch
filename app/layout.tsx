@@ -121,9 +121,15 @@ export default function RootLayout({
                 {SITE_NAME}
               </span>
             </Link>
-            <p className="font-mono text-xs text-mute">
-              USD · live street prices
-            </p>
+            <nav aria-label="Main" className="flex items-baseline gap-5">
+              <Link
+                href="/sources"
+                className="font-mono text-xs text-mute transition-colors hover:text-acc"
+              >
+                sources
+              </Link>
+              <p className="font-mono text-xs text-mute">USD · live street prices</p>
+            </nav>
           </div>
         </header>
 
@@ -135,7 +141,12 @@ export default function RootLayout({
 
         <footer className="border-t border-edge">
           <div className="mx-auto max-w-6xl space-y-2 px-4 py-8 font-mono text-xs text-mute sm:px-6">
-            <p>Sources: {SOURCES.map((s) => s.name).join(" · ")}.</p>
+            <p>
+              <Link href="/sources" className="hover:text-acc">
+                Sources
+              </Link>
+              : {SOURCES.map((s) => s.name).join(" · ")}.
+            </p>
             <p>
               Prices update automatically and reflect the lowest matching
               listing at each source. Availability and final pricing are set by

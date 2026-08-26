@@ -28,10 +28,18 @@ export const newegg: SourceAdapter = {
       const value = parsePrice(`${price[1]}.${price[2] || "00"}`);
       if (!Number.isFinite(value) || value <= 0) continue;
 
+      // In-stock cells offer "Add to cart"; unbuyable ones swap in an
+      // out-of-stock or notify button. Only assert false when it's explicit.
+      const button = cell.match(/item-button-area[\s\S]{0,240}/)?.[0] ?? "";
+      const unbuyable = /out of stock|sold out|auto notify|coming soon|pre-?order/i.test(
+        button
+      );
+
       listings.push({
         title: stripTags(anchor[2]),
         price: value,
         url: anchor[1],
+        ...(unbuyable ? { inStock: false } : {}),
       });
     }
     return listings;

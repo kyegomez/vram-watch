@@ -28,6 +28,7 @@ const TABS = [
   { key: "consumer", label: "Consumer" },
   { key: "workstation", label: "Workstation" },
   { key: "datacenter", label: "Datacenter AI" },
+  { key: "system", label: "GPU systems" },
 ];
 
 type View = "gallery" | "table";

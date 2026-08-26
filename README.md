@@ -6,20 +6,28 @@ buy links for every part — RTX 5090 to H200.
 
 ## How it works
 
-- **Live sources (scraped server-side, verified working):** Newegg,
+For the full walkthrough — the sweep, the filter gate, the store, and how
+the crawler surface is generated — see **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
+- **Live sources (fetched server-side, verified working):** Newegg,
   Central Computer, Wiredzone (Supermicro-authorized — carries H100/A100/L40S),
-  and PC Server & Parts (refurb datacenter/workstation specialist — the
-  secondary-market signal for V100/A100-class cards).
+  PC Server & Parts, TechMikeNY and Server Part Deals (refurb specialists, read
+  through Shopify's structured product JSON — the secondary-market signal for
+  V100/A6000-class cards), and the **Supermicro store**, the manufacturer
+  selling direct, which is what lets the board price whole GPU systems.
 - **Official APIs (free keys, optional):** eBay
   [Browse API](https://developer.ebay.com) for the used market (A100s, 4090s,
   SXM modules, gray-market parts) and the
   [Best Buy Products API](https://developer.bestbuy.com) for consumer cards.
-- **Link-only sources:** Micro Center, B&H, Amazon bot-block server requests,
-  so they get deep search links instead of fetched prices. (Also probed and
+- **Link-only sources:** Micro Center, B&H and Amazon bot-block server
+  requests, so they get deep search links instead of fetched prices. Micro
+  Center 403s a server on every path including `robots.txt`; the only ways
+  around that are UA spoofing or proxy evasion, so it stays link-only. (Also probed and
   blocked: Walmart, CDW, Insight, Connection, Server Supply, Provantage,
   IT Creations, Server Orbit, antonline; SabrePC renders client-side.)
-- Every refresh records the day's lowest matching listing per (GPU, source)
-  into `data/history.json` — **charts grow real history as the tracker runs**.
+- Every refresh accumulates into `data/history.json` as `{lo, hi, n, at}` per
+  (GPU, source, day), so `lo` is the day's **true** low across every sweep —
+  **charts grow real history as the tracker runs**.
   Matched listings with URLs land in `data/listings.json` and power the
   "where to buy" cards.
 
@@ -98,6 +106,7 @@ Everything a crawler consumes is generated, never hand-maintained:
 
 ```
 lib/gpus.ts          tracked parts: query, match/exclude regex, price band
+lib/adapters/shopify.ts  one factory covering any Shopify storefront
 lib/sources.ts       source registry (mode: scrape | api | link, chart color)
 lib/adapters/*.ts    one fetcher per source — the seam to add more
 lib/refresh.ts       sweep: fetch → filter → snapshot
@@ -105,7 +114,7 @@ lib/store.ts         data/*.json persistence (swap for a DB here)
 lib/quotes.ts        best price, 24h/7d/30d deltas, spark series
 lib/site.ts          canonical origin + brand/boilerplate copy
 lib/seo.ts           JSON-LD builders (Product, ItemList, FAQ, breadcrumbs)
-app/                 dashboard, /gpu/[slug], /api/refresh
+app/                 dashboard, /gpu/[slug], /sources, /api/refresh
 app/*-image.tsx      generated OG cards, favicon, apple icon
 app/{robots,sitemap,manifest}.ts   crawler surface
 ```

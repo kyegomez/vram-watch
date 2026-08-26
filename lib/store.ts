@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { History, ListingBook, StoreMeta } from "./types";
+import type { DayStat, History, ListingBook, StoredDay, StoreMeta } from "./types";
 
 /**
  * File-backed store. Real price history accrues here: every refresh writes
@@ -26,7 +26,32 @@ function writeJson(name: string, value: unknown): void {
   fs.writeFileSync(file(name), JSON.stringify(value, null, 1));
 }
 
-export const readHistory = (): History => readJson("history.json", {});
+/**
+ * Old files stored one bare number per day. Widen those into DayStat on read
+ * so a store written by any prior version still loads and charts.
+ */
+const normalizeDay = (v: StoredDay, day: string): DayStat =>
+  typeof v === "number"
+    ? { lo: v, hi: v, n: 1, at: `${day}T00:00:00.000Z` }
+    : v;
+
+export const readHistory = (): History => {
+  const raw = readJson<Record<string, Record<string, Record<string, StoredDay>>>>(
+    "history.json",
+    {}
+  );
+  const out: History = {};
+  for (const [slug, bySource] of Object.entries(raw)) {
+    out[slug] = {};
+    for (const [sourceId, days] of Object.entries(bySource)) {
+      out[slug][sourceId] = {};
+      for (const [day, v] of Object.entries(days)) {
+        out[slug][sourceId][day] = normalizeDay(v, day);
+      }
+    }
+  }
+  return out;
+};
 export const readListings = (): ListingBook => readJson("listings.json", {});
 export const readMeta = (): StoreMeta =>
   readJson("meta.json", { lastRefresh: null, errors: {} });

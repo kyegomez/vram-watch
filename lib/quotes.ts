@@ -35,8 +35,9 @@ export function buildQuote(gpu: Gpu): GpuQuote {
   const series: SourceSeries[] = gpu.sources
     .map((sourceId) => {
       const days = history[sourceId] ?? {};
+      // `lo` is the day's true low across every sweep — that's the series.
       const points = Object.entries(days)
-        .map(([date, price]) => ({ date, price }))
+        .map(([date, stat]) => ({ date, price: stat.lo }))
         .sort((a, b) => (a.date < b.date ? -1 : 1));
       return {
         sourceId,
@@ -60,10 +61,23 @@ export function buildQuote(gpu: Gpu): GpuQuote {
     }
   }
 
+  // Today's observed spread across sources — how much the low is worth chasing.
+  const todayStats = today
+    ? gpu.sources
+        .map((id) => history[id]?.[today.date])
+        .filter((d): d is NonNullable<typeof d> => Boolean(d))
+    : [];
+  const observations = todayStats.reduce((n, d) => n + d.n, 0);
+  const spreadHigh = todayStats.length > 0
+    ? Math.max(...todayStats.map((d) => d.hi))
+    : null;
+
   return {
     slug: gpu.slug,
     best: bestPrice,
     bestSourceId,
+    spreadHigh,
+    observations,
     delta24h: deltaOver(best, 1),
     delta7d: deltaOver(best, 7),
     delta30d: deltaOver(best, 30),

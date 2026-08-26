@@ -7,18 +7,27 @@ import type { Gpu } from "./types";
  */
 
 const JUNK =
-  "water\\s?block|backplate|bracket|cable|adapter|riser|shroud|holder|stand|sticker|figure|box only|shield|laptop|notebook|egpu enclosure";
+  "water\\s?block|backplate|bracket|cable|adapter|riser|shroud|holder|stand|sticker|figure|box only|shield|laptop|notebook|egpu enclosure|" +
+  // multi-unit listings quote the lot price, not the card price
+  "\\b(lot|set|pair|bundle)\\s+of\\s+\\d+|\\b\\d+\\s?[-x]\\s?pack\\b|\\bqty\\s*[2-9]\\b";
 
 /** Datacenter searches surface whole servers and 8-GPU boards — keep the bare cards. */
 const DC_JUNK = `${JUNK}|barebone|superserver|rackmount|\\b[1248]u\\b|epyc|xeon|motherboard|baseboard|heatsink|tray|8.gpu|4.gpu`;
 
 // List order = chart series order; each order's colors are CVD-validated —
 // re-run the palette validator before reordering or adding chartable sources.
-const CONSUMER = ["newegg", "central", "ebay", "bestbuy", "microcenter", "bhphoto", "amazon"];
-const WORKSTATION = ["newegg", "wiredzone", "central", "ebay", "pcsp", "bhphoto"];
-const DATACENTER = ["wiredzone", "newegg", "ebay", "pcsp", "amazon"];
+/**
+ * GPU systems are whole boxes, so the card-level junk filters don't apply —
+ * what pollutes this category is accessories and the wrong SKU revision.
+ */
+const SYSTEM_JUNK =
+  "cable|rail kit|heatsink|hdd tray|io shield|power supply|license|accessory|accessories";
 
-export const GPUS: Gpu[] = [
+const CONSUMER = ["newegg", "central", "ebay", "bestbuy", "microcenter", "bhphoto", "amazon"];
+const WORKSTATION = ["newegg", "wiredzone", "central", "ebay", "pcsp", "techmikeny", "serverpartdeals", "bhphoto"];
+const DATACENTER = ["wiredzone", "newegg", "ebay", "pcsp", "techmikeny", "serverpartdeals", "amazon"];
+
+const CARDS: Gpu[] = [
   {
     slug: "rtx-5090",
     ticker: "RTX-5090",
@@ -29,6 +38,7 @@ export const GPUS: Gpu[] = [
     arch: "Blackwell",
     msrp: 1999,
     query: "GeForce RTX 5090",
+    modelQuery: "RTX 5090",
     match: "rtx\\s?5090",
     exclude: `${JUNK}|5090\\s?d\\b`,
     priceMin: 1900,
@@ -47,6 +57,7 @@ export const GPUS: Gpu[] = [
     arch: "Blackwell",
     msrp: 999,
     query: "GeForce RTX 5080",
+    modelQuery: "RTX 5080",
     match: "rtx\\s?5080",
     exclude: JUNK,
     priceMin: 850,
@@ -65,6 +76,7 @@ export const GPUS: Gpu[] = [
     arch: "Blackwell",
     msrp: 749,
     query: "GeForce RTX 5070 Ti",
+    modelQuery: "RTX 5070 Ti",
     match: "rtx\\s?5070\\s?ti",
     exclude: JUNK,
     priceMin: 620,
@@ -83,6 +95,7 @@ export const GPUS: Gpu[] = [
     arch: "Ada Lovelace",
     msrp: 1599,
     query: "GeForce RTX 4090",
+    modelQuery: "RTX 4090",
     match: "rtx\\s?4090",
     exclude: `${JUNK}|4090\\s?d\\b`,
     priceMin: 1300,
@@ -102,6 +115,7 @@ export const GPUS: Gpu[] = [
     arch: "RDNA 4",
     msrp: 599,
     query: "Radeon RX 9070 XT",
+    modelQuery: "RX 9070 XT",
     match: "rx\\s?9070\\s?xt",
     exclude: JUNK,
     priceMin: 520,
@@ -120,6 +134,7 @@ export const GPUS: Gpu[] = [
     arch: "RDNA 3",
     msrp: 999,
     query: "Radeon RX 7900 XTX",
+    modelQuery: "RX 7900 XTX",
     match: "(rx\\s?)?7900\\s?xtx",
     exclude: JUNK,
     priceMin: 600,
@@ -138,6 +153,7 @@ export const GPUS: Gpu[] = [
     arch: "RDNA 4",
     msrp: 349,
     query: "Radeon RX 9060 XT 16GB",
+    modelQuery: "RX 9060 XT",
     match: "rx\\s?9060\\s?xt",
     exclude: `${JUNK}|8\\s?gb`,
     priceMin: 280,
@@ -156,6 +172,7 @@ export const GPUS: Gpu[] = [
     arch: "Battlemage",
     msrp: 249,
     query: "Intel Arc B580",
+    modelQuery: "Arc B580",
     match: "\\bb580\\b",
     exclude: JUNK,
     priceMin: 200,
@@ -174,6 +191,7 @@ export const GPUS: Gpu[] = [
     arch: "Ada Lovelace",
     msrp: 6799,
     query: "NVIDIA RTX 6000 Ada",
+    modelQuery: "RTX 6000 Ada",
     match: "rtx\\s?6000\\s?ada",
     exclude: JUNK,
     priceMin: 4200,
@@ -192,6 +210,7 @@ export const GPUS: Gpu[] = [
     arch: "Blackwell",
     msrp: 8565,
     query: "NVIDIA RTX PRO 6000 Blackwell",
+    modelQuery: "RTX PRO 6000",
     match: "rtx\\s?pro\\s?6000",
     exclude: JUNK,
     priceMin: 6500,
@@ -199,6 +218,26 @@ export const GPUS: Gpu[] = [
     sources: WORKSTATION,
     blurb:
       "96 GB in a workstation slot. The new default for serious local inference without going to the datacenter aisle.",
+  },
+  {
+    slug: "rtx-a6000",
+    ticker: "RTX-A6000",
+    name: "NVIDIA RTX A6000",
+    vendor: "NVIDIA",
+    category: "workstation",
+    vram: "48 GB GDDR6",
+    arch: "Ampere",
+    msrp: 4650,
+    query: "NVIDIA RTX A6000",
+    modelQuery: "RTX A6000",
+    match: "rtx\\s?a6000",
+    exclude: `${JUNK}|a6000\\s?ada|nvlink|bridge`,
+    priceMin: 2200,
+    priceMax: 7000,
+    usedOk: true,
+    sources: WORKSTATION,
+    blurb:
+      "The Ampere workstation workhorse. 48 GB for well under half the price of its Ada successor, which is why it dominates the refurb market for local model work.",
   },
   {
     slug: "l40s",
@@ -210,6 +249,7 @@ export const GPUS: Gpu[] = [
     arch: "Ada Lovelace",
     msrp: null,
     query: "NVIDIA L40S",
+    modelQuery: "L40S",
     match: "\\bl40s\\b",
     exclude: JUNK,
     priceMin: 5000,
@@ -228,6 +268,7 @@ export const GPUS: Gpu[] = [
     arch: "Volta",
     msrp: null,
     query: "NVIDIA Tesla V100 32GB",
+    modelQuery: "Tesla V100",
     match: "v100.*32\\s?gb|32\\s?gb.*v100",
     exclude: `${DC_JUNK}|16\\s?gb`,
     priceMin: 400,
@@ -247,6 +288,7 @@ export const GPUS: Gpu[] = [
     arch: "Ampere",
     msrp: null,
     query: "NVIDIA A100 40GB",
+    modelQuery: "A100",
     match: "a100.*40\\s?gb|40\\s?gb.*a100",
     exclude: `${DC_JUNK}|80\\s?gb`,
     priceMin: 3000,
@@ -266,6 +308,7 @@ export const GPUS: Gpu[] = [
     arch: "Ampere",
     msrp: null,
     query: "NVIDIA A100 80GB",
+    modelQuery: "A100",
     match: "a100.*80\\s?gb|80\\s?gb.*a100",
     exclude: `${DC_JUNK}|40\\s?gb`,
     priceMin: 6000,
@@ -284,6 +327,7 @@ export const GPUS: Gpu[] = [
     arch: "Hopper",
     msrp: null,
     query: "NVIDIA H100 80GB PCIe",
+    modelQuery: "H100",
     match: "h100",
     exclude: `${DC_JUNK}|nvl|sxm|hgx`,
     priceMin: 15000,
@@ -302,6 +346,7 @@ export const GPUS: Gpu[] = [
     arch: "Hopper",
     msrp: null,
     query: "NVIDIA H100 SXM5",
+    modelQuery: "H100 SXM",
     match: "h100.*sxm|sxm.*h100",
     exclude: `${DC_JUNK}|nvl|pcie|hgx`,
     priceMin: 18000,
@@ -320,6 +365,7 @@ export const GPUS: Gpu[] = [
     arch: "Hopper",
     msrp: null,
     query: "NVIDIA H100 NVL",
+    modelQuery: "H100 NVL",
     match: "h100\\s?nvl",
     exclude: DC_JUNK,
     priceMin: 18000,
@@ -338,6 +384,7 @@ export const GPUS: Gpu[] = [
     arch: "Hopper",
     msrp: null,
     query: "NVIDIA H200",
+    modelQuery: "H200",
     match: "\\bh200\\b",
     exclude: `${DC_JUNK}|nvl|hgx|gh200|grace`,
     priceMin: 22000,
@@ -345,6 +392,25 @@ export const GPUS: Gpu[] = [
     sources: DATACENTER,
     blurb:
       "Hopper with the memory turned up — 141 GB of HBM3e makes it the inference favorite until Blackwell volume lands.",
+  },
+  {
+    slug: "h200-nvl",
+    ticker: "H200-NVL",
+    name: "NVIDIA H200 NVL 141GB",
+    vendor: "NVIDIA",
+    category: "datacenter",
+    vram: "141 GB HBM3e",
+    arch: "Hopper",
+    msrp: null,
+    query: "NVIDIA H200 NVL",
+    modelQuery: "H200 NVL",
+    match: "h200\\s?nvl",
+    exclude: `${DC_JUNK}|sxm|hgx|gh200|grace`,
+    priceMin: 20000,
+    priceMax: 48000,
+    sources: DATACENTER,
+    blurb:
+      "The air-cooled PCIe H200 — 141 GB of HBM3e without SXM plumbing. Unlike the SXM module it actually carries a retail price, which makes it the most quotable Hopper part on the board.",
   },
   {
     slug: "b200",
@@ -356,6 +422,7 @@ export const GPUS: Gpu[] = [
     arch: "Blackwell",
     msrp: null,
     query: "NVIDIA B200",
+    modelQuery: "B200",
     match: "\\bb200\\b",
     exclude: `${DC_JUNK}|gb200|grace|hgx|dgx`,
     priceMin: 25000,
@@ -374,6 +441,7 @@ export const GPUS: Gpu[] = [
     arch: "CDNA 3",
     msrp: null,
     query: "AMD Instinct MI300X",
+    modelQuery: "MI300X",
     match: "mi300x",
     exclude: DC_JUNK,
     priceMin: 8000,
@@ -392,6 +460,7 @@ export const GPUS: Gpu[] = [
     arch: "CDNA 3",
     msrp: null,
     query: "AMD Instinct MI325X",
+    modelQuery: "MI325X",
     match: "mi325x",
     exclude: DC_JUNK,
     priceMin: 9000,
@@ -410,6 +479,7 @@ export const GPUS: Gpu[] = [
     arch: "CDNA 4",
     msrp: null,
     query: "AMD Instinct MI355X",
+    modelQuery: "MI355X",
     match: "mi355x",
     exclude: DC_JUNK,
     priceMin: 15000,
@@ -428,6 +498,7 @@ export const GPUS: Gpu[] = [
     arch: "Da Vinci",
     msrp: null,
     query: "Huawei Ascend 910B",
+    modelQuery: "Ascend 910B",
     match: "ascend.*910|910b",
     exclude: DC_JUNK,
     priceMin: 4000,
@@ -439,11 +510,145 @@ export const GPUS: Gpu[] = [
   },
 ];
 
+const SYSTEMS: Gpu[] = [
+  {
+    slug: "sys-821ge-tnhr",
+    ticker: "SYS-821GE",
+    name: "Supermicro 8U HGX H200 SuperServer",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "8× H200 · 1,128 GB HBM3e",
+    arch: "Hopper HGX",
+    msrp: null,
+    query: "SYS-821GE-TNHR",
+    match: "sys-821ge-tnhr",
+    exclude: `${SYSTEM_JUNK}|-01-g2`,
+    priceMin: 150000,
+    priceMax: 600000,
+    sources: ["supermicro"],
+    blurb:
+      "The reference 8-way H200 training box: an HGX baseboard with 1.1 TB of HBM3e, sold complete. Buying the system is how most H200 silicon actually changes hands.",
+  },
+  {
+    slug: "sys-822gs-nb3rt",
+    ticker: "SYS-822GS",
+    name: "Supermicro 8U HGX B300 SuperServer",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "8× B300 · HGX baseboard",
+    arch: "Blackwell Ultra HGX",
+    msrp: null,
+    query: "SYS-822GS-NB3RT",
+    match: "sys-822gs-nb3rt",
+    exclude: `${SYSTEM_JUNK}|-01-g2`,
+    priceMin: 300000,
+    priceMax: 900000,
+    sources: ["supermicro"],
+    blurb:
+      "Blackwell Ultra in its shipping form — eight B300s on one HGX baseboard. The current top of Supermicro's public price list.",
+  },
+  {
+    slug: "as-8126gs-nb3rt",
+    ticker: "AS-8126GS",
+    name: "Supermicro 8U HGX B300 NVL8 A+ SuperServer",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "8× B300 NVL8",
+    arch: "Blackwell Ultra HGX",
+    msrp: null,
+    query: "AS -8126GS-NB3RT",
+    match: "8126gs-nb3rt",
+    exclude: `${SYSTEM_JUNK}|-01-g2`,
+    priceMin: 300000,
+    priceMax: 900000,
+    sources: ["supermicro"],
+    blurb:
+      "The EPYC-hosted twin of the 822GS — same B300 NVL8 baseboard, AMD platform underneath.",
+  },
+  {
+    slug: "as-8125gs-tnmr2",
+    ticker: "AS-8125GS",
+    name: "Supermicro 8U MI300X SuperServer",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "8× MI300X · 1,536 GB HBM3",
+    arch: "CDNA 3 OAM",
+    msrp: null,
+    query: "AS -8125GS-TNMR2",
+    match: "8125gs-tnmr2",
+    exclude: SYSTEM_JUNK,
+    priceMin: 120000,
+    priceMax: 500000,
+    sources: ["supermicro"],
+    blurb:
+      "AMD's answer at rack scale: eight MI300X OAM modules and 1.5 TB of HBM3 in one box. The cleanest public read on what an MI300X node actually costs.",
+  },
+  {
+    slug: "as-8126gs-tnmr",
+    ticker: "AS-8126GS-M",
+    name: "Supermicro 8U MI325X/MI350X SuperServer",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "8× MI325X or MI350X OAM",
+    arch: "CDNA 3/4 OAM",
+    msrp: null,
+    query: "AS -8126GS-TNMR",
+    match: "8126gs-tnmr(?!2)",
+    exclude: SYSTEM_JUNK,
+    priceMin: 120000,
+    priceMax: 500000,
+    sources: ["supermicro"],
+    blurb:
+      "The MI325X/MI350X generation of AMD's 8-way node — the successor platform to the 8125GS, and the only place either accelerator carries a public price.",
+  },
+  {
+    slug: "sys-422ga-nrt-g2",
+    ticker: "SYS-422GA",
+    name: "Supermicro 4U RTX PRO 6000 Gold Series",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "4× RTX PRO 6000 Blackwell",
+    arch: "Blackwell Server Edition",
+    msrp: null,
+    query: "SYS-422GA-NRT-01-G2",
+    match: "sys-422ga-nrt-01-g2",
+    exclude: SYSTEM_JUNK,
+    priceMin: 50000,
+    priceMax: 250000,
+    sources: ["supermicro"],
+    blurb:
+      "Four RTX PRO 6000 Blackwell Server Edition cards in a 4U — the workstation-class Blackwell you can rack without HGX plumbing.",
+  },
+  {
+    slug: "sys-212gb-fnr-g2",
+    ticker: "SYS-212GB",
+    name: "Supermicro 2U RTX 6000 PRO Gold Series",
+    vendor: "Supermicro",
+    category: "system",
+    vram: "2× RTX 6000 PRO Server Edition",
+    arch: "Blackwell Server Edition",
+    msrp: null,
+    query: "SYS-212GB-FNR-01-G2",
+    match: "sys-212gb-fnr-01-g2",
+    exclude: SYSTEM_JUNK,
+    priceMin: 25000,
+    priceMax: 140000,
+    sources: ["supermicro"],
+    blurb:
+      "The small end of the systems board — a 2U with two RTX 6000 PRO Server Edition cards, for inference and rendering rather than training.",
+  },
+];
+
+/** Everything tracked: bare cards first, whole systems after. */
+export const GPUS: Gpu[] = [...CARDS, ...SYSTEMS];
+
 export const gpuBySlug = (slug: string): Gpu | undefined =>
   GPUS.find((g) => g.slug === slug);
+
 
 export const CATEGORY_LABEL: Record<string, string> = {
   consumer: "Consumer",
   workstation: "Workstation",
   datacenter: "Datacenter AI",
+  system: "GPU system",
 };

@@ -144,14 +144,14 @@
     "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-shadow-3x-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814137935"
    },
    {
-    "title": "GIGABYTE Eagle GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card GV-N507TEAGLE OC-16GD",
-    "price": 1179.99,
-    "url": "https://www.newegg.com/gigabyte-gv-n507teagle-oc-16gd-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814932770"
-   },
-   {
     "title": "MSI Ventus GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card RTX 5070 TI 16G VENTUS 3X OC",
     "price": 1179.99,
     "url": "https://www.newegg.com/msi-rtx-5070-ti-16g-ventus-3x-oc-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814137933"
+   },
+   {
+    "title": "GIGABYTE Eagle GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card GV-N507TEAGLE OC-16GD",
+    "price": 1179.99,
+    "url": "https://www.newegg.com/gigabyte-gv-n507teagle-oc-16gd-geforce-rtx-5070-ti-16gb-graphics-card-triple-fans/p/N82E16814932770"
    },
    {
     "title": "GIGABYTE Eagle GeForce RTX 5070 Ti 16GB GDDR7 PCI Express 5.0 ATX Graphics Card GV-N507TEAGLEOC ICE-16GD",
@@ -340,11 +340,6 @@
  "l40s": {
   "newegg": [
    {
-    "title": "PNY NVIDIA L40S Graphic Card - 48 GB GDDR6 - PCIe 4.0 x16 - 2x Slot - Ada - NVL40STCGPU-KIT",
-    "price": 8095,
-    "url": "https://www.newegg.com/p/N82E16888899002"
-   },
-   {
     "title": "PNY NVIDIA L40S Graphic Card - 48 GB GDDR6 - PCIe 4.0 x16 - 2x Slot - Ada -",
     "price": 9970,
     "url": "https://www.newegg.com/p/N82E16814133876"
@@ -382,7 +377,7 @@
    {
     "title": "NVIDIA 900-21001-0060-000 Graphics Processing Unit (GPU) A100 80GB HBM2e Memory PCIe Liquid Cooling",
     "price": 14006,
-    "url": "https://www.wiredzone.com/shop/product/10025503-nvidia-900-21001-0060-000-graphics-processing-unit-gpu-a100-80gb-hbm2e-memory-pcie-liquid-cooling-10756?search=NVIDIA+A100+80GB"
+    "url": "https://www.wiredzone.com/shop/product/10025503-nvidia-900-21001-0060-000-graphics-processing-unit-gpu-a100-80gb-hbm2e-memory-pcie-liquid-cooling-10756?search=A100"
    }
   ]
  },
@@ -407,7 +402,7 @@
    {
     "title": "NVIDIA 900-2G153-0000-000 RTX PRO 6000 Blackwell Server Edition Graphics Card 96GB GDDR7 Memory PCI-Express 5.0 x16 Air-Cooled",
     "price": 12093,
-    "url": "https://www.wiredzone.com/shop/product/10032818-nvidia-900-2g153-0000-000-rtx-pro-6000-blackwell-server-edition-graphics-card-96gb-gddr7-memory-pci-express-5-0-x16-air-cooled-15515?search=NVIDIA+RTX+PRO+6000+Blackwell"
+    "url": "https://www.wiredzone.com/shop/product/10032818-nvidia-900-2g153-0000-000-rtx-pro-6000-blackwell-server-edition-graphics-card-96gb-gddr7-memory-pci-express-5-0-x16-air-cooled-15515?search=RTX+PRO+6000"
    }
   ],
   "central": [
@@ -448,7 +443,7 @@
    {
     "title": "NVIDIA 900-21010-0020-000 H100 NVL 94GB Memory Passive Cooling GPU-NVH100NVL",
     "price": 26768,
-    "url": "https://www.wiredzone.com/shop/product/10029542-nvidia-900-21010-0020-000-h100-nvl-94gb-memory-passive-cooling-gpu-nvh100nvl-12609?search=NVIDIA+H100+NVL"
+    "url": "https://www.wiredzone.com/shop/product/10029542-nvidia-900-21010-0020-000-h100-nvl-94gb-memory-passive-cooling-gpu-nvh100nvl-12609?search=H100+NVL"
    }
   ]
  },
@@ -470,11 +465,6 @@
     "url": "https://www.newegg.com/msi-rtx-4090-suprim-liquid-24g-geforce-rtx-4090-24gb-graphics-card-liquid-cooler/p/N82E16814137779"
    },
    {
-    "title": "MSI Gaming (MSI) GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Video Card RTX 4090 GAMING X TRIO 24G",
-    "price": 3495,
-    "url": "https://www.newegg.com/msi-rtx-4090-gaming-x-trio-24g-geforce-rtx-4090-graphics-card/p/1FT-0009-00AN6"
-   },
-   {
     "title": "GIGABYTE GAMING GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 ATX Video Card GeForce RTX 4090 GAMING OC 24G (rev. 1.0/1.1)",
     "price": 3495,
     "url": "https://www.newegg.com/p/1FT-000A-00694"
@@ -483,6 +473,11 @@
     "title": "GIGABYTE WINDFORCE GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 ATX Video Card GV-N4090WF3-24GD",
     "price": 3495,
     "url": "https://www.newegg.com/p/1FT-000A-005P8"
+   },
+   {
+    "title": "MSI Gaming (MSI) GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Video Card RTX 4090 GAMING X TRIO 24G",
+    "price": 3495,
+    "url": "https://www.newegg.com/msi-rtx-4090-gaming-x-trio-24g-geforce-rtx-4090-graphics-card/p/1FT-0009-00AN6"
    }
   ],
   "central": [
@@ -567,11 +562,6 @@
     "url": "https://www.newegg.com/onix-lumi-8346-00278-arc-b580-12gb-graphics-card-double-fans/p/N82E16814987002"
    },
    {
-    "title": "ASRock STEEL LEGEND Arc B580 12GB GDDR6 PCI Express 4.0 x8 ATX Graphics Card B580 SL 12GO",
-    "price": 309.99,
-    "url": "https://www.newegg.com/asrock-steel-legend-b580-sl-12go-arc-b580-12gb-graphics-card-triple-fans/p/N82E16814930132"
-   },
-   {
     "title": "GUNNIR Intel Arc B580 Photon 12G OC W Gaming Graphics Card (PCIe 4.0, 12GB GDDR6, HDMI 2.1, DisplayPort 2.1) White",
     "price": 429,
     "url": "https://www.newegg.com/gunnir-b580-photon-b580-photon-12g-oc-w-intel-12gb-gddr6/p/3GM-0001-00008"
@@ -617,6 +607,22 @@
     "price": 1089,
     "url": "https://www.newegg.com/nvidia-tesla-v100-32gb-video-cards/p/1FT-0004-00957"
    }
+  ],
+  "serverpartdeals": [
+   {
+    "title": "NVIDIA/HP Tesla V100  PG500-216 32GB HBM2 PCIe 3.0 x16 Refurbished Data Center AI Deep Learning HPC Accelerator GPU",
+    "price": 669,
+    "url": "https://serverpartdeals.com/products/hpe-nvidia-tesla-v100-pg500-216-32gb-hbm2-pcie-3-0-x16-refurbished-data-center-ai-deep-learning-hpc-accelerator-gpu?_pos=1&_psq=Tesla+V100&_psid=db798a9e7&_ss=e",
+    "inStock": true
+   }
+  ],
+  "techmikeny": [
+   {
+    "title": "Dell 0HR5WD Nvidia Tesla V100 32GB HBM2 250W PCIe 3.0 x16 FHHL Dual-Slot GPU",
+    "price": 899.95,
+    "url": "https://www.techmikeny.com/products/dell-0hr5wd-nvidia-tesla-v100-32gb-hbm2-250w-pcie-3-0-x16-fhhl-dual-slot-gpu?_pos=1&_psq=Tesla+V100&_psid=75d8a3cc5&_ss=e",
+    "inStock": true
+   }
   ]
  },
  "a100-40gb": {
@@ -645,6 +651,110 @@
     "title": "Nvidia A100 40GB Tensor Core GPU",
     "price": 5599,
     "url": "https://www.newegg.com/p/0XP-00VH-00059"
+   }
+  ]
+ },
+ "sys-821ge-tnhr": {
+  "supermicro": [
+   {
+    "title": "Supermicro 8U GPU SuperServer (SYS-821GE-TNHR)",
+    "price": 317613.64,
+    "url": "https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html"
+   }
+  ]
+ },
+ "sys-822gs-nb3rt": {
+  "supermicro": [
+   {
+    "title": "Supermicro 8U GPU SuperServer (SYS-822GS-NB3RT)",
+    "price": 533155.05,
+    "url": "https://store.supermicro.com/us_en/8u-gpu-superserver-sys-822gs-nb3rt.html"
+   }
+  ]
+ },
+ "as-8126gs-nb3rt": {
+  "supermicro": [
+   {
+    "title": "Supermicro 8U GPU SuperServer (AS -8126GS-NB3RT)",
+    "price": 555626.95,
+    "url": "https://store.supermicro.com/us_en/8u-gpu-superserver-as-8126gs-nb3rt.html"
+   }
+  ]
+ },
+ "as-8125gs-tnmr2": {
+  "supermicro": [
+   {
+    "title": "Supermicro 8U GPU SuperServer (AS -8125GS-TNMR2)",
+    "price": 275952.87,
+    "url": "https://store.supermicro.com/us_en/systems/gpu/8u-gpu-servers/8u-gpu-superserver-as-8125gs-tnmr2.html"
+   }
+  ]
+ },
+ "as-8126gs-tnmr": {
+  "supermicro": [
+   {
+    "title": "Supermicro 8U GPU SuperServer (AS -8126GS-TNMR)",
+    "price": 242569.19,
+    "url": "https://store.supermicro.com/us_en/8u-gpu-superserver-as-8126gs-tnmr.html"
+   }
+  ]
+ },
+ "sys-422ga-nrt-g2": {
+  "supermicro": [
+   {
+    "title": "Supermicro 4U Gold Series GPU SuperServer (SYS-422GA-NRT-01-G2)",
+    "price": 114440.04,
+    "url": "https://store.supermicro.com/us_en/4u-gpu-ai-gold-series-gpu-server-sys-422ga-nrt-01-g2.html"
+   }
+  ]
+ },
+ "sys-212gb-fnr-g2": {
+  "supermicro": [
+   {
+    "title": "Supermicro 2U Gold Series GPU Server (SYS-212GB-FNR-01-G2)",
+    "price": 60683.22,
+    "url": "https://store.supermicro.com/us_en/2u-gold-series-gpu-server-sys-212b-fnr-01-g2.html"
+   }
+  ]
+ },
+ "rtx-a6000": {
+  "wiredzone": [
+   {
+    "title": "NVIDIA PNY VCNRTXA6000-BLK Quadro RTXA6000 Graphics Card with 48GB GDDR6",
+    "price": 4731,
+    "url": "https://www.wiredzone.com/shop/product/10021351-nvidia-pny-vcnrtxa6000-blk-quadro-rtxa6000-graphics-card-with-48gb-gddr6-8171?search=RTX+A6000"
+   }
+  ],
+  "newegg": [
+   {
+    "title": "Refurbished NVIDIA RTX A6000 - Graphics card - RTX A6000 - 48GB GDDR6 384-bit, Support ECC, DP1.4a*4",
+    "price": 4849.99,
+    "url": "https://www.newegg.com/p/1FT-0004-008K4"
+   },
+   {
+    "title": "NVIDIA RTX A6000 - Graphics card - RTX A6000 - 48GB GDDR6 384-bit, Support ECC, DP1.4a*4",
+    "price": 5490,
+    "url": "https://www.newegg.com/p/1FT-0004-00833"
+   },
+   {
+    "title": "NVIDIA RTX A6000 48G Graphics Card, GDDR6 ECC Memory, 384-bit, Bandwidth 768 GB/s, DP1.4 x 4, Modeling and Rendering, Film and Video Post-Production",
+    "price": 5490,
+    "url": "https://www.newegg.com/p/1FT-0004-008Y3"
+   },
+   {
+    "title": "NVIDIA RTX A6000 48G Graphics Card, GDDR6 ECC Memory, 384-bit, Bandwidth 768 GB/s, DP1.4 x 4, Modeling and Rendering, Film and Video Post-Production",
+    "price": 5490,
+    "url": "https://www.newegg.com/p/1FT-0004-008Z7"
+   },
+   {
+    "title": "NVIDIA Quadro RTX A6000 48G Graphics Card, GDDR6 ECC Memory, 384-bit, Bandwidth 768 GB/s, DP1.4 x 4, Modeling and Rendering, Film and Video Post-Production",
+    "price": 5490,
+    "url": "https://www.newegg.com/p/1FT-0004-00927"
+   },
+   {
+    "title": "NVIDIA Quadro RTX A6000 48G Graphics Card, GDDR6 ECC Memory, 384-bit, Bandwidth 768 GB/s, DP1.4 x 4, Modeling and Rendering, Film and Video Post-Production",
+    "price": 5490,
+    "url": "https://www.newegg.com/p/1FT-0004-00926"
    }
   ]
  }

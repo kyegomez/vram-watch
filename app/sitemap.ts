@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "hourly",
       priority: 1,
     },
+    {
+      url: `${SITE_URL}/sources`,
+      lastModified,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
+    },
     ...GPUS.map((gpu) => ({
       url: `${SITE_URL}/gpu/${gpu.slug}`,
       lastModified,

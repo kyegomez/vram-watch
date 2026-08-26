@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "refresh": "tsx scripts/refresh.ts"
+    "refresh": "tsx scripts/refresh.ts",
+    "probe": "tsx scripts/probe.ts",
+    "why": "tsx scripts/why.ts",
+    "coverage": "tsx scripts/coverage.ts",
+    "palette": "tsx scripts/check-palette.ts"
   },
   "dependencies": {
     "next": "^15.4.5",
