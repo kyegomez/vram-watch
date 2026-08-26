@@ -60,6 +60,40 @@ EBAY_CLIENT_SECRET=...
 BESTBUY_API_KEY=...      # developer.bestbuy.com
 ```
 
+### Canonical origin
+
+Every canonical tag, `sitemap.xml` entry and absolute OG image URL is built
+from one value:
+
+```sh
+NEXT_PUBLIC_SITE_URL=https://vram.swarms.world
+```
+
+It defaults to `https://vram.swarms.world` (and picks up
+`VERCEL_PROJECT_PRODUCTION_URL` on Vercel), so set it only when deploying
+somewhere else — a wrong origin here silently poisons canonicals.
+
+## SEO
+
+Everything a crawler consumes is generated, never hand-maintained:
+
+- `lib/site.ts` — canonical origin, brand, boilerplate copy, keyword set.
+- `lib/seo.ts` — JSON-LD builders. Home ships `CollectionPage` + `ItemList`
+  (all tracked parts, with live prices) + `FAQPage`; every GPU page ships a
+  `Product` with an `AggregateOffer` built from that part's real listings
+  (per-seller `Offer`s, condition tagged from the source) plus a
+  `BreadcrumbList`. `Organization` + `WebSite` sit in the root layout.
+- Per-GPU `generateMetadata` puts the live price in the title and meta
+  description (`GeForce RTX 5090 Price — $4,400 (Live, Central Computer)`),
+  so the SERP snippet is current rather than boilerplate.
+- `app/opengraph-image.tsx` and `app/gpu/[slug]/opengraph-image.tsx` render
+  1200×630 social cards with `next/og`; the per-GPU card shows the current
+  best price and 24h move and revalidates every 10 minutes.
+- `app/icon.svg` (the green box), `app/apple-icon.tsx`, `app/manifest.ts`,
+  `app/robots.ts`, `app/sitemap.ts` (hourly, all 23 parts), `app/not-found.tsx`.
+- The FAQ copy on the home page and its `FAQPage` markup are rendered from
+  the same `FAQ` array — Google requires the two to match, so they can't drift.
+
 ## Architecture
 
 ```
@@ -69,7 +103,11 @@ lib/adapters/*.ts    one fetcher per source — the seam to add more
 lib/refresh.ts       sweep: fetch → filter → snapshot
 lib/store.ts         data/*.json persistence (swap for a DB here)
 lib/quotes.ts        best price, 24h/7d/30d deltas, spark series
+lib/site.ts          canonical origin + brand/boilerplate copy
+lib/seo.ts           JSON-LD builders (Product, ItemList, FAQ, breadcrumbs)
 app/                 dashboard, /gpu/[slug], /api/refresh
+app/*-image.tsx      generated OG cards, favicon, apple icon
+app/{robots,sitemap,manifest}.ts   crawler surface
 ```
 
 To add a source: write an adapter returning `{title, price, url}[]`, register

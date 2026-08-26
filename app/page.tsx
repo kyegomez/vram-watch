@@ -1,13 +1,71 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Delta from "@/components/Delta";
+import JsonLd from "@/components/JsonLd";
 import LiveStatus from "@/components/LiveStatus";
 import MarketBoard, { type BoardRow } from "@/components/MarketBoard";
 import { usd } from "@/lib/format";
 import { getAllQuotes } from "@/lib/quotes";
+import {
+  boardItemListSchema,
+  faqSchema,
+  jsonLdGraph,
+} from "@/lib/seo";
+import {
+  SITE_DESCRIPTION,
+  SITE_DESCRIPTION_SHORT,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_TITLE,
+} from "@/lib/site";
 import { readHistory, readMeta } from "@/lib/store";
 import { sourceById, SOURCES } from "@/lib/sources";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: SITE_TITLE,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "en_US",
+    url: "/",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION_SHORT,
+  },
+};
+
+/** Visible copy and FAQPage markup read from the same array — never drift. */
+const FAQ = [
+  {
+    q: "How often do GPU prices update?",
+    a: "The board re-sweeps every source in the background on a fixed interval (10 minutes by default) and the page polls for fresh data every 10 seconds, so the prices you see are the current lowest matching listings rather than a cached daily snapshot.",
+  },
+  {
+    q: "Where do the prices come from?",
+    a: "Newegg, Central Computer, Wiredzone and PC Server & Parts are fetched live server-side. eBay and Best Buy come through their official APIs. Micro Center, B&H Photo and Amazon block automated requests, so those get deep search links instead of a quoted price.",
+  },
+  {
+    q: "Is the price history real?",
+    a: "Yes. Every sweep records the day's lowest matching listing per GPU per source, so the charts are built from this tracker's own observations — not estimates or modeled prices. History deepens the longer the tracker runs.",
+  },
+  {
+    q: "Do you track datacenter AI GPUs like the H100, H200 and B200?",
+    a: "Yes. Alongside consumer cards like the RTX 5090 and RX 9070 XT, the board tracks workstation parts (RTX 6000 Ada, RTX PRO 6000, L40S) and datacenter accelerators including the A100, H100 PCIe/SXM/NVL, H200, B200, AMD MI300X/MI325X/MI355X and Huawei Ascend 910B.",
+  },
+  {
+    q: "Are used and refurbished GPU prices included?",
+    a: "The used market is tracked separately: eBay and PC Server & Parts carry used and refurbished inventory, while retailer series track new-condition pricing. End-of-life parts such as the RTX 4090 and V100 are allowed to quote used prices at retailers too, since that is how they actually trade.",
+  },
+  {
+    q: "Does clicking a buy link cost anything?",
+    a: "No. Buy links go straight to the seller's own listing at the price shown. Availability and final checkout pricing are always set by the seller.",
+  },
+];
 
 export default function Dashboard() {
   const all = getAllQuotes();
@@ -43,14 +101,28 @@ export default function Dashboard() {
 
   return (
     <div className="pt-10">
+      <JsonLd
+        data={jsonLdGraph(
+          {
+            "@type": "CollectionPage",
+            name: SITE_TITLE,
+            description: SITE_DESCRIPTION,
+            url: "/",
+          },
+          boardItemListSchema(all),
+          faqSchema(FAQ)
+        )}
+      />
+
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">
-            The GPU board<span className="text-acc">.</span>
+            GPU Aggregator<span className="text-acc">.</span>
           </h1>
           <p className="mt-2 max-w-xl text-sm text-ink2">
             Live street prices for gaming and AI silicon, aggregated across
-            retailers, resellers and the used market.
+            retailers, resellers and the used market — RTX 5090 to H200, with
+            real price history and direct buy links.
           </p>
         </div>
         <LiveStatus lastRefresh={meta.lastRefresh} />
@@ -85,8 +157,11 @@ export default function Dashboard() {
       )}
 
       {movers.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-mono text-xs tracking-widest text-mute uppercase">
+        <section className="mt-10" aria-labelledby="movers-heading">
+          <h2
+            id="movers-heading"
+            className="mb-3 font-mono text-xs tracking-widest text-mute uppercase"
+          >
             Movers — 24h best price
           </h2>
           <div className="grid gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-4">
@@ -94,6 +169,7 @@ export default function Dashboard() {
               <Link
                 key={gpu.slug}
                 href={`/gpu/${gpu.slug}`}
+                title={`${gpu.name} price — ${usd(quote.best!)}`}
                 className="group bg-panel px-4 py-4 transition-colors hover:bg-panel2"
               >
                 <p className="font-mono text-xs text-acc">{gpu.ticker}</p>
@@ -112,11 +188,69 @@ export default function Dashboard() {
         </section>
       )}
 
-      <section className="mt-10">
-        <h2 className="mb-3 font-mono text-xs tracking-widest text-mute uppercase">
+      <section className="mt-10" aria-labelledby="board-heading">
+        <h2
+          id="board-heading"
+          className="mb-3 font-mono text-xs tracking-widest text-mute uppercase"
+        >
           All tracked GPUs
         </h2>
         <MarketBoard rows={rows} />
+      </section>
+
+      <section className="mt-16 border-t border-edge pt-10" aria-labelledby="about-heading">
+        <h2 id="about-heading" className="text-xl font-semibold tracking-tight">
+          {SITE_TAGLINE}
+        </h2>
+        <div className="mt-4 grid gap-6 text-sm leading-relaxed text-ink2 md:grid-cols-2">
+          <p>
+            This board tracks the <strong className="text-ink">street price</strong>{" "}
+            of {all.length} graphics cards and AI accelerators — the price you
+            can actually pay right now, not MSRP. Consumer cards like the
+            GeForce RTX 5090, RTX 5080, RTX 5070 Ti and RTX 4090 sit alongside
+            AMD&apos;s Radeon RX 9070 XT and RX 7900 XTX and Intel&apos;s Arc
+            B580, so you can compare what every retailer is charging in one
+            place before you buy.
+          </p>
+          <p>
+            The same machinery covers the parts that don&apos;t have a retail
+            shelf price: NVIDIA A100, H100 (PCIe, SXM and NVL), H200 and B200,
+            AMD Instinct MI300X, MI325X and MI355X, and workstation cards like
+            the RTX PRO 6000 and L40S. For those, the used and reseller market
+            is the market — so eBay and refurb specialists are quoted right
+            next to authorized Supermicro inventory.
+          </p>
+          <p>
+            Every price on this page is the lowest matching listing at that
+            source, filtered per part so waterblocks, barebones servers and
+            8-GPU baseboards never pollute the series. Each sweep is recorded,
+            which is how the{" "}
+            <strong className="text-ink">24-hour, 7-day and 30-day moves</strong>{" "}
+            and the per-source charts on every GPU page are built from real
+            observations rather than estimates.
+          </p>
+          <p>
+            {snapshotCount.toLocaleString("en-US")} price snapshots have been
+            recorded so far across {liveSourceCount} live sources. Open any part
+            on the board for its full price history, a source-by-source
+            breakdown and direct links to the cheapest listing currently
+            available.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-14" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" className="text-xl font-semibold tracking-tight">
+          GPU price tracking FAQ
+        </h2>
+        <dl className="mt-5 grid gap-px border border-edge bg-edge md:grid-cols-2">
+          {FAQ.map(({ q, a }) => (
+            <div key={q} className="bg-panel px-5 py-4">
+              <dt className="text-sm font-semibold text-ink">{q}</dt>
+              <dd className="mt-2 text-sm leading-relaxed text-ink2">{a}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </div>
   );
