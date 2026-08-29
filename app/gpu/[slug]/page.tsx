@@ -5,9 +5,12 @@ import Delta from "@/components/Delta";
 import JsonLd from "@/components/JsonLd";
 import LiveStatus from "@/components/LiveStatus";
 import PriceChart, { type ChartSeries } from "@/components/PriceChart";
-import { pct, usd } from "@/lib/format";
+import { breakevenHours, humanHours, pct, rate, usd } from "@/lib/format";
 import { CATEGORY_LABEL, GPUS, gpuBySlug } from "@/lib/gpus";
 import { buildQuote } from "@/lib/quotes";
+import { rentModelForBuySlug } from "@/lib/rentals/models";
+import { providerById } from "@/lib/rentals/providers";
+import { buildRentalQuote } from "@/lib/rentals/quotes";
 import { breadcrumbSchema, gpuProductSchema, jsonLdGraph } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/site";
 import { sourceById } from "@/lib/sources";
@@ -137,6 +140,14 @@ export default async function GpuPage({ params }: Props) {
       ? (quote.best - gpu.msrp) / gpu.msrp
       : null;
 
+  // The other half of the market: what the same silicon costs by the hour.
+  const rentModel = rentModelForBuySlug(gpu.slug);
+  const rentQuote = rentModel ? buildRentalQuote(rentModel) : null;
+  const breakeven =
+    rentQuote?.best != null && quote.best !== null
+      ? breakevenHours(quote.best, rentQuote.best)
+      : null;
+
   return (
     <div className="pt-8">
       <JsonLd
@@ -259,11 +270,88 @@ export default async function GpuPage({ params }: Props) {
         >
           {gpu.ticker} price history
         </h2>
-        <PriceChart series={series} msrp={gpu.msrp} />
+        <PriceChart
+          series={series}
+          reference={
+            gpu.msrp !== null ? { value: gpu.msrp, label: `MSRP ${usd(gpu.msrp)}` } : null
+          }
+        />
         <p className="mt-2 font-mono text-[11px] text-mute">
           Daily lows per source — hover the chart for detail.
         </p>
       </section>
+
+      {rentModel && rentQuote?.best != null && breakeven !== null && (
+        <section className="mt-10" aria-labelledby="rent-heading">
+          <h2
+            id="rent-heading"
+            className="mb-3 font-mono text-xs tracking-widest text-mute uppercase"
+          >
+            Or rent it by the hour
+          </h2>
+          <div className="border border-edge bg-panel px-5 py-4">
+            <div className="flex flex-wrap items-baseline gap-x-8 gap-y-3">
+              <div>
+                <p className="font-mono text-[11px] tracking-wider text-mute uppercase">
+                  cheapest cloud rate
+                </p>
+                <p className="mt-1 font-mono text-2xl text-ink tabular-nums">
+                  {rate(rentQuote.best)}
+                  <span className="text-sm text-mute">/GPU-hr</span>
+                </p>
+                {rentQuote.bestProviderId && (
+                  <p className="mt-1 font-mono text-[11px] text-mute">
+                    at {providerById(rentQuote.bestProviderId).name}
+                    {!rentQuote.bestAvailable && (
+                      <span className="text-neg"> · sold out</span>
+                    )}
+                  </p>
+                )}
+              </div>
+              {rentQuote.bestCluster && (
+                <div>
+                  <p className="font-mono text-[11px] tracking-wider text-mute uppercase">
+                    {rentQuote.bestCluster.gpuCount}× node
+                  </p>
+                  <p className="mt-1 font-mono text-2xl text-ink tabular-nums">
+                    {rate(rentQuote.bestCluster.nodeHour)}
+                    <span className="text-sm text-mute">/hr</span>
+                  </p>
+                  <p className="mt-1 font-mono text-[11px] text-mute">
+                    at {providerById(rentQuote.bestCluster.providerId).name}
+                  </p>
+                </div>
+              )}
+              <div>
+                <p className="font-mono text-[11px] tracking-wider text-mute uppercase">
+                  breakeven vs. buying
+                </p>
+                <p className="mt-1 font-mono text-2xl text-acc tabular-nums">
+                  {humanHours(breakeven)}
+                </p>
+                <p className="mt-1 font-mono text-[11px] text-mute">
+                  {rentQuote.providerCount} providers quoting
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 max-w-3xl text-xs leading-relaxed text-ink2">
+              At {usd(quote.best!)} to buy and {rate(rentQuote.best)} an hour to
+              rent, the {gpu.name} pays for itself after about{" "}
+              {Math.round(breakeven).toLocaleString("en-US")} hours of use
+              ({humanHours(breakeven)}) — before power, cooling, networking and
+              the cost of the capital, all of which push that further out. Under
+              that much use, renting is straightforwardly cheaper.
+            </p>
+            <Link
+              href={`/rent/${rentModel.slug}`}
+              className="mt-3 inline-block font-mono text-xs text-mute transition-colors hover:text-acc"
+            >
+              Compare {rentQuote.providerCount} cloud providers renting the{" "}
+              {rentModel.name} →
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section className="mt-10" aria-labelledby="buy-heading">
         <h2

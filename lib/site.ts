@@ -55,3 +55,37 @@ export const SITE_KEYWORDS = [
 /** Resolve a path against the canonical origin. */
 export const absoluteUrl = (path = "/"): string =>
   new URL(path, `${SITE_URL}/`).toString();
+
+/* ---- rental market ---- */
+
+export const RENT_TAGLINE = "Live GPU Cloud Rental Prices";
+export const RENT_TITLE = `${SITE_NAME} Rent — ${RENT_TAGLINE}`;
+
+export const RENT_DESCRIPTION =
+  "Compare live GPU rental prices by the hour across AWS, Azure, Lambda, RunPod, Vast.ai, Crusoe, Nebius, Voltage Park, Hyperstack and more — H100, H200, B200, A100, L40S, RTX 4090 and RTX PRO 6000, priced per GPU-hour and per 8-GPU cluster node, with real rate history and rent-vs-buy breakeven.";
+
+export const RENT_DESCRIPTION_SHORT =
+  "Live hourly GPU rental rates across 20+ clouds — per GPU and per cluster node — with real rate history and rent-vs-buy breakeven.";
+
+export const RENT_KEYWORDS = [
+  "GPU rental prices",
+  "GPU cloud pricing",
+  "rent GPU by the hour",
+  "H100 rental price",
+  "H100 per hour",
+  "H200 rental price",
+  "B200 rental price",
+  "A100 hourly price",
+  "cheapest H100 cloud",
+  "GPU cluster pricing",
+  "8x H100 node price",
+  "GPU cloud comparison",
+  "RunPod vs Lambda pricing",
+  "Vast.ai prices",
+  "AWS GPU instance pricing",
+  "Azure GPU VM pricing",
+  "rent vs buy GPU",
+  "L40S rental price",
+  "RTX 4090 cloud rental",
+  "MI300X rental price",
+];

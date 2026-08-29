@@ -123,12 +123,26 @@ export default function RootLayout({
             </Link>
             <nav aria-label="Main" className="flex items-baseline gap-5">
               <Link
+                href="/"
+                className="font-mono text-xs text-mute transition-colors hover:text-acc"
+              >
+                buy
+              </Link>
+              <Link
+                href="/rent"
+                className="font-mono text-xs text-mute transition-colors hover:text-acc"
+              >
+                rent
+              </Link>
+              <Link
                 href="/sources"
                 className="font-mono text-xs text-mute transition-colors hover:text-acc"
               >
                 sources
               </Link>
-              <p className="font-mono text-xs text-mute">USD · live street prices</p>
+              <p className="hidden font-mono text-xs text-mute sm:block">
+                USD · live prices
+              </p>
             </nav>
           </div>
         </header>
@@ -148,9 +162,18 @@ export default function RootLayout({
               : {SOURCES.map((s) => s.name).join(" · ")}.
             </p>
             <p>
+              <Link href="/rent" className="hover:text-acc">
+                Rental market
+              </Link>
+              : live hourly GPU rates across AWS, Azure, Lambda, RunPod,
+              Vast.ai, Crusoe, Nebius, Voltage Park and more — per GPU-hour and
+              per cluster node.
+            </p>
+            <p>
               Prices update automatically and reflect the lowest matching
-              listing at each source. Availability and final pricing are set by
-              the seller — buy links go straight to the listing.
+              listing at each source, or the lowest live rate at each cloud.
+              Availability and final pricing are set by the seller or provider —
+              links go straight to them.
             </p>
             <p>
               <Link href="/" className="hover:text-acc">

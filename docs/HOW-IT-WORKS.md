@@ -1,10 +1,12 @@
 # How the aggregator and indexing work
 
-VRAMWATCH runs two pipelines in opposite directions.
+VRAMWATCH runs two pipelines in opposite directions, over two markets.
 
-- **The aggregator** pulls prices *in*: search pages and APIs at twelve sources
-  become filtered listings, a daily price index, and the quotes the UI
-  renders.
+- **The aggregator** pulls prices *in*: search pages and APIs at twelve retail
+  sources become filtered listings, a daily price index, and the quotes the UI
+  renders. A second, parallel aggregator does the same for the **rental**
+  market — what the same silicon costs by the hour across twenty-three cloud
+  providers.
 - **Indexing** pushes the result *out*: every page emits canonical metadata,
   structured data and social cards so a crawler can read the board as data
   rather than as a screenshot.
@@ -12,13 +14,24 @@ VRAMWATCH runs two pipelines in opposite directions.
 They meet in the middle at `data/*.json` — the store is the aggregator's
 output and the indexer's input.
 
+The two markets are deliberately separate all the way down: separate
+adapters, separate sweeps, separate files, separate freshness guards. A
+retail source timing out never delays the rental board, or the reverse. They
+touch in exactly one place — the **rent-vs-buy breakeven**, which needs a live
+price from both sides at once.
+
 ```mermaid
 flowchart LR
-  S["12 sources<br/>scrape · API · link"] --> A["adapters"]
+  S["12 retail sources<br/>scrape · API · link"] --> A["adapters"]
   A --> F["filter gate<br/>match / exclude / band"]
   F --> ST[("data/*.json<br/>index · listings · meta")]
+  R["5 rental feeds<br/>23 providers"] --> RA["rental adapters"]
+  RA --> RF["rate band<br/>+ outlier guard"]
+  RF --> ST
   ST --> Q["quotes<br/>best · deltas · spark"]
+  Q --> BE["rent-vs-buy<br/>breakeven"]
   Q --> P["pages"]
+  BE --> P
   P --> I["metadata · JSON-LD<br/>sitemap · OG cards"]
   I --> C["crawlers"]
 ```
@@ -298,6 +311,141 @@ pnpm palette                  # CVD separation of the chart palette
 `pnpm why` is usually the fastest way to tell a broken adapter from a source
 that simply doesn't stock the part — a distinction that looks identical from
 the outside, since both show up as an empty chart.
+
+---
+
+# Part 1b — The rental aggregator
+
+Everything in Part 1 describes buying a card. This part describes renting the
+same silicon by the hour, which is a different market with a different shape.
+
+## Why it is not just another source
+
+A retailer sells *a part* for *a price*. A cloud sells *a node* — one GPU on
+RunPod, an 8-way NVLink box at Lambda, a 96-vCPU instance on AWS — that is
+either available in a given region right now or is not. Three consequences
+follow, and they drive the whole design:
+
+1. **Two numbers, not one.** Every offer carries `nodeHour` (what you are
+   actually billed) and `perGpuHour` (`nodeHour / gpuCount`). Only the second
+   compares across providers; only the first prices a cluster. Both are stored.
+2. **One call per provider, not one per part.** Every rental feed publishes its
+   entire catalog at once, so a sweep is a handful of requests rather than
+   twelve sources × thirty-two parts. Vast.ai is the exception — its endpoint
+   takes a query, and an unfiltered listing is dominated by fractional slices
+   of old consumer cards — so it alone asks per model.
+3. **Availability is part of the quote.** A sold-out rate is real and worth
+   charting, so offers keep an `available` flag rather than being dropped the
+   way an out-of-stock listing is — but they are **not allowed to set the
+   headline**. `quote.best` is the cheapest rate you can actually book, and
+   `bestCluster` likewise prefers a node with capacity over a cheaper sold-out
+   one. This is the same principle the retail board applies ("a price you can't
+   pay isn't a price"), just enforced at the quote instead of at the filter,
+   because unlike a dead retail listing the rate itself still belongs in the
+   history. When nothing at all has capacity, `bestAvailable` goes false and
+   every surface — board, page, title tag, meta description — says sold out
+   rather than quoting a rate you can't get.
+
+   It matters more than it sounds: quoting sold-out capacity understated the
+   B200 by 30% ($3.74 vs. the bookable $5.32) and the H200 by 26%.
+
+## The feeds
+
+Five adapters cover twenty-three providers. None of them block us, so unlike
+the retail side there is no link-only tier.
+
+| Adapter | Providers | How |
+| --- | --- | --- |
+| `shadeform` | 19 GPU clouds — Lambda, Crusoe, Nebius, Voltage Park, Hyperstack, Denvr, Paperspace, DigitalOcean, Scaleway, Vultr, Latitude, Massed Compute and partner clouds | Public catalog endpoint: every instance shape, live rate, per-region availability |
+| `runpod` | RunPod | Public GraphQL `gpuTypes` query — lowest on-demand and spot rate per GPU |
+| `vastai` | Vast.ai | Public bundles endpoint, queried per model with `rentable: true` |
+| `aws` | AWS | The public JSON feed behind the pricing calculator (us-east-1, Linux on-demand) |
+| `azure` | Microsoft Azure | Retail Prices API, paged (eastus, consumption) |
+
+Prices from the Shadeform catalog are attributed to the cloud that actually
+charges them, never to Shadeform.
+
+### Two traps worth knowing
+
+**Shadeform quotes cents.** `hourly_price: 3192` is $31.92/hour for an 8-way
+node, or $3.99 per GPU-hour. Reading it as dollars inflates every rate 100×,
+which the rate band catches — but only because the band exists.
+
+**The hyperscalers don't publish GPU counts.** Neither AWS's nor Azure's price
+feed says how many accelerators an instance carries, so `INSTANCES` in
+`aws.ts` and `SKUS` in `azure.ts` map that statically. The price is always
+live; only the count is a table. A wrong count silently scales the per-GPU
+rate, so shapes whose count isn't unambiguous — Azure's `RTXPRO6000BSE_v6`
+ladder, the GB200 VM — are **skipped rather than guessed at**. That is why
+those SKUs are absent rather than approximate.
+
+## The filter gate
+
+Thinner than the retail one, because a catalog feed doesn't need a title
+regex — the provider already told us what the GPU is. What it does need is a
+guard against arithmetic going wrong:
+
+- **Rate band** (`rateMin`/`rateMax` per model, `lib/rentals/models.ts`) —
+  catches unit errors, fractional-GPU slices sold as whole cards, and
+  GPU-count mistakes, all of which land orders of magnitude off. The bands are
+  deliberately wide: a single-GPU AWS `.16xlarge` bundles a lot of CPU with one
+  card and legitimately quotes several times the market rate, and a decade-old
+  V100 on a peer-to-peer host legitimately quotes three cents.
+- **Outlier guard** — a provider's offer far below the *cross-provider* median
+  is skipped in favour of its next cheapest. Note the fallback: if *every*
+  offer a provider has is below the floor, its cheapest is used anyway. That is
+  intentional. Vast.ai is systematically cheaper than everyone else; that is a
+  real market fact, not an outlier, and the guard exists to catch one bad
+  listing among a provider's otherwise normal ones.
+
+## The rate index
+
+Identical in shape to the retail price index, and stored in the same `DayStat`
+type — `rentals-history.json` is `model → provider → day → {lo, hi, n, at}`,
+accumulated with `Math.min`/`Math.max` across sweeps so `lo` is the day's true
+low. The recorded value is always the **per-GPU** rate; node prices live in
+`rentals-offers.json` with the rest of the live offer detail.
+
+## Rent vs. buy
+
+The one place the two markets meet. `RentModel.buySlug` ties a rental model to
+a tracked part, and the breakeven is deliberately the simplest possible
+calculation:
+
+```
+hours = street price / hourly rate
+```
+
+It is a **floor, not a TCO model**, and both pages that show it say so: it
+ignores power, cooling, rack space, networking, depreciation and the cost of
+capital, every one of which pushes the real breakeven further out. It is
+useful precisely because it is unarguable — below that many hours, renting is
+cheaper, full stop.
+
+## Why rental charts color by rank
+
+The retail side gives every source a fixed color it keeps on every chart.
+Twenty-three providers can't work that way: past roughly ten categorical
+colors, some pair always collides under protanopia. So rental series are
+colored by **rank within the chart** — cheapest provider first — from the same
+nine hues the retail palette was validated at. A chart draws at most nine
+series and the legend is always visible. `pnpm palette` validates this set too.
+
+Rank 1 is a green near the brand accent but not the accent itself: the exact
+accent (`#3ecf8e`) collides with rank 2's cyan under tritanopia at ΔE 19.3,
+while the chosen green clears every pair at 25.1.
+
+## Diagnostics
+
+```bash
+pnpm rent              # sweep, then a table of every model's low and spread
+pnpm rent raw          # per-adapter fetch only, listing every rate-band rejection
+pnpm rent h100-sxm     # every live offer for one model, cheapest first
+```
+
+`pnpm rent raw` is the rental equivalent of `pnpm why`: it prints exactly which
+offers were rejected and against which band, which is the fastest way to tell a
+broken adapter from a provider that is simply sold out.
 
 ---
 

@@ -5,6 +5,7 @@ import { usd } from "@/lib/format";
 import { GPUS } from "@/lib/gpus";
 import { breadcrumbSchema, jsonLdGraph } from "@/lib/seo";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
+import { PROVIDERS } from "@/lib/rentals/providers";
 import { SOURCES } from "@/lib/sources";
 import { readHistory, readListings } from "@/lib/store";
 import type { Source } from "@/lib/types";
@@ -181,6 +182,48 @@ export default function SourcesPage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="mt-14" aria-labelledby="rent-sources-heading">
+        <h2
+          id="rent-sources-heading"
+          className="text-xl font-semibold tracking-tight"
+        >
+          Where the rental rates come from
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink2">
+          The{" "}
+          <Link href="/rent" className="text-acc hover:underline">
+            rental board
+          </Link>{" "}
+          is fed by a separate set of sources, and it has an easier time of it:
+          none of these block automated requests, so there are no link-only
+          entries. Five live feeds cover {PROVIDERS.length} named providers plus
+          the smaller partner clouds behind them — AWS&rsquo;s public pricing
+          feed, Azure&rsquo;s Retail Prices API, RunPod&rsquo;s GraphQL
+          endpoint, Vast.ai&rsquo;s marketplace listings, and
+          Shadeform&rsquo;s catalog, which publishes live rates and per-region
+          availability for a dozen-plus GPU clouds that have no public pricing
+          API of their own. Rates are always attributed to the cloud that
+          charges them.
+        </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink2">
+          Two things are static rather than fetched, and only two: how many GPUs
+          each AWS instance type and Azure VM SKU carries. Neither
+          hyperscaler publishes accelerator counts in its price feed, and a
+          wrong count would silently scale every per-GPU rate — so shapes whose
+          count isn&rsquo;t unambiguous are skipped rather than guessed at.
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-px border border-edge bg-edge">
+          {PROVIDERS.map((p) => (
+            <li key={p.id} className="flex-1 bg-panel px-4 py-3 whitespace-nowrap">
+              <p className="text-sm text-ink">{p.name}</p>
+              <p className="mt-1 font-mono text-[11px] text-mute">
+                {p.via === "shadeform" ? "Shadeform catalog" : "direct feed"}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );

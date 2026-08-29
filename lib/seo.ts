@@ -1,4 +1,6 @@
 import { CATEGORY_LABEL } from "./gpus";
+import { providerById } from "./rentals/providers";
+import type { RentalQuote, RentModel } from "./rentals/types";
 import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "./site";
 import { sourceById } from "./sources";
 import type { Gpu, GpuQuote, Listing } from "./types";
@@ -155,6 +157,99 @@ export function gpuProductSchema(
       priceCurrency: "USD",
       lowPrice,
       highPrice,
+      offerCount: Math.max(offers.length, 1),
+      ...(offers.length > 0 ? { offers } : {}),
+    };
+  }
+
+  return schema;
+}
+
+/** The rental board, as a ranked list of the GPUs it prices by the hour. */
+export function rentBoardItemListSchema(
+  entries: { model: RentModel; quote: RentalQuote }[]
+): Json {
+  return {
+    "@type": "ItemList",
+    name: `GPUs rentable by the hour, tracked by ${SITE_NAME}`,
+    description:
+      "Every GPU whose hourly cloud rental rate is tracked on the board, with its current lowest price per GPU-hour.",
+    numberOfItems: entries.length,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    itemListElement: entries.map(({ model, quote }, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: absoluteUrl(`/rent/${model.slug}`),
+      name:
+        quote.best !== null
+          ? `${model.name} — $${quote.best.toFixed(3)}/GPU-hour`
+          : model.name,
+    })),
+  };
+}
+
+/**
+ * One rentable GPU as a Service with live offers from every provider quoting
+ * it. Renting is a service, not a product transfer, so the offers carry a
+ * unitCode of HUR (hours) rather than a one-off price — which is what tells a
+ * crawler that "$2.69" means per hour and not outright.
+ */
+export function rentalServiceSchema(
+  model: RentModel,
+  quote: RentalQuote,
+  description: string
+): Json {
+  const offers = quote.rates
+    .filter((r) => r.offers.length > 0)
+    .flatMap((r) =>
+      r.offers.slice(0, 3).map((o) => ({
+        "@type": "Offer",
+        name: `${model.name} × ${o.gpuCount} — ${o.instance}`,
+        url: o.url ?? providerById(o.providerId).rentUrl,
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: Number(o.perGpuHour.toFixed(4)),
+          priceCurrency: "USD",
+          unitCode: "HUR",
+          referenceQuantity: {
+            "@type": "QuantitativeValue",
+            value: 1,
+            unitCode: "HUR",
+          },
+        },
+        availability:
+          o.available === false
+            ? "https://schema.org/OutOfStock"
+            : "https://schema.org/InStock",
+        seller: {
+          "@type": "Organization",
+          name: providerById(o.providerId).name,
+        },
+      }))
+    );
+
+  const schema: Json = {
+    "@type": "Service",
+    "@id": absoluteUrl(`/rent/${model.slug}#service`),
+    name: `${model.name} cloud rental`,
+    serviceType: "GPU cloud rental",
+    description,
+    url: absoluteUrl(`/rent/${model.slug}`),
+    category: "Cloud computing",
+    provider: { "@id": ORG_ID },
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "GPU", value: model.name },
+      { "@type": "PropertyValue", name: "VRAM", value: model.vram },
+      { "@type": "PropertyValue", name: "Architecture", value: model.arch },
+    ],
+  };
+
+  if (quote.best !== null && quote.spreadHigh !== null) {
+    schema.offers = {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: Number(quote.best.toFixed(4)),
+      highPrice: Number(quote.spreadHigh.toFixed(4)),
       offerCount: Math.max(offers.length, 1),
       ...(offers.length > 0 ? { offers } : {}),
     };
