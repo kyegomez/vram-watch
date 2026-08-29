@@ -10,7 +10,8 @@
     "probe": "tsx scripts/probe.ts",
     "why": "tsx scripts/why.ts",
     "coverage": "tsx scripts/coverage.ts",
-    "palette": "tsx scripts/check-palette.ts"
+    "palette": "tsx scripts/check-palette.ts",
+    "rent": "tsx scripts/rent.ts"
   },
   "dependencies": {
     "next": "^15.4.5",

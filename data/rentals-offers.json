@@ -1,0 +1,5510 @@
+{
+ "a6000": {
+  "imwt": [
+   {
+    "providerId": "imwt",
+    "modelSlug": "a6000",
+    "gpuCount": 8,
+    "nodeHour": 3.92,
+    "perGpuHour": 0.49,
+    "instance": "gpu_8x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.49,
+    "perGpuHour": 0.49,
+    "instance": "gpu_1x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 0.98,
+    "perGpuHour": 0.49,
+    "instance": "gpu_2x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 1.96,
+    "perGpuHour": 0.49,
+    "instance": "gpu_4x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": false
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 8,
+    "nodeHour": 4.56,
+    "perGpuHour": 0.57,
+    "instance": "gpu_8x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 1.14,
+    "perGpuHour": 0.57,
+    "instance": "gpu_2x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 2.28,
+    "perGpuHour": 0.57,
+    "instance": "gpu_4x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.57,
+    "perGpuHour": 0.57,
+    "instance": "gpu_1x_a6000",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.57,
+    "perGpuHour": 0.57,
+    "instance": "gpu_1x_A6000_high_perf",
+    "interconnect": "pcie",
+    "region": "US, Wichita, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 1.14,
+    "perGpuHour": 0.57,
+    "instance": "gpu_2x_A6000_high_perf",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 2.28,
+    "perGpuHour": 0.57,
+    "instance": "gpu_4x_A6000_high_perf",
+    "interconnect": "pcie",
+    "region": "US, Wichita, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a6000",
+    "gpuCount": 8,
+    "nodeHour": 4.56,
+    "perGpuHour": 0.57,
+    "instance": "gpu_8x_A6000_high_perf",
+    "interconnect": "pcie",
+    "region": "US, Wichita, KS",
+    "available": false
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 4.36,
+    "perGpuHour": 1.09,
+    "instance": "gpu_4x_a6000",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 2.18,
+    "perGpuHour": 1.09,
+    "instance": "gpu_2x_a6000",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 1.09,
+    "perGpuHour": 1.09,
+    "instance": "gpu_1x_a6000",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   }
+  ],
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 2,
+    "perGpuHour": 0.5,
+    "instance": "n3-RTX-A6000x4",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a6000",
+    "gpuCount": 8,
+    "nodeHour": 4,
+    "perGpuHour": 0.5,
+    "instance": "n3-RTX-A6000x8",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.5,
+    "perGpuHour": 0.5,
+    "instance": "n3-RTX-A6000x1",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 1,
+    "perGpuHour": 0.5,
+    "instance": "n3-RTX-A6000x2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   }
+  ],
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 1.93,
+    "perGpuHour": 1.93,
+    "instance": "A6000",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 3.86,
+    "perGpuHour": 1.93,
+    "instance": "A6000x2",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 7.72,
+    "perGpuHour": 1.93,
+    "instance": "A6000x4",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 4.32,
+    "perGpuHour": 1.08,
+    "instance": "4A6000.40V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 1.08,
+    "perGpuHour": 1.08,
+    "instance": "1A6000.10V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a6000",
+    "gpuCount": 8,
+    "nodeHour": 8.64,
+    "perGpuHour": 1.08,
+    "instance": "8A6000.80V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 2.16,
+    "perGpuHour": 1.08,
+    "instance": "2A6000.20V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.33,
+    "perGpuHour": 0.33,
+    "instance": "RTX A6000",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 0.6185185185185186,
+    "perGpuHour": 0.3092592592592593,
+    "instance": "RTX A6000 x2",
+    "region": "Romania, RO",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40843835"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.3118518518518519,
+    "perGpuHour": 0.3118518518518519,
+    "instance": "RTX A6000 x1",
+    "region": "Romania, RO",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40843834"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.3829629629629629,
+    "perGpuHour": 0.3829629629629629,
+    "instance": "RTX A6000 x1",
+    "region": "Italy, IT",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=30565040"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.4022222222222222,
+    "perGpuHour": 0.4022222222222222,
+    "instance": "RTX A6000 x1",
+    "region": "Kansas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=21004761"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 4,
+    "nodeHour": 1.7622222222222221,
+    "perGpuHour": 0.44055555555555553,
+    "instance": "RTX A6000 x4",
+    "region": "Romania, RO",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=20805230"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 2,
+    "nodeHour": 0.8822222222222222,
+    "perGpuHour": 0.4411111111111111,
+    "instance": "RTX A6000 x2",
+    "region": "Romania, RO",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=20805232"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.44674074074074077,
+    "perGpuHour": 0.44674074074074077,
+    "instance": "RTX A6000 x1",
+    "region": "Virginia, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49173184"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a6000",
+    "gpuCount": 1,
+    "nodeHour": 0.46888888888888886,
+    "perGpuHour": 0.46888888888888886,
+    "instance": "RTX A6000 x1",
+    "region": "Hawaii, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=43974624"
+   }
+  ]
+ },
+ "a100-80gb": {
+  "crusoe": [
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.65,
+    "perGpuHour": 1.65,
+    "instance": "a100-80gb.1x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": true
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 3.3,
+    "perGpuHour": 1.65,
+    "instance": "a100-80gb.2x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": true
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 6.6,
+    "perGpuHour": 1.65,
+    "instance": "a100-80gb.4x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 13.2,
+    "perGpuHour": 1.65,
+    "instance": "a100-80gb.8x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 15.6,
+    "perGpuHour": 1.95,
+    "instance": "a100-80gb-sxm-ib.8x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": false
+   }
+  ],
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 25.76,
+    "perGpuHour": 3.22,
+    "instance": "A100-80Gx8",
+    "interconnect": "sxm4",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 12.88,
+    "perGpuHour": 3.22,
+    "instance": "A100-80Gx4",
+    "interconnect": "sxm4",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 6.48,
+    "perGpuHour": 3.24,
+    "instance": "A100-80Gx2",
+    "interconnect": "sxm4",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 3.28,
+    "perGpuHour": 3.28,
+    "instance": "A100-80G",
+    "interconnect": "sxm4",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 2.7,
+    "perGpuHour": 1.35,
+    "instance": "n3-A100x2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 5.4,
+    "perGpuHour": 1.35,
+    "instance": "n3-A100x4",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 10.8,
+    "perGpuHour": 1.35,
+    "instance": "n3-A100x8",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.35,
+    "perGpuHour": 1.35,
+    "instance": "n3-A100x1",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 11.2,
+    "perGpuHour": 1.4,
+    "instance": "n2-A100x8-NVLink-v2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   }
+  ],
+  "vultr": [
+   {
+    "providerId": "vultr",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 2.6,
+    "perGpuHour": 2.6,
+    "instance": "vcg-a100-12c-120g-80vram",
+    "interconnect": "pcie",
+    "region": "GB, London",
+    "available": false
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 22.32,
+    "perGpuHour": 2.79,
+    "instance": "gpu_8x_a100_80gb_sxm4",
+    "interconnect": "sxm4",
+    "region": "US, Dulles, VA",
+    "available": true
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 10.8,
+    "perGpuHour": 1.35,
+    "instance": "gpu_8x_a100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 2.7,
+    "perGpuHour": 1.35,
+    "instance": "gpu_2x_a100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.35,
+    "perGpuHour": 1.35,
+    "instance": "gpu_1x_a100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 5.4,
+    "perGpuHour": 1.35,
+    "instance": "gpu_4x_a100",
+    "interconnect": "pcie",
+    "region": "US, Wichita, KS",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.38,
+    "perGpuHour": 1.38,
+    "instance": "gpu_1x_a100_SXM4",
+    "interconnect": "sxm4",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.38,
+    "perGpuHour": 1.38,
+    "instance": "gpu_1x_DGX_A100",
+    "interconnect": "sxm4",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 11.04,
+    "perGpuHour": 1.38,
+    "instance": "gpu_8x_a100_SXM4",
+    "interconnect": "sxm4",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 11.04,
+    "perGpuHour": 1.38,
+    "instance": "gpu_8x_DGX_A100",
+    "interconnect": "sxm4",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 24,
+    "perGpuHour": 3,
+    "instance": "gpu_8x_a100_80gb_sxm4",
+    "interconnect": "sxm4",
+    "region": "US, Dulles, VA",
+    "available": true
+   }
+  ],
+  "denvr": [
+   {
+    "providerId": "denvr",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.4,
+    "perGpuHour": 1.4,
+    "instance": "A100_80GB_SXM_1x",
+    "interconnect": "sxm4",
+    "region": "US, Houston, TX",
+    "available": true
+   },
+   {
+    "providerId": "denvr",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 12.2,
+    "perGpuHour": 1.525,
+    "instance": "A100_80GB_SXM_8x",
+    "interconnect": "sxm4",
+    "region": "US, Houston, TX",
+    "available": true
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.85,
+    "perGpuHour": 1.85,
+    "instance": "1A100.22V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 3.71,
+    "perGpuHour": 1.855,
+    "instance": "2A100.44V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 14.86,
+    "perGpuHour": 1.8575,
+    "instance": "8A100.176V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 7.43,
+    "perGpuHour": 1.8575,
+    "instance": "4A100.88V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.19,
+    "perGpuHour": 1.19,
+    "instance": "A100 PCIe",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   },
+   {
+    "providerId": "runpod",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.39,
+    "perGpuHour": 1.39,
+    "instance": "A100 SXM",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 0.8733333333333334,
+    "perGpuHour": 0.8733333333333334,
+    "instance": "A100 PCIE x1",
+    "region": "Oklahoma, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47546409"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.0022222222222221,
+    "perGpuHour": 1.0022222222222221,
+    "instance": "A100 PCIE x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42536927"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.0022222222222221,
+    "perGpuHour": 1.0022222222222221,
+    "instance": "A100 PCIE x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=45716369"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.0022222222222221,
+    "perGpuHour": 1.0022222222222221,
+    "instance": "A100 PCIE x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=45716570"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.0022222222222221,
+    "perGpuHour": 1.0022222222222221,
+    "instance": "A100 PCIE x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=32303765"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.0915555555555554,
+    "perGpuHour": 1.0915555555555554,
+    "instance": "A100 PCIE x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44937492"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 1.1675555555555555,
+    "perGpuHour": 1.1675555555555555,
+    "instance": "A100 PCIE x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48064006"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 27.44705,
+    "perGpuHour": 3.43088125,
+    "instance": "p4de.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 2,
+    "nodeHour": 7.346,
+    "perGpuHour": 3.673,
+    "instance": "NC48ads_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 1,
+    "nodeHour": 3.673,
+    "perGpuHour": 3.673,
+    "instance": "NC24ads_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 4,
+    "nodeHour": 14.692,
+    "perGpuHour": 3.673,
+    "instance": "NC96ads_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 32.77,
+    "perGpuHour": 4.09625,
+    "instance": "ND96ams_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-80gb",
+    "gpuCount": 8,
+    "nodeHour": 32.77,
+    "perGpuHour": 4.09625,
+    "instance": "ND96amsr_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "rtx-4090": {
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 8,
+    "nodeHour": 3.92,
+    "perGpuHour": 0.49,
+    "instance": "RTX4090x8",
+    "interconnect": "pcie",
+    "region": "US, Raleigh, NC",
+    "available": false
+   }
+  ],
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 8,
+    "nodeHour": 3.2,
+    "perGpuHour": 0.4,
+    "instance": "rtx4090.8x.epyc-7k62.96vcpu.252gib.bdb373e6b5",
+    "interconnect": "pcie",
+    "region": "US, Casper, WY",
+    "available": true
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.6,
+    "perGpuHour": 0.6,
+    "instance": "n3-RTX-4090x1",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": true
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 2,
+    "nodeHour": 1.2,
+    "perGpuHour": 0.6,
+    "instance": "n3-RTX-4090x2",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 4,
+    "nodeHour": 2.4,
+    "perGpuHour": 0.6,
+    "instance": "n3-RTX-4090x4",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": true
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 8,
+    "nodeHour": 4.8,
+    "perGpuHour": 0.6,
+    "instance": "n3-RTX-4090x8",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": false
+   }
+  ],
+  "phyntec": [
+   {
+    "providerId": "phyntec",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 8,
+    "nodeHour": 3.2,
+    "perGpuHour": 0.4,
+    "instance": "RTX4090x8",
+    "interconnect": "pcie",
+    "region": "US, Casper, WY",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.34,
+    "perGpuHour": 0.34,
+    "instance": "RTX 4090",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 2,
+    "nodeHour": 0.2414814814814815,
+    "perGpuHour": 0.12074074074074075,
+    "instance": "RTX 4090 x2",
+    "region": "CN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47417198"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.1214814814814815,
+    "perGpuHour": 0.1214814814814815,
+    "instance": "RTX 4090 x1",
+    "region": "CN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47417208"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.16148148148148148,
+    "perGpuHour": 0.16148148148148148,
+    "instance": "RTX 4090 x1",
+    "region": "Texas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46655524"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.16148148148148148,
+    "perGpuHour": 0.16148148148148148,
+    "instance": "RTX 4090 x1",
+    "region": "Texas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46655559"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.24222222222222223,
+    "perGpuHour": 0.24222222222222223,
+    "instance": "RTX 4090 x1",
+    "region": "South Africa, ZA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39709814"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.25555555555555554,
+    "perGpuHour": 0.25555555555555554,
+    "instance": "RTX 4090 x1",
+    "region": "The Netherlands, NL",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49125474"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.26814814814814814,
+    "perGpuHour": 0.26814814814814814,
+    "instance": "RTX 4090 x1",
+    "region": "Ukraine, UA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42005419"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-4090",
+    "gpuCount": 1,
+    "nodeHour": 0.26814814814814814,
+    "perGpuHour": 0.26814814814814814,
+    "instance": "RTX 4090 x1",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49081323"
+   }
+  ]
+ },
+ "h100-pcie": {
+  "latitude": [
+   {
+    "providerId": "latitude",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 1.66,
+    "perGpuHour": 1.66,
+    "instance": "vm.h100.small",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "latitude",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 8,
+    "nodeHour": 14.34,
+    "perGpuHour": 1.7925,
+    "instance": "g3-h100-large",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "latitude",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 1.99,
+    "perGpuHour": 1.99,
+    "instance": "g3-h100-small",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": true
+   },
+   {
+    "providerId": "latitude",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 4,
+    "nodeHour": 8.97,
+    "perGpuHour": 2.2425,
+    "instance": "g3-h100-medium",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": false
+   }
+  ],
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 8,
+    "nodeHour": 20,
+    "perGpuHour": 2.5,
+    "instance": "n3-H100x8",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 4,
+    "nodeHour": 10,
+    "perGpuHour": 2.5,
+    "instance": "n3-H100x4",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 2.5,
+    "perGpuHour": 2.5,
+    "instance": "n3-H100x1",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 5,
+    "perGpuHour": 2.5,
+    "instance": "n3-H100x2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 8,
+    "nodeHour": 20.8,
+    "perGpuHour": 2.6,
+    "instance": "n3-H100x8-NVLink",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 8,
+    "nodeHour": 21.82,
+    "perGpuHour": 2.7275,
+    "instance": "gpu_8x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 4,
+    "nodeHour": 10.91,
+    "perGpuHour": 2.7275,
+    "instance": "gpu_4x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 5.46,
+    "perGpuHour": 2.73,
+    "instance": "gpu_2x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 2.73,
+    "perGpuHour": 2.73,
+    "instance": "gpu_1x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 5.99,
+    "perGpuHour": 5.99,
+    "instance": "H100",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "scaleway": [
+   {
+    "providerId": "scaleway",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 6.6,
+    "perGpuHour": 3.3,
+    "instance": "H100-2-80G",
+    "interconnect": "pcie",
+    "region": "FR, Paris",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 3.3,
+    "perGpuHour": 3.3,
+    "instance": "H100-1-80G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": true
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 4.29,
+    "perGpuHour": 4.29,
+    "instance": "gpu_1x_h100_pcie",
+    "interconnect": "pcie",
+    "region": "US, Salt Lake City, UT",
+    "available": true
+   }
+  ],
+  "imwt": [
+   {
+    "providerId": "imwt",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 8,
+    "nodeHour": 19.84,
+    "perGpuHour": 2.48,
+    "instance": "gpu_8x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 4.96,
+    "perGpuHour": 2.48,
+    "instance": "gpu_2x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 4,
+    "nodeHour": 9.92,
+    "perGpuHour": 2.48,
+    "instance": "gpu_4x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 2.48,
+    "perGpuHour": 2.48,
+    "instance": "gpu_1x_h100",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 1.99,
+    "perGpuHour": 1.99,
+    "instance": "H100 PCIe",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 3,
+    "nodeHour": 4.001481481481481,
+    "perGpuHour": 1.3338271604938272,
+    "instance": "H100 PCIE x3",
+    "region": "Mexico, MX",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48491855"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 2.668148148148148,
+    "perGpuHour": 1.334074074074074,
+    "instance": "H100 PCIE x2",
+    "region": "Mexico, MX",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48491849"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 1.3348148148148147,
+    "perGpuHour": 1.3348148148148147,
+    "instance": "H100 PCIE x1",
+    "region": "Mexico, MX",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48491848"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 4.002222222222223,
+    "perGpuHour": 2.0011111111111113,
+    "instance": "H100 PCIE x2",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=32306172"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 2.337037037037037,
+    "perGpuHour": 2.337037037037037,
+    "instance": "H100 PCIE x1",
+    "region": "Maryland, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48311522"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 2,
+    "nodeHour": 5.076296296296296,
+    "perGpuHour": 2.538148148148148,
+    "instance": "H100 PCIE x2",
+    "region": "United Arab Emirates, AE",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48204011"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 1,
+    "nodeHour": 2.542962962962963,
+    "perGpuHour": 2.542962962962963,
+    "instance": "H100 PCIE x1",
+    "region": "United Arab Emirates, AE",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48204013"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-pcie",
+    "gpuCount": 4,
+    "nodeHour": 11.202222222222224,
+    "perGpuHour": 2.800555555555556,
+    "instance": "H100 PCIE x4",
+    "region": "United Arab Emirates, AE",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48991232"
+   }
+  ]
+ },
+ "l4": {
+  "scaleway": [
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.95,
+    "perGpuHour": 0.95,
+    "instance": "L4-1-24G",
+    "interconnect": "pcie",
+    "region": "FR, Paris",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l4",
+    "gpuCount": 4,
+    "nodeHour": 3.8,
+    "perGpuHour": 0.95,
+    "instance": "L4-4-24G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l4",
+    "gpuCount": 2,
+    "nodeHour": 1.9,
+    "perGpuHour": 0.95,
+    "instance": "L4-2-24G",
+    "interconnect": "pcie",
+    "region": "FR, Paris",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l4",
+    "gpuCount": 8,
+    "nodeHour": 7.6,
+    "perGpuHour": 0.95,
+    "instance": "L4-8-24G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": true
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.44,
+    "perGpuHour": 0.44,
+    "instance": "L4",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.30888888888888894,
+    "perGpuHour": 0.30888888888888894,
+    "instance": "L4 x1",
+    "region": "Arizona, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49079061"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 2,
+    "nodeHour": 0.6185185185185186,
+    "perGpuHour": 0.3092592592592593,
+    "instance": "L4 x2",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=41125485"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.3118518518518519,
+    "perGpuHour": 0.3118518518518519,
+    "instance": "L4 x1",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48000711"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.3118518518518519,
+    "perGpuHour": 0.3118518518518519,
+    "instance": "L4 x1",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=41125489"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.3251851851851852,
+    "perGpuHour": 0.3251851851851852,
+    "instance": "L4 x1",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=35999128"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 4,
+    "nodeHour": 1.3355555555555554,
+    "perGpuHour": 0.33388888888888885,
+    "instance": "L4 x4",
+    "region": "Iceland, IS",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=24134624"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 2,
+    "nodeHour": 0.6681481481481482,
+    "perGpuHour": 0.3340740740740741,
+    "instance": "L4 x2",
+    "region": "Czechia, CZ",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=36578874"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l4",
+    "gpuCount": 2,
+    "nodeHour": 0.6688888888888889,
+    "perGpuHour": 0.33444444444444443,
+    "instance": "L4 x2",
+    "region": "Czechia, CZ",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=36610193"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.8048,
+    "perGpuHour": 0.8048,
+    "instance": "g6.xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 0.9776,
+    "perGpuHour": 0.9776,
+    "instance": "g6.2xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 4,
+    "nodeHour": 4.6016,
+    "perGpuHour": 1.1504,
+    "instance": "g6.12xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 1.3232,
+    "perGpuHour": 1.3232,
+    "instance": "g6.4xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 1.5392,
+    "perGpuHour": 1.5392,
+    "instance": "gr6.4xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 4,
+    "nodeHour": 6.6752,
+    "perGpuHour": 1.6688,
+    "instance": "g6.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 8,
+    "nodeHour": 13.3504,
+    "perGpuHour": 1.6688,
+    "instance": "g6.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l4",
+    "gpuCount": 1,
+    "nodeHour": 2.0144,
+    "perGpuHour": 2.0144,
+    "instance": "g6.8xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ]
+ },
+ "h100-sxm": {
+  "voltagepark": [
+   {
+    "providerId": "voltagepark",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 15.92,
+    "perGpuHour": 1.99,
+    "instance": "h100-sxm5-80gb",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "voltagepark",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 4,
+    "nodeHour": 7.96,
+    "perGpuHour": 1.99,
+    "instance": "h100-sxm5-80gb",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "voltagepark",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 2,
+    "nodeHour": 3.98,
+    "perGpuHour": 1.99,
+    "instance": "h100-sxm5-80gb",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "voltagepark",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 1.99,
+    "perGpuHour": 1.99,
+    "instance": "h100-sxm5-80gb",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": false
+   },
+   {
+    "providerId": "voltagepark",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 15.92,
+    "perGpuHour": 1.99,
+    "instance": "h100-sxm5-80gb-bm",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": false
+   }
+  ],
+  "denvr": [
+   {
+    "providerId": "denvr",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 18.8,
+    "perGpuHour": 2.35,
+    "instance": "H100_80GB_SXM_8x",
+    "interconnect": "sxm5",
+    "region": "US, Houston, TX",
+    "available": false
+   }
+  ],
+  "horizon": [
+   {
+    "providerId": "horizon",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 15.6,
+    "perGpuHour": 1.95,
+    "instance": "H100-8",
+    "interconnect": "sxm5",
+    "region": "IS, Blonduos 2",
+    "available": false
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 25.12,
+    "perGpuHour": 3.14,
+    "instance": "gpu_8x_H100_SXM5",
+    "interconnect": "sxm5",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "digitalocean": [
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 31.12,
+    "perGpuHour": 3.89,
+    "instance": "gpu-h100x8-640gb",
+    "interconnect": "sxm5",
+    "region": "CA, Toronto",
+    "available": false
+   },
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 4.41,
+    "perGpuHour": 4.41,
+    "instance": "gpu-h100x1-80gb",
+    "interconnect": "sxm5",
+    "region": "US, New York, NY",
+    "available": false
+   }
+  ],
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 25.6,
+    "perGpuHour": 3.2,
+    "instance": "n3-H100-SXM5x8",
+    "interconnect": "sxm5",
+    "region": "CA, Montreal",
+    "available": true
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 31.92,
+    "perGpuHour": 3.99,
+    "instance": "gpu_8x_h100_sxm5",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": true
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 4,
+    "nodeHour": 16.36,
+    "perGpuHour": 4.09,
+    "instance": "gpu_4x_h100_sxm5",
+    "interconnect": "sxm5",
+    "region": "US, Austin, TX",
+    "available": true
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 2,
+    "nodeHour": 8.38,
+    "perGpuHour": 4.19,
+    "instance": "gpu_2x_h100_sxm5",
+    "interconnect": "sxm5",
+    "region": "us-southeast-1",
+    "available": true
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 4.36,
+    "perGpuHour": 4.36,
+    "instance": "gpu_1x_h100_sxm5",
+    "interconnect": "sxm5",
+    "region": "US, Dallas, TX",
+    "available": true
+   }
+  ],
+  "nebius": [
+   {
+    "providerId": "nebius",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 30.93,
+    "perGpuHour": 3.86625,
+    "instance": "gpu-h100-sxm|8gpu-128vcpu-1600gb",
+    "interconnect": "sxm5",
+    "region": "FI, Helsinki",
+    "available": false
+   },
+   {
+    "providerId": "nebius",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 3.98,
+    "perGpuHour": 3.98,
+    "instance": "gpu-h100-sxm|1gpu-16vcpu-200gb",
+    "interconnect": "sxm5",
+    "region": "FI, Helsinki",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 3.31,
+    "perGpuHour": 3.31,
+    "instance": "1H100.80S.30V",
+    "interconnect": "sxm5",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 2.69,
+    "perGpuHour": 2.69,
+    "instance": "H100 SXM",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 1.3355555555555554,
+    "perGpuHour": 1.3355555555555554,
+    "instance": "H100 SXM x1",
+    "region": "Moldova, MD",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48451982"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 1.602222222222222,
+    "perGpuHour": 1.602222222222222,
+    "instance": "H100 SXM x1",
+    "region": "RU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48436696"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 2,
+    "nodeHour": 3.468888888888889,
+    "perGpuHour": 1.7344444444444445,
+    "instance": "H100 SXM x2",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40179575"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 1.7355555555555555,
+    "perGpuHour": 1.7355555555555555,
+    "instance": "H100 SXM x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40291942"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 1.809511111111111,
+    "perGpuHour": 1.809511111111111,
+    "instance": "H100 SXM x1",
+    "region": "Australia, AU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48672149"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 2.002222222222222,
+    "perGpuHour": 2.002222222222222,
+    "instance": "H100 SXM x1",
+    "region": "Idaho, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=24627638"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 2.002222222222222,
+    "perGpuHour": 2.002222222222222,
+    "instance": "H100 SXM x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40024082"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 2.271111111111111,
+    "perGpuHour": 2.271111111111111,
+    "instance": "H100 SXM x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48635743"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 55.04,
+    "perGpuHour": 6.88,
+    "instance": "p5.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 1,
+    "nodeHour": 6.88,
+    "perGpuHour": 6.88,
+    "instance": "p5.4xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 88.488,
+    "perGpuHour": 11.061,
+    "instance": "ND96is_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 88.488,
+    "perGpuHour": 11.061,
+    "instance": "ND96is_noIB_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 88.488,
+    "perGpuHour": 11.061,
+    "instance": "ND96is_flex_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 98.32,
+    "perGpuHour": 12.29,
+    "instance": "ND96isr_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-sxm",
+    "gpuCount": 8,
+    "nodeHour": 98.32,
+    "perGpuHour": 12.29,
+    "instance": "ND96isrf_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "h100-nvl": {
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 8,
+    "nodeHour": 25.28,
+    "perGpuHour": 3.16,
+    "instance": "gpu_8x_h100_nvl_nvlink",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 2,
+    "nodeHour": 6.32,
+    "perGpuHour": 3.16,
+    "instance": "gpu_2x_h100_nvl_nvlink",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 4,
+    "nodeHour": 12.64,
+    "perGpuHour": 3.16,
+    "instance": "gpu_4x_h100_nvl_nvlink",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 1,
+    "nodeHour": 2.59,
+    "perGpuHour": 2.59,
+    "instance": "H100 NVL",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 1,
+    "nodeHour": 2.6688888888888886,
+    "perGpuHour": 2.6688888888888886,
+    "instance": "H100 NVL x1",
+    "region": "The Netherlands, NL",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47931036"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 1,
+    "nodeHour": 2.67037037037037,
+    "perGpuHour": 2.67037037037037,
+    "instance": "H100 NVL x1",
+    "region": "Romania, RO",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48393944"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 1,
+    "nodeHour": 6.98,
+    "perGpuHour": 6.98,
+    "instance": "NC40ads_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "h100-nvl",
+    "gpuCount": 2,
+    "nodeHour": 13.96,
+    "perGpuHour": 6.98,
+    "instance": "NC80adis_H100_v5",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "h200": {
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 18,
+    "perGpuHour": 2.25,
+    "instance": "H200x8_es",
+    "interconnect": "sxm5",
+    "region": "US, Raleigh, NC",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 25.6,
+    "perGpuHour": 3.2,
+    "instance": "h200.8x.sapphire-rapids.208vcpu.1904gib.4x7tb",
+    "interconnect": "sxm5",
+    "region": "JP, Kagawa",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 36.13,
+    "perGpuHour": 4.51625,
+    "instance": "gpu-h200-sxm|8gpu-128vcpu-1600gb",
+    "interconnect": "sxm5",
+    "region": "FI, Helsinki",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 36.13,
+    "perGpuHour": 4.51625,
+    "instance": "gpu-h200-sxm|8gpu-128vcpu-1600gb",
+    "interconnect": "sxm5",
+    "region": "US, Kansas City, MO",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 4.63,
+    "perGpuHour": 4.63,
+    "instance": "gpu-h200-sxm|1gpu-16vcpu-200gb",
+    "interconnect": "sxm5",
+    "region": "FR, Paris",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 4.63,
+    "perGpuHour": 4.63,
+    "instance": "gpu-h200-sxm|1gpu-16vcpu-200gb",
+    "interconnect": "sxm5",
+    "region": "FI, Helsinki",
+    "available": false
+   }
+  ],
+  "nebius": [
+   {
+    "providerId": "nebius",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 36.13,
+    "perGpuHour": 4.51625,
+    "instance": "gpu-h200-sxm|8gpu-128vcpu-1600gb",
+    "interconnect": "sxm5",
+    "region": "FI, Helsinki",
+    "available": false
+   },
+   {
+    "providerId": "nebius",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 4.63,
+    "perGpuHour": 4.63,
+    "instance": "gpu-h200-sxm|1gpu-16vcpu-200gb",
+    "interconnect": "sxm5",
+    "region": "FR, Paris",
+    "available": false
+   }
+  ],
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 19.6,
+    "perGpuHour": 2.45,
+    "instance": "H200x8",
+    "interconnect": "sxm5",
+    "region": "US, Raleigh, NC",
+    "available": false
+   }
+  ],
+  "amaya": [
+   {
+    "providerId": "amaya",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 18,
+    "perGpuHour": 2.25,
+    "instance": "H200_sxm5x8_NVLINK",
+    "interconnect": "sxm5",
+    "region": "US, Dowagiac, MI",
+    "available": false
+   }
+  ],
+  "digitalocean": [
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 4.47,
+    "perGpuHour": 4.47,
+    "instance": "gpu-h200x1-141gb",
+    "interconnect": "sxm5",
+    "region": "US, New York, NY",
+    "available": false
+   },
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 35.76,
+    "perGpuHour": 4.47,
+    "instance": "gpu-h200x8-1128gb",
+    "interconnect": "sxm5",
+    "region": "US, New York, NY",
+    "available": false
+   }
+  ],
+  "horizon": [
+   {
+    "providerId": "horizon",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 24,
+    "perGpuHour": 3,
+    "instance": "H200-8",
+    "interconnect": "sxm5",
+    "region": "IS, Blonduos 3",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "h200",
+    "gpuCount": 4,
+    "nodeHour": 16.82,
+    "perGpuHour": 4.205,
+    "instance": "4H200.141S.176V",
+    "interconnect": "sxm5",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 33.64,
+    "perGpuHour": 4.205,
+    "instance": "8H200.141S.176V",
+    "interconnect": "sxm5",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 4.41,
+    "perGpuHour": 4.41,
+    "instance": "1H200.141S.44V",
+    "interconnect": "sxm5",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "h200",
+    "gpuCount": 2,
+    "nodeHour": 9.23,
+    "perGpuHour": 4.615,
+    "instance": "2H200.141S.88V",
+    "interconnect": "sxm5",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 3.59,
+    "perGpuHour": 3.59,
+    "instance": "H200 SXM",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 3.0285087719298245,
+    "perGpuHour": 3.0285087719298245,
+    "instance": "H200 x1",
+    "region": "Georgia, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48691663"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 4,
+    "nodeHour": 15.480409356725145,
+    "perGpuHour": 3.8701023391812863,
+    "instance": "H200 x4",
+    "region": "New Jersey, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48493812"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 2,
+    "nodeHour": 7.7409356725146194,
+    "perGpuHour": 3.8704678362573097,
+    "instance": "H200 x2",
+    "region": "New Jersey, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48493816"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 3.8711988304093565,
+    "perGpuHour": 3.8711988304093565,
+    "instance": "H200 x1",
+    "region": "New Jersey, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48493809"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 2,
+    "nodeHour": 7.950292397660818,
+    "perGpuHour": 3.975146198830409,
+    "instance": "H200 x2",
+    "region": "Saudi Arabia, SA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39605085"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 2,
+    "nodeHour": 7.950292397660818,
+    "perGpuHour": 3.975146198830409,
+    "instance": "H200 x2",
+    "region": "Saudi Arabia, SA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39353729"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 3.9766081871345027,
+    "perGpuHour": 3.9766081871345027,
+    "instance": "H200 x1",
+    "region": "Saudi Arabia, SA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39605094"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200",
+    "gpuCount": 1,
+    "nodeHour": 3.9766081871345027,
+    "perGpuHour": 3.9766081871345027,
+    "instance": "H200 x1",
+    "region": "Saudi Arabia, SA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39353724"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "h200",
+    "gpuCount": 8,
+    "nodeHour": 63.296,
+    "perGpuHour": 7.912,
+    "instance": "p5en.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ]
+ },
+ "a4000": {
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a4000",
+    "gpuCount": 10,
+    "nodeHour": 1.5,
+    "perGpuHour": 0.15,
+    "instance": "n3-RTX-A4000x10",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.15,
+    "perGpuHour": 0.15,
+    "instance": "n3-RTX-A4000x1",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a4000",
+    "gpuCount": 8,
+    "nodeHour": 1.2,
+    "perGpuHour": 0.15,
+    "instance": "n3-RTX-A4000x8",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a4000",
+    "gpuCount": 2,
+    "nodeHour": 0.3,
+    "perGpuHour": 0.15,
+    "instance": "n3-RTX-A4000x2",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "a4000",
+    "gpuCount": 4,
+    "nodeHour": 0.6,
+    "perGpuHour": 0.15,
+    "instance": "n3-RTX-A4000x4",
+    "interconnect": "pcie",
+    "region": "NO, Oslo",
+    "available": false
+   }
+  ],
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a4000",
+    "gpuCount": 2,
+    "nodeHour": 1.6,
+    "perGpuHour": 0.8,
+    "instance": "A4000x2",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a4000",
+    "gpuCount": 4,
+    "nodeHour": 3.2,
+    "perGpuHour": 0.8,
+    "instance": "A4000x4",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.8,
+    "perGpuHour": 0.8,
+    "instance": "A4000",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.07288888888888889,
+    "perGpuHour": 0.07288888888888889,
+    "instance": "RTX A4000 x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=36322398"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.07288888888888889,
+    "perGpuHour": 0.07288888888888889,
+    "instance": "RTX A4000 x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=15969174"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.07288888888888889,
+    "perGpuHour": 0.07288888888888889,
+    "instance": "RTX A4000 x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=15969228"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.08222222222222222,
+    "perGpuHour": 0.08222222222222222,
+    "instance": "RTX A4000 x1",
+    "region": "Kentucky, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42131841"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.08888888888888889,
+    "perGpuHour": 0.08888888888888889,
+    "instance": "RTX A4000 x1",
+    "region": "Ohio, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=45315444"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.09214814814814816,
+    "perGpuHour": 0.09214814814814816,
+    "instance": "RTX A4000 x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=43086112"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.09481481481481482,
+    "perGpuHour": 0.09481481481481482,
+    "instance": "RTX A4000 x1",
+    "region": "The Netherlands, NL",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=36172968"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a4000",
+    "gpuCount": 1,
+    "nodeHour": 0.09481481481481482,
+    "perGpuHour": 0.09481481481481482,
+    "instance": "RTX A4000 x1",
+    "region": "Poland, PL",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=45600036"
+   }
+  ]
+ },
+ "l40": {
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40",
+    "gpuCount": 1,
+    "nodeHour": 0.88,
+    "perGpuHour": 0.88,
+    "instance": "gpu_1x_l40",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40",
+    "gpuCount": 2,
+    "nodeHour": 1.98,
+    "perGpuHour": 0.99,
+    "instance": "gpu_2x_l40",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40",
+    "gpuCount": 4,
+    "nodeHour": 5.96,
+    "perGpuHour": 1.49,
+    "instance": "gpu_4x_l40",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   }
+  ],
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "l40",
+    "gpuCount": 8,
+    "nodeHour": 8,
+    "perGpuHour": 1,
+    "instance": "n3-L40x8",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "l40",
+    "gpuCount": 1,
+    "nodeHour": 1,
+    "perGpuHour": 1,
+    "instance": "n3-L40x1",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "l40",
+    "gpuCount": 2,
+    "nodeHour": 2,
+    "perGpuHour": 1,
+    "instance": "n3-L40x2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "l40",
+    "gpuCount": 4,
+    "nodeHour": 4,
+    "perGpuHour": 1,
+    "instance": "n3-L40x4",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": true
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40",
+    "gpuCount": 2,
+    "nodeHour": 0.6703703703703703,
+    "perGpuHour": 0.33518518518518514,
+    "instance": "L40 x2",
+    "region": "Vietnam, VN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48035745"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40",
+    "gpuCount": 1,
+    "nodeHour": 0.337037037037037,
+    "perGpuHour": 0.337037037037037,
+    "instance": "L40 x1",
+    "region": "Vietnam, VN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48035744"
+   }
+  ]
+ },
+ "a100-40gb": {
+  "denvr": [
+   {
+    "providerId": "denvr",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 11.2,
+    "perGpuHour": 1.4,
+    "instance": "A100_40GB_SXM_8x",
+    "interconnect": "sxm4",
+    "region": "CA, Calgary",
+    "available": true
+   },
+   {
+    "providerId": "denvr",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1.4,
+    "perGpuHour": 1.4,
+    "instance": "A100_40GB_SXM_1x",
+    "interconnect": "sxm4",
+    "region": "CA, Calgary",
+    "available": true
+   }
+  ],
+  "crusoe": [
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1.45,
+    "perGpuHour": 1.45,
+    "instance": "a100.1x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 11.6,
+    "perGpuHour": 1.45,
+    "instance": "a100.8x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 4,
+    "nodeHour": 5.8,
+    "perGpuHour": 1.45,
+    "instance": "a100.4x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 2,
+    "nodeHour": 2.9,
+    "perGpuHour": 1.45,
+    "instance": "a100.2x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1.99,
+    "perGpuHour": 1.99,
+    "instance": "gpu_1x_a100_sxm4",
+    "interconnect": "sxm4",
+    "region": "IN, Mumbai",
+    "available": true
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1.99,
+    "perGpuHour": 1.99,
+    "instance": "gpu_1x_a100",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 4,
+    "nodeHour": 7.96,
+    "perGpuHour": 1.99,
+    "instance": "gpu_4x_a100",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 15.92,
+    "perGpuHour": 1.99,
+    "instance": "gpu_8x_a100",
+    "interconnect": "pcie",
+    "region": "US, San Jose, Ca",
+    "available": true
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 2,
+    "nodeHour": 3.98,
+    "perGpuHour": 1.99,
+    "instance": "gpu_2x_a100",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   }
+  ],
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 24.88,
+    "perGpuHour": 3.11,
+    "instance": "A100x8",
+    "interconnect": "pcie",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 4,
+    "nodeHour": 12.44,
+    "perGpuHour": 3.11,
+    "instance": "A100x4",
+    "interconnect": "pcie",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 2,
+    "nodeHour": 6.26,
+    "perGpuHour": 3.13,
+    "instance": "A100x2",
+    "interconnect": "pcie",
+    "region": "NL, Amsterdam",
+    "available": false
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 3.19,
+    "perGpuHour": 3.19,
+    "instance": "A100",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1.36,
+    "perGpuHour": 1.36,
+    "instance": "1A100.40S.22V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 10.88,
+    "perGpuHour": 1.36,
+    "instance": "8A100.40S.176V",
+    "interconnect": "sxm4",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 1,
+    "perGpuHour": 1,
+    "instance": "A100 SXM 40GB",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.5355555555555556,
+    "perGpuHour": 0.5355555555555556,
+    "instance": "A100 SXM4 x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48863866"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6014814814814815,
+    "perGpuHour": 0.6014814814814815,
+    "instance": "A100 SXM4 x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42974676"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6014814814814815,
+    "perGpuHour": 0.6014814814814815,
+    "instance": "A100 SXM4 x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48715371"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6022222222222222,
+    "perGpuHour": 0.6022222222222222,
+    "instance": "A100 SXM4 x1",
+    "region": "South Carolina, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46116763"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6022222222222222,
+    "perGpuHour": 0.6022222222222222,
+    "instance": "A100 SXM4 x1",
+    "region": "Singapore, SG",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47130298"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6368888888888888,
+    "perGpuHour": 0.6368888888888888,
+    "instance": "A100 PCIE x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=41257394"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6688888888888889,
+    "perGpuHour": 0.6688888888888889,
+    "instance": "A100 PCIE x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=35352685"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 1,
+    "nodeHour": 0.6696296296296296,
+    "perGpuHour": 0.6696296296296296,
+    "instance": "A100 SXM4 x1",
+    "region": "Alberta, CA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39185351"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 21.957642,
+    "perGpuHour": 2.74470525,
+    "instance": "p4d.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 27.197,
+    "perGpuHour": 3.399625,
+    "instance": "ND96asr_A100_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "a100-40gb",
+    "gpuCount": 8,
+    "nodeHour": 27.197,
+    "perGpuHour": 3.399625,
+    "instance": "ND96asr_v4",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "l40s": {
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 5.52,
+    "perGpuHour": 0.69,
+    "instance": "L40Sx8",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": false
+   }
+  ],
+  "scaleway": [
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 1.7,
+    "perGpuHour": 1.7,
+    "instance": "L40S-1-48G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 13.6,
+    "perGpuHour": 1.7,
+    "instance": "L40S-8-48G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": false
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 3.4,
+    "perGpuHour": 1.7,
+    "instance": "L40S-2-48G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": true
+   },
+   {
+    "providerId": "scaleway",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 6.8,
+    "perGpuHour": 1.7,
+    "instance": "L40S-4-48G",
+    "interconnect": "pcie",
+    "region": "PL, Warsaw",
+    "available": false
+   }
+  ],
+  "crusoe": [
+   {
+    "providerId": "crusoe",
+    "modelSlug": "l40s",
+    "gpuCount": 10,
+    "nodeHour": 14.5,
+    "perGpuHour": 1.45,
+    "instance": "l40s-48gb.10x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 1.45,
+    "perGpuHour": 1.45,
+    "instance": "l40s-48gb.1x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 2.9,
+    "perGpuHour": 1.45,
+    "instance": "l40s-48gb.2x",
+    "interconnect": "pcie",
+    "region": "US, Houston, TX",
+    "available": true
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 11.6,
+    "perGpuHour": 1.45,
+    "instance": "l40s-48gb.8x",
+    "interconnect": "pcie",
+    "region": "US, Culpeper, VA",
+    "available": true
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 5.8,
+    "perGpuHour": 1.45,
+    "instance": "l40s-48gb.4x",
+    "interconnect": "pcie",
+    "region": "US, Houston, TX",
+    "available": true
+   }
+  ],
+  "latitude": [
+   {
+    "providerId": "latitude",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 0.74,
+    "perGpuHour": 0.74,
+    "instance": "vm.l40s.small",
+    "interconnect": "pcie",
+    "region": "DE, Frankfurt",
+    "available": false
+   },
+   {
+    "providerId": "latitude",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 6.97,
+    "perGpuHour": 0.87125,
+    "instance": "g3-l40s-large",
+    "interconnect": "pcie",
+    "region": "DE, Frankfurt",
+    "available": false
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 0.88,
+    "perGpuHour": 0.88,
+    "instance": "gpu_1x_l40s",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 3.52,
+    "perGpuHour": 0.88,
+    "instance": "gpu_4x_l40s",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 7.04,
+    "perGpuHour": 0.88,
+    "instance": "gpu_8x_l40s",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 1.76,
+    "perGpuHour": 0.88,
+    "instance": "gpu_2x_l40s",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   }
+  ],
+  "digitalocean": [
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 1.57,
+    "perGpuHour": 1.57,
+    "instance": "gpu-l40sx1-48gb",
+    "interconnect": "pcie",
+    "region": "CA, Toronto",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 1.43,
+    "perGpuHour": 1.43,
+    "instance": "1L40S.20V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 11.5,
+    "perGpuHour": 1.4375,
+    "instance": "8L40S.160V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 0.79,
+    "perGpuHour": 0.79,
+    "instance": "L40S",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 1.868148148148148,
+    "perGpuHour": 0.467037037037037,
+    "instance": "L40S x4",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=38028232"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 1.868148148148148,
+    "perGpuHour": 0.467037037037037,
+    "instance": "L40S x4",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=38027976"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 1.0688888888888888,
+    "perGpuHour": 0.5344444444444444,
+    "instance": "L40S x2",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48250806"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 0.6696296296296296,
+    "perGpuHour": 0.6696296296296296,
+    "instance": "L40S x1",
+    "region": "Spain, ES",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48802921"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 1.4703703703703705,
+    "perGpuHour": 0.7351851851851853,
+    "instance": "L40S x2",
+    "region": "Finland, FI",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=27979079"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 0.737037037037037,
+    "perGpuHour": 0.737037037037037,
+    "instance": "L40S x1",
+    "region": "Finland, FI",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=27979082"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 1.6014814814814813,
+    "perGpuHour": 0.8007407407407406,
+    "instance": "L40S x2",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=25918213"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "l40s",
+    "gpuCount": 2,
+    "nodeHour": 1.6014814814814813,
+    "perGpuHour": 0.8007407407407406,
+    "instance": "L40S x2",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=38575010"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 1.861,
+    "perGpuHour": 1.861,
+    "instance": "g6e.xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 2.24208,
+    "perGpuHour": 2.24208,
+    "instance": "g6e.2xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 10.49264,
+    "perGpuHour": 2.62316,
+    "instance": "g6e.12xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 3.00424,
+    "perGpuHour": 3.00424,
+    "instance": "g6e.4xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 4,
+    "nodeHour": 15.06559,
+    "perGpuHour": 3.7663975,
+    "instance": "g6e.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 8,
+    "nodeHour": 30.13118,
+    "perGpuHour": 3.7663975,
+    "instance": "g6e.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 4.52856,
+    "perGpuHour": 4.52856,
+    "instance": "g6e.8xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "l40s",
+    "gpuCount": 1,
+    "nodeHour": 7.57719,
+    "perGpuHour": 7.57719,
+    "instance": "g6e.16xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ]
+ },
+ "a5000": {
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a5000",
+    "gpuCount": 4,
+    "nodeHour": 5.68,
+    "perGpuHour": 1.42,
+    "instance": "A5000x4",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 1.42,
+    "perGpuHour": 1.42,
+    "instance": "A5000",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "a5000",
+    "gpuCount": 2,
+    "nodeHour": 2.84,
+    "perGpuHour": 1.42,
+    "instance": "A5000x2",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a5000",
+    "gpuCount": 2,
+    "nodeHour": 0.88,
+    "perGpuHour": 0.44,
+    "instance": "gpu_2x_a5000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.44,
+    "perGpuHour": 0.44,
+    "instance": "gpu_1x_a5000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a5000",
+    "gpuCount": 4,
+    "nodeHour": 1.76,
+    "perGpuHour": 0.44,
+    "instance": "gpu_4x_a5000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "a5000",
+    "gpuCount": 8,
+    "nodeHour": 3.52,
+    "perGpuHour": 0.44,
+    "instance": "gpu_8x_a5000",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": false
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.14888888888888888,
+    "perGpuHour": 0.14888888888888888,
+    "instance": "RTX A5000 x1",
+    "region": "Argentina, AR",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48244116"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.1622222222222222,
+    "perGpuHour": 0.1622222222222222,
+    "instance": "RTX A5000 x1",
+    "region": "Kentucky, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49151839"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.17555555555555555,
+    "perGpuHour": 0.17555555555555555,
+    "instance": "RTX A5000 x1",
+    "region": "Australia, AU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=23307643"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.17555555555555555,
+    "perGpuHour": 0.17555555555555555,
+    "instance": "RTX A5000 x1",
+    "region": "Australia, AU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=11925443"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.20888888888888887,
+    "perGpuHour": 0.20888888888888887,
+    "instance": "RTX A5000 x1",
+    "region": "Quebec, CA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49007297"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.21555555555555556,
+    "perGpuHour": 0.21555555555555556,
+    "instance": "RTX A5000 x1",
+    "region": "Puerto Rico, PR",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48465829"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.23232592592592594,
+    "perGpuHour": 0.23232592592592594,
+    "instance": "RTX A5000 x1",
+    "region": "Iceland, IS",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=9817744"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "a5000",
+    "gpuCount": 1,
+    "nodeHour": 0.23232592592592594,
+    "perGpuHour": 0.23232592592592594,
+    "instance": "RTX A5000 x1",
+    "region": "Iceland, IS",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=9817752"
+   }
+  ]
+ },
+ "a40": {
+  "crusoe": [
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a40",
+    "gpuCount": 1,
+    "nodeHour": 1.1,
+    "perGpuHour": 1.1,
+    "instance": "a40.1x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a40",
+    "gpuCount": 4,
+    "nodeHour": 4.4,
+    "perGpuHour": 1.1,
+    "instance": "a40.4x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a40",
+    "gpuCount": 2,
+    "nodeHour": 2.2,
+    "perGpuHour": 1.1,
+    "instance": "a40.2x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   },
+   {
+    "providerId": "crusoe",
+    "modelSlug": "a40",
+    "gpuCount": 8,
+    "nodeHour": 8.8,
+    "perGpuHour": 1.1,
+    "instance": "a40.8x",
+    "interconnect": "pcie",
+    "region": "US, Fairview, OH",
+    "available": false
+   }
+  ],
+  "vultr": [
+   {
+    "providerId": "vultr",
+    "modelSlug": "a40",
+    "gpuCount": 1,
+    "nodeHour": 1.86,
+    "perGpuHour": 1.86,
+    "instance": "vcg-a40-24c-120g-48vram",
+    "interconnect": "pcie",
+    "region": "AU, Sydney",
+    "available": true
+   },
+   {
+    "providerId": "vultr",
+    "modelSlug": "a40",
+    "gpuCount": 4,
+    "nodeHour": 7.44,
+    "perGpuHour": 1.86,
+    "instance": "vcg-a40-96c-480g-192vram",
+    "interconnect": "pcie",
+    "region": "US, Newark, NJ",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "a40",
+    "gpuCount": 1,
+    "nodeHour": 0.35,
+    "perGpuHour": 0.35,
+    "instance": "A40",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "a40",
+    "gpuCount": 1,
+    "nodeHour": 0.33555555555555555,
+    "perGpuHour": 0.33555555555555555,
+    "instance": "A40 x1",
+    "region": "Vietnam, VN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47876011"
+   }
+  ]
+ },
+ "v100-32gb": {
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 1,
+    "nodeHour": 2.34,
+    "perGpuHour": 2.34,
+    "instance": "V100-32G",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 4,
+    "nodeHour": 9.36,
+    "perGpuHour": 2.34,
+    "instance": "V100-32Gx4",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   },
+   {
+    "providerId": "paperspace",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 4.68,
+    "perGpuHour": 2.34,
+    "instance": "V100-32Gx2",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 0.05555555555555556,
+    "perGpuHour": 0.02777777777777778,
+    "instance": "Tesla V100 x2",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49022076"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 0.05555555555555556,
+    "perGpuHour": 0.02777777777777778,
+    "instance": "Tesla V100 x2",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48038272"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 0.05555555555555556,
+    "perGpuHour": 0.02777777777777778,
+    "instance": "Tesla V100 x2",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47966242"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 0.05555555555555556,
+    "perGpuHour": 0.02777777777777778,
+    "instance": "Tesla V100 x2",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=38450908"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 1,
+    "nodeHour": 0.02888888888888889,
+    "perGpuHour": 0.02888888888888889,
+    "instance": "Tesla V100 x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49022082"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 1,
+    "nodeHour": 0.02888888888888889,
+    "perGpuHour": 0.02888888888888889,
+    "instance": "Tesla V100 x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47966240"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 1,
+    "nodeHour": 0.02888888888888889,
+    "perGpuHour": 0.02888888888888889,
+    "instance": "Tesla V100 x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=38450626"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 2,
+    "nodeHour": 0.06444444444444444,
+    "perGpuHour": 0.03222222222222222,
+    "instance": "Tesla V100 x2",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47751953"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 8,
+    "nodeHour": 31.212,
+    "perGpuHour": 3.9015,
+    "instance": "p3dn.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 8,
+    "nodeHour": 12.24,
+    "perGpuHour": 1.53,
+    "instance": "ND40s_v2",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-32gb",
+    "gpuCount": 8,
+    "nodeHour": 22.032,
+    "perGpuHour": 2.754,
+    "instance": "ND40rs_v2",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "a10g": {
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 1.29,
+    "perGpuHour": 1.29,
+    "instance": "gpu_1x_a10",
+    "interconnect": "pcie",
+    "region": "US, Dulles, VA",
+    "available": true
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 1.006,
+    "perGpuHour": 1.006,
+    "instance": "g5.xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 1.212,
+    "perGpuHour": 1.212,
+    "instance": "g5.2xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 4,
+    "nodeHour": 5.672,
+    "perGpuHour": 1.418,
+    "instance": "g5.12xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 1.624,
+    "perGpuHour": 1.624,
+    "instance": "g5.4xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 4,
+    "nodeHour": 8.144,
+    "perGpuHour": 2.036,
+    "instance": "g5.24xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 8,
+    "nodeHour": 16.288,
+    "perGpuHour": 2.036,
+    "instance": "g5.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 2.448,
+    "perGpuHour": 2.448,
+    "instance": "g5.8xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "a10g",
+    "gpuCount": 1,
+    "nodeHour": 4.096,
+    "perGpuHour": 4.096,
+    "instance": "g5.16xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ]
+ },
+ "v100-16gb": {
+  "paperspace": [
+   {
+    "providerId": "paperspace",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 2.34,
+    "perGpuHour": 2.34,
+    "instance": "V100",
+    "interconnect": "pcie",
+    "region": "US, New York, NY",
+    "available": true
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 8,
+    "nodeHour": 6.32,
+    "perGpuHour": 0.79,
+    "instance": "gpu_8x_v100",
+    "interconnect": "pcie",
+    "region": "IN, Mumbai",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 2,
+    "nodeHour": 0.78,
+    "perGpuHour": 0.39,
+    "instance": "2V100.10V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 8,
+    "nodeHour": 3.12,
+    "perGpuHour": 0.39,
+    "instance": "8V100.48V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 4,
+    "nodeHour": 1.56,
+    "perGpuHour": 0.39,
+    "instance": "4V100.20V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 0.39,
+    "perGpuHour": 0.39,
+    "instance": "1V100.6V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 0.23,
+    "perGpuHour": 0.23,
+    "instance": "V100 SXM2",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   },
+   {
+    "providerId": "runpod",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 0.19,
+    "perGpuHour": 0.19,
+    "instance": "Tesla V100",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 0.0794074074074074,
+    "perGpuHour": 0.0794074074074074,
+    "instance": "Tesla V100 x1",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=35429403"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 0.08222222222222222,
+    "perGpuHour": 0.08222222222222222,
+    "instance": "Tesla V100 x1",
+    "region": "Spain, ES",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48941317"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 3.06,
+    "perGpuHour": 3.06,
+    "instance": "p3.2xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 8,
+    "nodeHour": 24.48,
+    "perGpuHour": 3.06,
+    "instance": "p3.16xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   },
+   {
+    "providerId": "aws",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 4,
+    "nodeHour": 12.24,
+    "perGpuHour": 3.06,
+    "instance": "p3.8xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ],
+  "azure": [
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 2,
+    "nodeHour": 6.12,
+    "perGpuHour": 3.06,
+    "instance": "NC12s_v3",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 1,
+    "nodeHour": 3.06,
+    "perGpuHour": 3.06,
+    "instance": "NC6s_v3",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 4,
+    "nodeHour": 12.24,
+    "perGpuHour": 3.06,
+    "instance": "NC24s_v3",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   },
+   {
+    "providerId": "azure",
+    "modelSlug": "v100-16gb",
+    "gpuCount": 4,
+    "nodeHour": 13.46,
+    "perGpuHour": 3.365,
+    "instance": "NC24rs_v3",
+    "region": "eastus",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+   }
+  ]
+ },
+ "gh200": {
+  "latitude": [
+   {
+    "providerId": "latitude",
+    "modelSlug": "gh200",
+    "gpuCount": 1,
+    "nodeHour": 4.23,
+    "perGpuHour": 4.23,
+    "instance": "g3-gh200",
+    "interconnect": "pcie",
+    "region": "US, Dallas, TX",
+    "available": false
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "gh200",
+    "gpuCount": 1,
+    "nodeHour": 2.29,
+    "perGpuHour": 2.29,
+    "instance": "gpu_1x_gh200",
+    "interconnect": "pcie",
+    "region": "US, Dulles, VA",
+    "available": true
+   }
+  ]
+ },
+ "rtx-6000-ada": {
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 4,
+    "nodeHour": 3.88,
+    "perGpuHour": 0.97,
+    "instance": "gpu_4x_6000_ada",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 2,
+    "nodeHour": 1.94,
+    "perGpuHour": 0.97,
+    "instance": "gpu_2x_6000_ada",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, KS",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.97,
+    "perGpuHour": 0.97,
+    "instance": "gpu_1x_6000_ada",
+    "interconnect": "pcie",
+    "region": "US, Des Moines, IA",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 8,
+    "nodeHour": 7.76,
+    "perGpuHour": 0.97,
+    "instance": "gpu_8x_6000_ada",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": false
+   }
+  ],
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 8,
+    "nodeHour": 4.8,
+    "perGpuHour": 0.6,
+    "instance": "RTX6000Adax8",
+    "interconnect": "sxm5",
+    "region": "US, Seattle, WA",
+    "available": false
+   }
+  ],
+  "digitalocean": [
+   {
+    "providerId": "digitalocean",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 1.57,
+    "perGpuHour": 1.57,
+    "instance": "gpu-6000adax1-48gb",
+    "interconnect": "pcie",
+    "region": "CA, Toronto",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 1.1,
+    "perGpuHour": 1.1,
+    "instance": "1RTX6000ADA.10V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 2,
+    "nodeHour": 2.21,
+    "perGpuHour": 1.105,
+    "instance": "2RTX6000ADA.20V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 8,
+    "nodeHour": 8.86,
+    "perGpuHour": 1.1075,
+    "instance": "8RTX6000ADA.80V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.74,
+    "perGpuHour": 0.74,
+    "instance": "RTX 6000 Ada",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 2,
+    "nodeHour": 1.0182222222222221,
+    "perGpuHour": 0.5091111111111111,
+    "instance": "RTX 6000Ada x2",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=25318158"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.5345185185185185,
+    "perGpuHour": 0.5345185185185185,
+    "instance": "RTX 6000Ada x1",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46668997"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.5348148148148149,
+    "perGpuHour": 0.5348148148148149,
+    "instance": "RTX 6000Ada x1",
+    "region": "The Netherlands, NL",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48928116"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.5494814814814815,
+    "perGpuHour": 0.5494814814814815,
+    "instance": "RTX 6000Ada x1",
+    "region": "New York, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=43709900"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.6059259259259259,
+    "perGpuHour": 0.6059259259259259,
+    "instance": "RTX 6000Ada x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48064193"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.6288888888888888,
+    "perGpuHour": 0.6288888888888888,
+    "instance": "RTX 6000Ada x1",
+    "region": "Germany, DE",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44922352"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 2,
+    "nodeHour": 1.4681481481481482,
+    "perGpuHour": 0.7340740740740741,
+    "instance": "RTX 6000Ada x2",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=26051036"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-6000-ada",
+    "gpuCount": 1,
+    "nodeHour": 0.7348148148148149,
+    "perGpuHour": 0.7348148148148149,
+    "instance": "RTX 6000Ada x1",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=26051042"
+   }
+  ]
+ },
+ "rtx-5090": {
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.65,
+    "perGpuHour": 0.65,
+    "instance": "n3-RTX-5090x1",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": true
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 2,
+    "nodeHour": 1.3,
+    "perGpuHour": 0.65,
+    "instance": "n3-RTX-5090x2",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 8,
+    "nodeHour": 5.2,
+    "perGpuHour": 0.65,
+    "instance": "n3-RTX-5090x8",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 4,
+    "nodeHour": 2.6,
+    "perGpuHour": 0.65,
+    "instance": "n3-RTX-5090x4",
+    "interconnect": "pcie",
+    "region": "NO, Central",
+    "available": false
+   },
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 8,
+    "nodeHour": 5.6,
+    "perGpuHour": 0.7,
+    "instance": "nvidia-gpu-nvidia-geforce-rtx-us-central-1-35d1bee24d",
+    "interconnect": "pcie",
+    "region": "US, Casper, WY",
+    "available": true
+   }
+  ],
+  "phyntec": [
+   {
+    "providerId": "phyntec",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 8,
+    "nodeHour": 5.6,
+    "perGpuHour": 0.7,
+    "instance": "RTX5090x8",
+    "interconnect": "pcie",
+    "region": "US, Casper, WY",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.69,
+    "perGpuHour": 0.69,
+    "instance": "RTX 5090",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.32222222222222224,
+    "perGpuHour": 0.32222222222222224,
+    "instance": "RTX 5090 x1",
+    "region": "Slovakia, SK",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48381287"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.3348148148148148,
+    "perGpuHour": 0.3348148148148148,
+    "instance": "RTX 5090 x1",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47601771"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.3348148148148148,
+    "perGpuHour": 0.3348148148148148,
+    "instance": "RTX 5090 x1",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47365402"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.3348148148148148,
+    "perGpuHour": 0.3348148148148148,
+    "instance": "RTX 5090 x1",
+    "region": "Beijing, CN",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49032921"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.33555555555555555,
+    "perGpuHour": 0.33555555555555555,
+    "instance": "RTX 5090 x1",
+    "region": "Hong Kong, HK",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42167636"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.33555555555555555,
+    "perGpuHour": 0.33555555555555555,
+    "instance": "RTX 5090 x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48437392"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.33555555555555555,
+    "perGpuHour": 0.33555555555555555,
+    "instance": "RTX 5090 x1",
+    "region": "Australia, AU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48265678"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-5090",
+    "gpuCount": 1,
+    "nodeHour": 0.33777777777777773,
+    "perGpuHour": 0.33777777777777773,
+    "instance": "RTX 5090 x1",
+    "region": "Virginia, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44746858"
+   }
+  ]
+ },
+ "b200": {
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "b200",
+    "gpuCount": 8,
+    "nodeHour": 36.11,
+    "perGpuHour": 4.51375,
+    "instance": "gpu-b200-sxm|8gpu-160vcpu-1792gb",
+    "interconnect": "sxm6",
+    "region": "US, Kansas City, MO",
+    "available": false
+   }
+  ],
+  "lambdalabs": [
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "b200",
+    "gpuCount": 8,
+    "nodeHour": 53.52,
+    "perGpuHour": 6.69,
+    "instance": "gpu_8x_b200_sxm6",
+    "interconnect": "sxm6",
+    "region": "AU, Sydney",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "b200",
+    "gpuCount": 4,
+    "nodeHour": 27.16,
+    "perGpuHour": 6.79,
+    "instance": "gpu_4x_b200_sxm6",
+    "interconnect": "sxm6",
+    "region": "AU, Sydney",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 13.78,
+    "perGpuHour": 6.89,
+    "instance": "gpu_2x_b200_sxm6",
+    "interconnect": "sxm6",
+    "region": "AU, Sydney",
+    "available": false
+   },
+   {
+    "providerId": "lambdalabs",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 6.99,
+    "perGpuHour": 6.99,
+    "instance": "gpu_1x_b200_sxm6",
+    "interconnect": "sxm6",
+    "region": "US, Dulles, VA",
+    "available": false
+   }
+  ],
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "b200",
+    "gpuCount": 8,
+    "nodeHour": 29.92,
+    "perGpuHour": 3.74,
+    "instance": "B200x8",
+    "interconnect": "sxm6",
+    "region": "US, Dallas, TX",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "b200",
+    "gpuCount": 8,
+    "nodeHour": 50.44,
+    "perGpuHour": 6.305,
+    "instance": "8B200.240V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b200",
+    "gpuCount": 4,
+    "nodeHour": 25.67,
+    "perGpuHour": 6.4175,
+    "instance": "4B200.120V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 6.52,
+    "perGpuHour": 6.52,
+    "instance": "1B200.30V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 13.04,
+    "perGpuHour": 6.52,
+    "instance": "2B200.60V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 5.98,
+    "perGpuHour": 5.98,
+    "instance": "B200",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 5.314583333333333,
+    "perGpuHour": 5.314583333333333,
+    "instance": "B200 x1",
+    "region": "Oregon, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=36083196"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 4,
+    "nodeHour": 23.010416666666664,
+    "perGpuHour": 5.752604166666666,
+    "instance": "B200 x4",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48714764"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 12.010416666666664,
+    "perGpuHour": 6.005208333333332,
+    "instance": "B200 x2",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49035441"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 12.010416666666664,
+    "perGpuHour": 6.005208333333332,
+    "instance": "B200 x2",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46656939"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 12.010416666666664,
+    "perGpuHour": 6.005208333333332,
+    "instance": "B200 x2",
+    "region": "Ohio, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49016600"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 6.010416666666666,
+    "perGpuHour": 6.010416666666666,
+    "instance": "B200 x1",
+    "region": "Ohio, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49016609"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 1,
+    "nodeHour": 7.510416666666668,
+    "perGpuHour": 7.510416666666668,
+    "instance": "B200 x1",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46961872"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b200",
+    "gpuCount": 2,
+    "nodeHour": 15.502083333333333,
+    "perGpuHour": 7.751041666666667,
+    "instance": "B200 x2",
+    "region": "US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=46064169"
+   }
+  ],
+  "aws": [
+   {
+    "providerId": "aws",
+    "modelSlug": "b200",
+    "gpuCount": 8,
+    "nodeHour": 113.9328,
+    "perGpuHour": 14.2416,
+    "instance": "p6-b200.48xlarge",
+    "region": "us-east-1",
+    "url": "https://aws.amazon.com/ec2/instance-types/"
+   }
+  ]
+ },
+ "rtx-pro-6000": {
+  "hyperstack": [
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.85,
+    "perGpuHour": 1.85,
+    "instance": "n3-RTX-PRO6000-SEx1",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 2,
+    "nodeHour": 3.7,
+    "perGpuHour": 1.85,
+    "instance": "n3-RTX-PRO6000-SEx2",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 14.8,
+    "perGpuHour": 1.85,
+    "instance": "n3-RTX-PRO6000-SEx8",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   },
+   {
+    "providerId": "hyperstack",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 4,
+    "nodeHour": 7.4,
+    "perGpuHour": 1.85,
+    "instance": "n3-RTX-PRO6000-SEx4",
+    "interconnect": "pcie",
+    "region": "CA, Montreal",
+    "available": false
+   }
+  ],
+  "massedcompute": [
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 17.51,
+    "perGpuHour": 2.18875,
+    "instance": "gpu_8x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": false
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 2.19,
+    "perGpuHour": 2.19,
+    "instance": "gpu_1x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Beltsville, MD",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 2,
+    "nodeHour": 4.38,
+    "perGpuHour": 2.19,
+    "instance": "gpu_2x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": true
+   },
+   {
+    "providerId": "massedcompute",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 4,
+    "nodeHour": 8.76,
+    "perGpuHour": 2.19,
+    "instance": "gpu_4x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Kansas City, MO",
+    "available": true
+   }
+  ],
+  "boostrun": [
+   {
+    "providerId": "boostrun",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 7.92,
+    "perGpuHour": 0.99,
+    "instance": "RTXPro6000x8",
+    "interconnect": "pcie",
+    "region": "US, Charlotte, NC",
+    "available": false
+   }
+  ],
+  "latitude": [
+   {
+    "providerId": "latitude",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.9,
+    "perGpuHour": 1.9,
+    "instance": "vm.rtx6kpro.small",
+    "interconnect": "pcie",
+    "region": "US, Ashburn, VA",
+    "available": false
+   },
+   {
+    "providerId": "latitude",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 27.28,
+    "perGpuHour": 3.41,
+    "instance": "g4-rtx6kpro-large",
+    "interconnect": "pcie",
+    "region": "SYD2",
+    "available": true
+   }
+  ],
+  "excesssupply": [
+   {
+    "providerId": "excesssupply",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 10.8,
+    "perGpuHour": 1.35,
+    "instance": "RTXPro6000x8_es",
+    "interconnect": "pcie",
+    "region": "US, Charlotte, NC",
+    "available": false
+   }
+  ],
+  "imwt": [
+   {
+    "providerId": "imwt",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.25,
+    "perGpuHour": 1.25,
+    "instance": "gpu_1x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Beltsville, MD",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 2,
+    "nodeHour": 2.5,
+    "perGpuHour": 1.25,
+    "instance": "gpu_2x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Beltsville, MD",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 4,
+    "nodeHour": 5,
+    "perGpuHour": 1.25,
+    "instance": "gpu_4x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Beltsville, MD",
+    "available": false
+   },
+   {
+    "providerId": "imwt",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 10,
+    "perGpuHour": 1.25,
+    "instance": "gpu_8x_pro_6000_blackwell",
+    "interconnect": "pcie",
+    "region": "US, Omaha, NE",
+    "available": false
+   }
+  ],
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.95,
+    "perGpuHour": 1.95,
+    "instance": "1RTXPRO6000.30V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 2,
+    "nodeHour": 3.91,
+    "perGpuHour": 1.955,
+    "instance": "2RTXPRO6000.60V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 4,
+    "nodeHour": 7.83,
+    "perGpuHour": 1.9575,
+    "instance": "4RTXPRO6000.120V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 8,
+    "nodeHour": 15.66,
+    "perGpuHour": 1.9575,
+    "instance": "8RTXPRO6000.240V",
+    "interconnect": "pcie",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.64,
+    "perGpuHour": 1.64,
+    "instance": "RTX PRO 6000 MaxQ",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   },
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.69,
+    "perGpuHour": 1.69,
+    "instance": "RTX PRO 6000",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   },
+   {
+    "providerId": "runpod",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 1.69,
+    "perGpuHour": 1.69,
+    "instance": "RTX PRO 6000 WK",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.7355555555555556,
+    "perGpuHour": 0.7355555555555556,
+    "instance": "RTX PRO 6000 WS x1",
+    "region": "Arizona, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=42283541"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.7607407407407406,
+    "perGpuHour": 0.7607407407407406,
+    "instance": "RTX PRO 6000 WS x1",
+    "region": "Australia, AU",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48001442"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.8688888888888889,
+    "perGpuHour": 0.8688888888888889,
+    "instance": "RTX PRO 6000 WS x1",
+    "region": "Alberta, CA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=39970420"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.8688888888888889,
+    "perGpuHour": 0.8688888888888889,
+    "instance": "RTX PRO 6000 WS x1",
+    "region": "Mississippi, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48609496"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.8688888888888889,
+    "perGpuHour": 0.8688888888888889,
+    "instance": "RTX PRO 6000 Max-Q x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49096792"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.894814814814815,
+    "perGpuHour": 0.894814814814815,
+    "instance": "RTX PRO 6000 Max-Q x1",
+    "region": "Ontario, CA",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=40639446"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.908888888888889,
+    "perGpuHour": 0.908888888888889,
+    "instance": "RTX PRO 6000 Max-Q x1",
+    "region": "United Kingdom, GB",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47542987"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "rtx-pro-6000",
+    "gpuCount": 1,
+    "nodeHour": 0.9355555555555555,
+    "perGpuHour": 0.9355555555555555,
+    "instance": "RTX PRO 6000 WS x1",
+    "region": "Virginia, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48960633"
+   }
+  ]
+ },
+ "b300": {
+  "verda": [
+   {
+    "providerId": "verda",
+    "modelSlug": "b300",
+    "gpuCount": 8,
+    "nodeHour": 61.64,
+    "perGpuHour": 7.705,
+    "instance": "8B300.240V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b300",
+    "gpuCount": 4,
+    "nodeHour": 31.23,
+    "perGpuHour": 7.8075,
+    "instance": "4B300.120V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b300",
+    "gpuCount": 1,
+    "nodeHour": 7.91,
+    "perGpuHour": 7.91,
+    "instance": "1B300.30V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   },
+   {
+    "providerId": "verda",
+    "modelSlug": "b300",
+    "gpuCount": 2,
+    "nodeHour": 15.82,
+    "perGpuHour": 7.91,
+    "instance": "2B300.60V",
+    "interconnect": "sxm6",
+    "region": "FI, Central",
+    "available": false
+   }
+  ],
+  "scaleway": [
+   {
+    "providerId": "scaleway",
+    "modelSlug": "b300",
+    "gpuCount": 8,
+    "nodeHour": 72.06,
+    "perGpuHour": 9.0075,
+    "instance": "B300-SXM-8-288G",
+    "interconnect": "sxm6",
+    "region": "FR, Paris",
+    "available": false
+   }
+  ],
+  "runpod": [
+   {
+    "providerId": "runpod",
+    "modelSlug": "b300",
+    "gpuCount": 1,
+    "nodeHour": 6.94,
+    "perGpuHour": 6.94,
+    "instance": "B300",
+    "available": true,
+    "url": "https://www.runpod.io/pricing"
+   }
+  ],
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 8,
+    "nodeHour": 45.00208333333333,
+    "perGpuHour": 5.625260416666666,
+    "instance": "B300 x8",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44983378"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 4,
+    "nodeHour": 22.502083333333335,
+    "perGpuHour": 5.625520833333334,
+    "instance": "B300 x4",
+    "region": "Taiwan, TW",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44983380"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 2,
+    "nodeHour": 19.377083333333335,
+    "perGpuHour": 9.688541666666667,
+    "instance": "B300 x2",
+    "region": "Utah, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48685789"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 8,
+    "nodeHour": 100.00138888888888,
+    "perGpuHour": 12.50017361111111,
+    "instance": "B300 x8",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48838128"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 4,
+    "nodeHour": 50.00138888888889,
+    "perGpuHour": 12.500347222222222,
+    "instance": "B300 x4",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48838127"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 2,
+    "nodeHour": 25.00138888888889,
+    "perGpuHour": 12.500694444444445,
+    "instance": "B300 x2",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48838125"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "b300",
+    "gpuCount": 1,
+    "nodeHour": 12.501388888888888,
+    "perGpuHour": 12.501388888888888,
+    "instance": "B300 x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48838117"
+   }
+  ]
+ },
+ "h200-nvl": {
+  "vastai": [
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.002222222222222,
+    "perGpuHour": 3.002222222222222,
+    "instance": "H200 NVL x1",
+    "region": "California, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=47111252"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.0688888888888886,
+    "perGpuHour": 3.0688888888888886,
+    "instance": "H200 NVL x1",
+    "region": "New York, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49053762"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 2,
+    "nodeHour": 6.654370370370371,
+    "perGpuHour": 3.3271851851851855,
+    "instance": "H200 NVL x2",
+    "region": "Texas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49085088"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.329037037037037,
+    "perGpuHour": 3.329037037037037,
+    "instance": "H200 NVL x1",
+    "region": "Texas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=49085094"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.468888888888889,
+    "perGpuHour": 3.468888888888889,
+    "instance": "H200 NVL x1",
+    "region": "Japan, JP",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48217153"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.770222222222223,
+    "perGpuHour": 3.770222222222223,
+    "instance": "H200 NVL x1",
+    "region": "Texas, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=28418866"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.8111111111111113,
+    "perGpuHour": 3.8111111111111113,
+    "instance": "H200 NVL x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=44499509"
+   },
+   {
+    "providerId": "vastai",
+    "modelSlug": "h200-nvl",
+    "gpuCount": 1,
+    "nodeHour": 3.8111111111111113,
+    "perGpuHour": 3.8111111111111113,
+    "instance": "H200 NVL x1",
+    "region": "Washington, US",
+    "available": true,
+    "url": "https://cloud.vast.ai/create/?offerId=48497455"
+   }
+  ]
+ }
+}

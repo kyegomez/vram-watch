@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { OfferBook, RentalHistory } from "./rentals/types";
 import type { DayStat, History, ListingBook, StoredDay, StoreMeta } from "./types";
 
 /**
@@ -59,5 +60,39 @@ export const readMeta = (): StoreMeta =>
 export const writeHistory = (h: History): void => writeJson("history.json", h);
 export const writeListings = (l: ListingBook): void => writeJson("listings.json", l);
 export const writeMeta = (m: StoreMeta): void => writeJson("meta.json", m);
+
+/**
+ * The rental market is stored the same way and in the same shapes as the buy
+ * market — day stats keyed by (model, provider), plus the latest live offers —
+ * just in its own files, so a sweep of one side never risks the other's data.
+ */
+export const readRentalHistory = (): RentalHistory => {
+  const raw = readJson<Record<string, Record<string, Record<string, StoredDay>>>>(
+    "rentals-history.json",
+    {}
+  );
+  const out: RentalHistory = {};
+  for (const [slug, byProvider] of Object.entries(raw)) {
+    out[slug] = {};
+    for (const [providerId, days] of Object.entries(byProvider)) {
+      out[slug][providerId] = {};
+      for (const [day, v] of Object.entries(days)) {
+        out[slug][providerId][day] = normalizeDay(v, day);
+      }
+    }
+  }
+  return out;
+};
+
+export const readOffers = (): OfferBook => readJson("rentals-offers.json", {});
+export const readRentalMeta = (): StoreMeta =>
+  readJson("rentals-meta.json", { lastRefresh: null, errors: {} });
+
+export const writeRentalHistory = (h: RentalHistory): void =>
+  writeJson("rentals-history.json", h);
+export const writeOffers = (o: OfferBook): void =>
+  writeJson("rentals-offers.json", o);
+export const writeRentalMeta = (m: StoreMeta): void =>
+  writeJson("rentals-meta.json", m);
 
 export const todayISO = (): string => new Date().toISOString().slice(0, 10);

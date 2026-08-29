@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { shortDate, usd } from "@/lib/format";
+import { rate as rateFmt, shortDate, usd } from "@/lib/format";
 
 export interface ChartSeries {
   id: string;
@@ -17,8 +17,38 @@ const DAY = 86_400_000;
 
 const ts = (date: string) => Date.parse(`${date}T00:00:00Z`);
 
-const tickLabel = (v: number) =>
-  v >= 10_000 ? `$${(v / 1000).toFixed(1)}k` : usd(v);
+/** A dashed horizontal marker — MSRP on a price chart, a buy-breakeven on a rate chart. */
+export interface ChartReference {
+  value: number;
+  label: string;
+}
+
+/**
+ * How values on this chart are written. A mode rather than a formatter
+ * function, because this is a client component and a server page can't hand a
+ * function across the boundary.
+ */
+export type ChartFormat = "price" | "rate";
+
+/**
+ * Axis ticks and readouts want different precision. A tick sits under a
+ * gridline where "$2.00" is the useful label; the hover readout is comparing
+ * providers, where the third decimal is often the entire difference between
+ * two hosts.
+ */
+const FORMATTERS: Record<
+  ChartFormat,
+  { tick: (v: number) => string; value: (v: number) => string }
+> = {
+  price: {
+    tick: (v) => (v >= 10_000 ? `$${(v / 1000).toFixed(1)}k` : usd(v)),
+    value: usd,
+  },
+  rate: {
+    tick: (v) => (v >= 10 ? `$${v.toFixed(0)}` : `$${v.toFixed(2)}`),
+    value: rateFmt,
+  },
+};
 
 function niceTicks(min: number, max: number, target = 4): number[] {
   const span = max - min || 1;
@@ -37,13 +67,26 @@ const RANGES = [
   { key: "all", label: "ALL", days: Infinity },
 ] as const;
 
+/**
+ * Shared by both markets: the retail board charts daily low prices per source,
+ * the rental board charts daily low hourly rates per provider. They differ
+ * only in how a value is formatted and what the reference line means, so both
+ * are props rather than a second copy of this component.
+ */
 export default function PriceChart({
   series,
-  msrp,
+  reference = null,
+  format = "price",
+  emptyLabel = "No snapshots yet — run a refresh to start recording history.",
+  ariaLabel = "Price history by source",
 }: {
   series: ChartSeries[];
-  msrp: number | null;
+  reference?: ChartReference | null;
+  format?: ChartFormat;
+  emptyLabel?: string;
+  ariaLabel?: string;
 }) {
+  const { tick: fmtTick, value: fmtValue } = FORMATTERS[format];
   const [hidden, setHidden] = useState<Set<string>>(new Set());
   const [range, setRange] = useState<(typeof RANGES)[number]["key"]>("all");
   const [hover, setHover] = useState<{ day: number; px: number; py: number } | null>(null);
@@ -73,9 +116,11 @@ export default function PriceChart({
     const spanT = Math.max(maxT - minT, 1);
     let lo = Math.min(...prices);
     let hi = Math.max(...prices);
-    if (msrp !== null && msrp > lo * 0.7 && msrp < hi * 1.3) {
-      lo = Math.min(lo, msrp);
-      hi = Math.max(hi, msrp);
+    // Only stretch the axis for a reference line that's actually near the
+    // data — a breakeven ten times the plotted range would flatten the series.
+    if (reference !== null && reference.value > lo * 0.7 && reference.value < hi * 1.3) {
+      lo = Math.min(lo, reference.value);
+      hi = Math.max(hi, reference.value);
     }
     const padP = (hi - lo || lo * 0.04 || 1) * 0.08;
     lo -= padP;
@@ -92,7 +137,7 @@ export default function PriceChart({
     const xTicks = unionDays.filter((_, i) => i % step === 0);
 
     return { vis, minT, maxT, lo, hi, x, y, unionDays, xTicks, yTicks: niceTicks(lo, hi) };
-  }, [series, hidden, range, msrp]);
+  }, [series, hidden, range, reference]);
 
   const toggle = (id: string) =>
     setHidden((prev) => {
@@ -105,7 +150,7 @@ export default function PriceChart({
   if (series.length === 0) {
     return (
       <div className="flex h-64 items-center justify-center border border-edge bg-panel font-mono text-sm text-mute">
-        No snapshots yet — run a refresh to start recording history.
+        {emptyLabel}
       </div>
     );
   }
@@ -191,7 +236,7 @@ export default function PriceChart({
               viewBox={`0 0 ${W} ${H}`}
               className="block w-full"
               role="img"
-              aria-label="Price history by source"
+              aria-label={ariaLabel}
               onMouseMove={onMove}
               onMouseLeave={() => setHover(null)}
             >
@@ -213,7 +258,7 @@ export default function PriceChart({
                     fill="var(--color-mute)"
                     fontFamily="var(--font-mono)"
                   >
-                    {tickLabel(v)}
+                    {fmtTick(v)}
                   </text>
                 </g>
               ))}
@@ -231,26 +276,28 @@ export default function PriceChart({
                 </text>
               ))}
 
-              {msrp !== null && msrp > model.lo && msrp < model.hi && (
+              {reference !== null &&
+                reference.value > model.lo &&
+                reference.value < model.hi && (
                 <g>
                   <line
                     x1={PAD.l}
                     x2={W - PAD.r}
-                    y1={model.y(msrp)}
-                    y2={model.y(msrp)}
+                    y1={model.y(reference.value)}
+                    y2={model.y(reference.value)}
                     stroke="var(--color-edge2)"
                     strokeWidth="1"
                     strokeDasharray="4 4"
                   />
                   <text
                     x={W - PAD.r}
-                    y={model.y(msrp) - 5}
+                    y={model.y(reference.value) - 5}
                     textAnchor="end"
                     fontSize="10"
                     fill="var(--color-mute)"
                     fontFamily="var(--font-mono)"
                   >
-                    MSRP {usd(msrp)}
+                    {reference.label}
                   </text>
                 </g>
               )}
@@ -308,7 +355,7 @@ export default function PriceChart({
                   <p key={r.name} className="flex items-center gap-2 font-mono text-xs">
                     <span aria-hidden className="inline-block h-2 w-2" style={{ background: r.color }} />
                     <span className="text-ink2">{r.name}</span>
-                    <span className="ml-auto pl-4 text-ink">{usd(r.price)}</span>
+                    <span className="ml-auto pl-4 text-ink">{fmtValue(r.price)}</span>
                   </p>
                 ))}
               </div>

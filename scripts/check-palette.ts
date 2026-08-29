@@ -1,5 +1,6 @@
 import { validate } from "./palette";
 import { GPUS } from "../lib/gpus";
+import { RENT_PALETTE } from "../lib/rentals/palette";
 import { SOURCES, sourceById } from "../lib/sources";
 
 /**
@@ -24,3 +25,13 @@ for (const [cat, ids] of Object.entries(byCategory)) {
 }
 
 validate("all swatches", palette(SOURCES.map((s) => s.id)));
+
+/**
+ * Rental charts color by rank rather than by provider identity (there are too
+ * many providers for a fixed per-provider palette to stay CVD-safe), but the
+ * ranks still have to separate from each other on one surface.
+ */
+validate(
+  "rent: ranks",
+  Object.fromEntries(RENT_PALETTE.map((c, i) => [`rank${i + 1}`, c]))
+);

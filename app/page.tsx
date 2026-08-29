@@ -4,8 +4,10 @@ import Delta from "@/components/Delta";
 import JsonLd from "@/components/JsonLd";
 import LiveStatus from "@/components/LiveStatus";
 import MarketBoard, { type BoardRow } from "@/components/MarketBoard";
-import { usd } from "@/lib/format";
+import { perHour, usd } from "@/lib/format";
 import { getAllQuotes } from "@/lib/quotes";
+import { providerById } from "@/lib/rentals/providers";
+import { getAllRentalQuotes } from "@/lib/rentals/quotes";
 import {
   boardItemListSchema,
   faqSchema,
@@ -62,6 +64,10 @@ const FAQ = [
     a: "The used market is tracked separately: eBay and PC Server & Parts carry used and refurbished inventory, while retailer series track new-condition pricing. End-of-life parts such as the RTX 4090 and V100 are allowed to quote used prices at retailers too, since that is how they actually trade.",
   },
   {
+    q: "Can I compare GPU rental prices too?",
+    a: "Yes — the rental board tracks what the same silicon costs by the hour across AWS, Azure, RunPod, Vast.ai, Lambda, Crusoe, Nebius, Voltage Park, Hyperstack and more, priced both per GPU-hour and per whole cluster node. Every GPU tracked on both sides also shows a rent-vs-buy breakeven: how many hours of renting cost the same as buying the card outright.",
+  },
+  {
     q: "Does clicking a buy link cost anything?",
     a: "No. Buy links go straight to the seller's own listing at the price shown. Availability and final checkout pricing are always set by the seller.",
   },
@@ -79,6 +85,18 @@ export default function Dashboard() {
   );
   const liveSourceCount = SOURCES.filter((s) => s.mode !== "link").length;
   const hasData = all.some(({ quote }) => quote.best !== null);
+
+  // Headline figures for the rental board, so the buy side points at it with a
+  // real number rather than a bare link.
+  const rentals = getAllRentalQuotes();
+  const rentPriced = rentals.filter(({ quote }) => quote.best !== null);
+  const rentProviders = new Set(
+    rentals.flatMap(({ quote }) =>
+      quote.rates.filter((r) => r.offers.length > 0).map((r) => r.providerId)
+    )
+  );
+  const headlineRental =
+    rentPriced.find(({ model }) => model.slug === "h100-sxm") ?? rentPriced[0];
 
   const movers = all
     .filter(({ quote }) => quote.delta24h !== null && quote.best !== null)
@@ -197,6 +215,50 @@ export default function Dashboard() {
         </h2>
         <MarketBoard rows={rows} />
       </section>
+
+      {headlineRental && (
+        <section className="mt-12" aria-labelledby="rent-cta">
+          <h2
+            id="rent-cta"
+            className="mb-3 font-mono text-xs tracking-widest text-mute uppercase"
+          >
+            Renting instead of buying
+          </h2>
+          <Link
+            href="/rent"
+            className="block border border-edge bg-panel px-5 py-5 transition-colors hover:bg-panel2"
+          >
+            <div className="flex flex-wrap items-baseline justify-between gap-4">
+              <p className="max-w-2xl text-sm leading-relaxed text-ink2">
+                The same silicon rents by the hour, and the spread between
+                providers is far wider than anything on the retail board. The{" "}
+                {headlineRental.model.name}{" "}
+                {headlineRental.quote.bestAvailable ? "starts at" : "quotes"}{" "}
+                <strong className="text-ink">
+                  {perHour(headlineRental.quote.best!)}
+                </strong>{" "}
+                per GPU
+                {headlineRental.quote.bestProviderId && (
+                  <> at {providerById(headlineRental.quote.bestProviderId).name}</>
+                )}
+                {headlineRental.quote.bestCluster && (
+                  <>
+                    , and a full {headlineRental.quote.bestCluster.gpuCount}-GPU
+                    node at{" "}
+                    <strong className="text-ink">
+                      {perHour(headlineRental.quote.bestCluster.nodeHour)}
+                    </strong>
+                  </>
+                )}
+                . Every GPU tracked on both sides shows a rent-vs-buy breakeven.
+              </p>
+              <span className="font-mono text-xs text-acc">
+                {rentPriced.length} GPUs · {rentProviders.size} providers →
+              </span>
+            </div>
+          </Link>
+        </section>
+      )}
 
       <section className="mt-16 border-t border-edge pt-10" aria-labelledby="about-heading">
         <h2 id="about-heading" className="text-xl font-semibold tracking-tight">

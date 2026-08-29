@@ -20,8 +20,11 @@ function ago(iso: string): string {
  */
 export default function LiveStatus({
   lastRefresh,
+  rentals = false,
 }: {
   lastRefresh: string | null;
+  /** Watch the rental sweep instead of the retail one. */
+  rentals?: boolean;
 }) {
   const router = useRouter();
   const [refreshing, setRefreshing] = useState(false);
@@ -35,10 +38,13 @@ export default function LiveStatus({
       try {
         const res = await fetch("/api/tick", { cache: "no-store" });
         if (!res.ok || cancelled) return;
-        const data = (await res.json()) as {
+        const payload = (await res.json()) as {
           lastRefresh: string | null;
           refreshing: boolean;
+          rentals?: { lastRefresh: string | null; refreshing: boolean };
         };
+        // One heartbeat drives both markets; each status watches its own.
+        const data = rentals && payload.rentals ? payload.rentals : payload;
         setRefreshing(data.refreshing);
         if (data.lastRefresh && data.lastRefresh !== seen.current) {
           seen.current = data.lastRefresh;
@@ -56,7 +62,7 @@ export default function LiveStatus({
       cancelled = true;
       clearInterval(id);
     };
-  }, [router]);
+  }, [router, rentals]);
 
   return (
     <p className="flex items-center gap-2 font-mono text-xs text-mute">
@@ -69,7 +75,9 @@ export default function LiveStatus({
         <span className="relative inline-flex h-2 w-2 rounded-full bg-acc" />
       </span>
       {refreshing
-        ? "updating prices…"
+        ? rentals
+          ? "updating rates…"
+          : "updating prices…"
         : seen.current
           ? `live · updated ${ago(seen.current)}`
           : "live · first sweep starting"}

@@ -1,8 +1,10 @@
 # GPU-AG · VRAMWATCH
 
-A market board for gaming and AI silicon. Live street prices pulled from real
-retailer and reseller search pages, tracked over time, with a chart and direct
-buy links for every part — RTX 5090 to H200.
+A market board for gaming and AI silicon, on both sides of the market: what a
+GPU costs to **buy**, pulled live from real retailer and reseller search pages,
+and what the same silicon costs to **rent** by the hour across twenty-three
+cloud providers. Both tracked over time, with charts, direct links, and a
+rent-vs-buy breakeven for every part tracked on both sides.
 
 ## How it works
 
@@ -31,6 +33,40 @@ the crawler surface is generated — see **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WO
   Matched listings with URLs land in `data/listings.json` and power the
   "where to buy" cards.
 
+## The rental market (`/rent`)
+
+The same board, priced by the hour. Five live feeds, no keys, no blocked
+sources:
+
+- **Shadeform's public catalog** — live rates and per-region availability for
+  19 GPU clouds (Lambda, Crusoe, Nebius, Voltage Park, Hyperstack, Denvr,
+  Paperspace, DigitalOcean, Scaleway, Vultr, Latitude, Massed Compute and
+  partner clouds). Rates are attributed to the cloud that charges them.
+  *Its `hourly_price` is in cents.*
+- **RunPod** — public GraphQL `gpuTypes`, on-demand and spot, per GPU.
+- **Vast.ai** — public bundles endpoint, queried per model, `rentable` only.
+- **AWS** — the public JSON feed behind the pricing calculator (us-east-1 Linux
+  on-demand).
+- **Azure** — the Retail Prices API (eastus, consumption; Windows, Spot and
+  Low Priority meters filtered out).
+
+Every offer is stored twice over: `perGpuHour` (node price ÷ GPU count), which
+is the only number that compares across a single RunPod GPU and an 8-way HGX
+box, and `nodeHour`, which is what you are actually billed and the only honest
+way to price a cluster. Rates accumulate into `data/rentals-history.json` in the
+same `{lo, hi, n, at}` shape as retail prices.
+
+The one static thing on the rental side: how many GPUs each AWS instance type
+and Azure VM SKU carries, since neither publishes accelerator counts in its
+price feed. Shapes whose count isn't unambiguous are **skipped rather than
+guessed at**.
+
+```sh
+pnpm rent              # sweep, then every model's low, spread and 8x node price
+pnpm rent raw          # per-adapter fetch, listing every rate-band rejection
+pnpm rent h100-sxm     # every live offer for one model, cheapest first
+```
+
 Listings are filtered per part by title regex (`match` / `exclude`) and a
 price sanity band (see `lib/gpus.ts`) so waterblocks, server barebones and
 GH200 superchips don't pollute the series. Retail series track new-condition
@@ -53,8 +89,11 @@ pnpm build && pnpm start
 The site keeps itself fresh: the UI polls `/api/tick` every 10 seconds, and
 the server re-sweeps all sources in the background whenever the stored data
 is older than the sweep interval (default 10 minutes — tune with
-`SWEEP_INTERVAL_MS`, floored at 60s to stay polite to the sources). No cron
-required; `pnpm refresh` still exists for warming data ahead of a deploy.
+`SWEEP_INTERVAL_MS` for retail and `RENTAL_SWEEP_INTERVAL_MS` for rentals, both
+floored at 60s to stay polite to the sources). The two markets sweep
+independently, so a slow retail source never delays the rental board. No cron
+required; `pnpm refresh` and `pnpm rent` still exist for warming data ahead of
+a deploy, and `POST /api/refresh?market=retail|rentals` forces one side.
 
 Note: the store is process-local JSON (`data/*.json`) — run a single
 instance, or swap `lib/store.ts` for a shared database before scaling out.
